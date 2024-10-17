@@ -18,12 +18,23 @@ class ProductCategoryResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    public static function getPermissionPrefixes(): array
+    {
+        return [
+            'view',
+            'view_any',
+            'create',
+            'update',
+            'delete',
+            'delete_any',
+            'publish'
+        ];
+    }
+    protected static ?int $navigationSort = 4;
     public static function getNavigationGroup(): ?string
     {
-        return 'Media';
+        return 'Manage Products';
     }
-
-    // Customize the singular label
     public static function getLabel(): string
     {
         return 'Product Category';
@@ -39,29 +50,16 @@ class ProductCategoryResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('namaKategori')
-                    ->label('Category Name')
-                    ->required()
-                    ->maxLength(255)
-                    ->reactive()
-                    ->debounce(500)
-                    ->afterStateUpdated(function ($state, callable $set) {
-                        $set('slug', Str::slug($state));
-                    }),
-
-                Forms\Components\TextInput::make('slug')
-                    ->label('Slug')
-                    ->required()
-                    ->maxLength(255)
-                    ->unique(ignoreRecord: true)
-                    ->disabled()
-                    ->dehydrated()
-                    ->helperText('This will be used for the URL.'),
-
-                Forms\Components\Textarea::make('deskripsiKategori')
-                    ->label('Description')
-                    ->maxLength(500)
-                    ->helperText('Provide a short description of this product category.'),
+                Forms\Components\Section::make('Product Category')->schema([
+                    Forms\Components\TextInput::make('namaKategori')
+                        ->label('Category Name')
+                        ->required()
+                        ->maxLength(255),
+                    Forms\Components\Textarea::make('deskripsiKategori')
+                        ->label('Description')
+                        ->maxLength(500)
+                        ->helperText('Provide a short description of this product category.'),
+                ])
             ]);
     }
 

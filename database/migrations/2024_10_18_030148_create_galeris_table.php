@@ -12,12 +12,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('galeris', function (Blueprint $table) {
-            $table->id('idFoto');
+            $table->id();
             $table->string('namaFoto');
             $table->unsignedBigInteger('kategoriFoto_id');
             $table->text('deskripsiFoto');
             $table->string('pathFoto');
-            $table->foreign('kategoriFoto_id')->references('idKategoriFoto')->on('kategori_foto')->onDelete('cascade');
+            $table->foreign('kategoriFoto_id')->references('id')->on('kategori_fotos')->onDelete('cascade');
             $table->timestamps();
         });
     }

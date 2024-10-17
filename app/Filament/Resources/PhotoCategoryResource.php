@@ -16,11 +16,27 @@ class PhotoCategoryResource extends Resource
 {
     protected static ?string $model = KategoriFoto::class;
 
-
-
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    // Customize the singular label
+    public static function getPermissionPrefixes(): array
+    {
+        return [
+            'view',
+            'view_any',
+            'create',
+            'update',
+            'delete',
+            'delete_any',
+            'publish'
+        ];
+    }
+
+    protected static ?int $navigationSort = 2;
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Media';
+    }
+
     public static function getLabel(): string
     {
         return 'Photo Category';
@@ -36,28 +52,17 @@ class PhotoCategoryResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('namaKategoriFoto')
-                    ->label('Category Name')
-                    ->required()
-                    ->maxLength(255)
-                    ->reactive()
-                    ->debounce(500)
-                    ->afterStateUpdated(function ($state, callable $set) {
-                        $set('slug', Str::slug($state));
-                    }),
-                Forms\Components\TextInput::make('slug')
-                    ->label('Slug')
-                    ->required()
-                    ->maxLength(255)
-                    ->unique(ignoreRecord: true)
-                    ->disabled()
-                    ->dehydrated()
-                    ->helperText('This will be used for the URL.'),
-                Forms\Components\Textarea::make('deskripsiKategori')
-                    ->label('Description')
-                    ->maxLength(500)
-                    ->helperText('Provide a short description of this photo category.'),
+                Forms\Components\Section::make('Photo Category')->schema([
+                    Forms\Components\TextInput::make('namaKategoriFoto')
+                        ->label('Category Name')
+                        ->required()
+                        ->maxLength(255),
+                    Forms\Components\Textarea::make('deskripsiKategori')
+                        ->label('Description')
+                        ->maxLength(500)
+                        ->helperText('Provide a short description of this photo category.'),
 
+                ])
             ]);
     }
 

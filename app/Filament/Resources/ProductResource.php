@@ -6,8 +6,10 @@ use App\Filament\Resources\ProductResource\Pages;
 use App\Filament\Resources\ProductResource\RelationManagers;
 use App\Models\Produk;
 use App\Models\KategoriProduk;
+use Filament\Actions\Modal\Actions\Action;
 use Filament\Forms;
 use Filament\Forms\Form;
+use Filament\Forms\Set;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -19,63 +21,79 @@ class ProductResource extends Resource
 {
     protected static ?string $model = Produk::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-tag';
+
+    public static function getPermissionPrefixes(): array
+    {
+        return [
+            'view',
+            'view_any',
+            'create',
+            'update',
+            'delete',
+            'delete_any',
+            'publish'
+        ];
+    }
+
+    protected static ?int $navigationSort = 3;
+
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Manage Products';
+    }
+
     public static function getLabel(): string
     {
         return 'Product'; // Singular label
     }
+
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('namaProduk')
-                    ->label('Product Name')
-                    ->required()
-                    ->maxLength(255),
+                Forms\Components\Section::make('Product')->schema([
+                    Forms\Components\TextInput::make('namaProduk')
+                        ->label('Product Name')
+                        ->required()
+                        ->maxLength(255),
+                    Forms\Components\Textarea::make('deskripsiProduk')
+                        ->label('Product Description')
+                        ->required(),
 
-                Forms\Components\Textarea::make('deskripsiProduk')
-                    ->label('Product Description')
-                    ->required(),
+                    Forms\Components\TextInput::make('hargaProduk')
+                        ->label('Product Price')
+                        ->numeric()
+                        ->required()
+                        ->prefix('Rp.'),
 
-                Forms\Components\TextInput::make('hargaProduk')
-                    ->label('Product Price')
-                    ->numeric()
-                    ->required(),
+                    Forms\Components\Select::make('kategoriProduk_id')
+                        ->label('Category')
+                        ->relationship('kategoriProduk', 'namaKategori')
+                        ->createOptionForm([
+                            Forms\Components\TextInput::make('namaKategori')
+                                ->label('Category Name')
+                                ->required()
+                                ->maxLength(255),
 
-                Forms\Components\Select::make('kategoriProduk_id')
-                    ->label('Category')
-                    ->relationship('kategoriProduk', 'namaKategori')
-                    ->createOptionForm([
-                        Forms\Components\TextInput::make('namaKategori')
-                            ->label('Category Name')
-                            ->required()
-                            ->maxLength(255)
-                            ->reactive()
-                            ->debounce(500)
-                            ->afterStateUpdated(function ($state, callable $set) {
-                                $set('slug', Str::slug($state));
-                            }),
-
-                        Forms\Components\TextInput::make('slug')
-                            ->label('Slug')
-                            ->required()
-                            ->maxLength(255)
-                            ->unique(ignoreRecord: true)
-                            ->disabled()
-                            ->dehydrated()
-                            ->helperText('This will be used for the URL.'),
-
-                        Forms\Components\Textarea::make('deskripsiKategori')
-                            ->label('Description')
-                            ->maxLength(500)
-                            ->helperText('Provide a short description of this product category.'),
-                    ])
-                    ->required(),
-                Forms\Components\FileUpload::make('fotoProduk')
-                    ->label('Product Image')
-                    ->directory('products')
-                    ->image()
-                    ->required(),
+                            Forms\Components\Textarea::make('deskripsiKategori')
+                                ->label('Description')
+                                ->maxLength(500)
+                                ->helperText('Provide a short description of this product category.'),
+                        ])
+                        ->required(),
+                    Forms\Components\FileUpload::make('fotoProduk')
+                        ->label('Product Image')
+                        ->directory('products')
+                        ->image()
+                        ->required()
+                        ->maxSize(10240)
+                        ->imageCropAspectRatio('1:1')
+                        ->imageResizeMode('contain')
+                        ->imageResizeTargetWidth(2000)
+                        ->imageResizeTargetHeight(2000)
+                        ->rules('dimensions:max_width=2000,max_height=2000')
+                ]),
             ]);
     }
 
@@ -83,9 +101,10 @@ class ProductResource extends Resource
     {
         return $table
             ->columns([
-                // Define table columns for listing
                 Tables\Columns\TextColumn::make('namaProduk')
-                    ->label('Product Name'),
+                    ->label('Product Name')
+                    ->sortable()
+                    ->searchable(),
 
                 Tables\Columns\ImageColumn::make('fotoProduk')
                     ->disk('public')
@@ -98,26 +117,26 @@ class ProductResource extends Resource
                     ->label('Price'),
 
                 Tables\Columns\TextColumn::make('kategoriProduk.namaKategori')
-                    ->label('Category'),
+                    ->label('Category')
+                    ->sortable()
+                    ->searchable(),
             ])
             ->filters([
-                //
+                // Add filters if needed
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
+                Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
 
     public static function getRelations(): array
     {
         return [
-            //
+            // Define relationships if needed
         ];
     }
 

@@ -4,6 +4,7 @@ namespace App\Filament\Resources\ProductResource\Pages;
 
 use App\Filament\Resources\ProductResource;
 use Filament\Actions;
+use Filament\Actions\Action;
 use Filament\Resources\Pages\EditRecord;
 
 class EditProduct extends EditRecord
@@ -13,6 +14,9 @@ class EditProduct extends EditRecord
     protected function getHeaderActions(): array
     {
         return [
+            Action::make('save')
+                ->label('Save Changes')
+                ->action('save'),
             Actions\DeleteAction::make(),
         ];
     }

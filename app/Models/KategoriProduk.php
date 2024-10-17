@@ -18,11 +18,18 @@ class KategoriProduk extends Model
         return $this->hasMany(Produk::class, 'kategoriProduk_id', 'id');
     }
 
-    protected static function booted()
+    protected static function boot()
     {
-        static::creating(function ($kategoriProduk) {
+        parent::boot();
+
+        static::saving(function ($kategoriProduk) {
+            // Only generate the slug if it's empty or null
             if (empty($kategoriProduk->slug)) {
-                $kategoriProduk->slug = Str::slug($kategoriProduk->namaKategori);
+                $slug = Str::slug($kategoriProduk->namaKategori);
+
+                // Check if the slug already exists and append a number if necessary
+                $count = static::where('slug', 'LIKE', "{$slug}%")->count();
+                $kategoriProduk->slug = $count ? "{$slug}-{$count}" : $slug;
             }
         });
     }

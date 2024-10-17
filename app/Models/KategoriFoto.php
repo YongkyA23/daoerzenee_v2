@@ -18,11 +18,17 @@ class KategoriFoto extends Model
         return $this->hasMany(Galeri::class, 'kategoriFoto_id', 'id');
     }
 
-    protected static function booted()
+    protected static function boot()
     {
-        static::creating(function ($kategoriFoto) {
+        parent::boot();
+
+        static::saving(function ($kategoriFoto) {
             if (empty($kategoriFoto->slug)) {
-                $kategoriFoto->slug = Str::slug($kategoriFoto->namaKategori);
+                $slug = Str::slug($kategoriFoto->namaKategoriFoto);
+
+                // Ensure unique slug by appending number if the slug already exists
+                $count = static::where('slug', 'LIKE', "{$slug}%")->count();
+                $kategoriFoto->slug = $count ? "{$slug}-{$count}" : $slug;
             }
         });
     }
