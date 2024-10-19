@@ -82,6 +82,7 @@ class PhotoGalleryResource extends Resource
                     Forms\Components\Textarea::make('deskripsiFoto')
                         ->label('Photo Description')
                         ->maxLength(500)
+                        ->required()
                         ->helperText('Provide a short description of this photo.'),
                 ])
             ]);
