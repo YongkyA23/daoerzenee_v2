@@ -40,12 +40,14 @@
         </div>
 
 
-
         <!-- Right Section: Social Media Icons -->
         <div class="footer-right d-flex">
-            <a href="#" class="text-dark mx-2">
-                <i class="bi bi-whatsapp fs-4"></i>
-            </a>
+            <li>
+                <a href="https://www.facebook.com/people/Daoerzenee-Cawang/61551373616539/?sk=photos"
+                    class="text-dark mx-2">
+                    <i class="bi bi-whatsapp fs-4"></i>
+                </a>
+            </li>
             <a href="#" class="text-dark mx-2">
                 <i class="bi bi-facebook fs-4"></i>
             </a>
