@@ -27,3 +27,786 @@
 .footer-right a:hover {
     transform: scale(1.2); /* Slight zoom effect on hover */
 }
+
+
+
+
+/* COLOR */
+/* hijau neon: #AFDA00 */
+/* hijau muda (card):  #CFF699 */
+/* hijau background: #F2FFD8 */
+/* hijau tua: #19392A */
+/* Hitam: #1a1a1a */
+/* Box Shadow Big and Small: 
+box-shadow: rgba(0, 0, 0, 0.25) 0 .4vw .8vw;
+box-shadow: rgba(0, 0, 0, 0.25) 0 .2vw .6vw;
+*/
+
+/* Bentuk page */
+.page-content {
+  padding: 5vw;
+}
+
+/* Jarak/pembatas antara sections */
+/* .hr {
+  margin: 8vw 0;
+  visibility: hidden;
+} */
+
+/* Background Main */
+body {
+  background-image: url("WebBG.webp");
+  background-color: #F2FFD8;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+.bg-custom {
+  background-color: #F2FFD8!important;
+}
+
+/* Hijau pada halaman produk: */
+.backdrop-product {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 44vw;
+  z-index: -1;
+}
+
+.section-paper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: -2;
+}
+
+.cardboard-card {
+  border-radius: 1.5vw  ;
+  background-image: url('cbCard.webp');
+  background-size: cover;
+  width: 100%;
+  padding: 3.4vw 4vw;
+  text-align: right;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 .4vw .8vw; 
+}
+
+/* ~~~~~ Banner Assets: ~~~~~ */
+.banner-section {
+  width: 100%;
+  height: 90vh;
+  background-color: rgba(220, 139, 41, 0);
+}
+
+.banner-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+  z-index: -1;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 .4vw .8vw;
+}
+
+.banner-text {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  z-index: 1;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-shadow: rgba(0, 0, 0, 0.85) 0 .4vw .8vw; 
+}
+
+/* {{-- Media Queries --}} */
+/* @media(max-width: 1280px) {
+  .banner-image {
+    width: 100%;
+    height: 60vw;
+  }
+  .banner-section {
+    width: 100%;
+    height: 60vw;
+    background-color: rgba(220, 41, 202, 0);
+  }
+}
+
+@media(max-width: 480px) {
+  .banner-image {
+    width: 100%;
+    height: 30vw;
+  }
+  .banner-section {
+    width: 100%;
+    height: 30vw;
+    background-color: rgba(220, 41, 41, 0);
+  }
+} */
+
+/* Tablet Screens */
+@media (max-width: 768px) {
+  .navbar li {
+    font-size: 3vw; /* Reduce font size */
+  }
+
+  .banner-image, .banner-section {
+    height: 50vw; /* Adjust height for tablets */
+  }
+
+  .card1beranda {
+    width: 100%; /* Full width on smaller screens */
+    margin-left: 0;
+    padding: 5vw;
+  }
+
+  .produk-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for products */
+    gap: 3vw;
+  }
+
+  .footer-logo {
+    width: 40px; /* Smaller logo */
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 480px) {
+  .navbar-nav {
+    padding: 0 1vw; /* Reduce padding */
+  }
+
+  .small-btn {
+    width: 100%; /* Full-width button on mobile */
+    height: auto;
+  }
+
+  .banner-text {
+    font-size: 4vw; /* Smaller font on mobile */
+    text-align: center;
+  }
+
+  .cardProduk {
+    width: 90%; /* Make product cards responsive */
+    height: auto;
+    margin: 1vw auto;
+  }
+
+  .scrollProduk ul {
+    flex-direction: column; /* Stack product cards */
+  }
+
+  .footer-logo {
+    width: 30px; /* Adjust logo size */
+  }
+}
+
+/* ~~~~~ Navbar: ~~~~~ */
+/* elemen navbar */
+#my-navbar .navbar-light {
+  color: #1a1a1a;
+}
+
+#my-navbar .navbar-light .nav-link {
+  color: #1a1a1a;
+}
+
+
+/* Utk navbar-partial */
+
+.navbar {
+  width: 100%; /* set a fixed width */
+  max-width: 100%; /* set a fixed max-width */
+  padding: 0; /* remove padding */
+  margin: 0; /* remove margin */
+  transform: none; /* prevent scaling */
+
+  flex-wrap: wrap; /* Allow wrapping */
+  justify-content: space-between;
+}
+
+.navbar li{
+  font-size: 1.2vw;
+  margin-left: 1vw;
+}
+
+.navbar-nav {
+  padding: 0 3vw;
+}
+
+.logo-nav {
+  height: 4.6vw;
+  width: auto;  
+}
+
+.navbar-toggler {
+  width: 5vw; /* set a fixed width */
+  height: 4vw; /* set a fixed height */
+  padding: 0; /* remove padding */
+  margin: 0; /* remove margin */
+  /* font-size: 1.2vw;  */
+  border-radius: .8vw;
+  transform: none; /* prevent scaling */
+    font-size: 1rem; /* Adjust size */
+
+}
+
+.container-fluid {
+  padding: 0 5vw;
+}
+
+
+/* ~~~~~ Button Assets: ~~~~~ */
+/* 1) Small Button */
+.small-btn {
+  background-color: #AFDA00;
+  color: #1a1a1a;
+  text-align: center;
+  border: none;
+  border-radius: .8vw;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2vw;
+  margin: 1.5vw 0;
+  width: 10vw;
+  height: 3vw;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 .2vw .6vw;
+}
+
+.small-btn:active {
+  background: rgba(255, 0, 0, 0.367);
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
+   outline: none;
+   transition: transform .6s cubic-bezier(0, 0.55, 0.45, 1);
+   transition-delay: .2s;
+   box-shadow: rgba(50, 50, 93, 0.25) 0 2vw 6vw -1vw inset, rgba(0, 0, 0, 0.3) 0 1vw 3vw -1vw inset;
+}
+
+
+/* ~~~~~ Card Assets: ~~~~~ */
+.card1beranda {
+  border-radius: 0 1.5vw 1.5vw 0;
+  background-color: #CFF699;
+  width: 97vw;
+  height: auto;
+  margin-left: -10%;
+  padding: 2.5vw 2.5vw 2.5vw 9vw;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 .4vw .8vw;
+}
+
+.foto-section {
+  height: 25vw;
+  width: 25vw;
+  object-fit: cover;
+  margin: 2vw;
+  border-radius: .8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 .4vw .8vw;
+}
+
+.foto-section2 {
+  object-fit: cover;
+  border-radius: .8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foto-komunitas {
+  object-fit: cover;
+  margin: 2vw;
+  border-radius: .8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 .4vw .8vw; 
+  width: 18vw; height: 18vw; margin:0;
+}
+
+.card2beranda {
+  border-radius: .8vw;
+  width: 85%;
+  margin: auto;
+  padding: 0;
+}
+
+/* .card img {
+  border-top-left-radius: .8vw;
+  border-bottom-left-radius: .8vw;
+  height: 318px;
+} */
+
+/* typography: */
+.card-title {
+  font-size: 4vw;
+  font-weight: bold;
+  margin: 0;
+  text-decoration: underline;
+  color: #1a1a1a;
+}
+
+.card-content {
+  font-size: 1.5vw;
+  line-height: 1.6; /* Utk jarak enter/paragraf */
+  color: #19392A;
+  margin: 0;
+  text-align: justify;
+}
+
+/* card Produk */
+.cardProduk {
+  background-color: #f1f1f1;
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1);
+  border-radius: .5vw;
+  overflow: hidden;
+  margin: 0;
+  width: 16vw;
+  height: 28vw;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 .2vw .6vw;
+}
+.img-product {
+  width: 15vw;
+  height: 14vw;
+  object-fit: cover;
+  border: .2vw solid #AFDA00;
+  margin: auto;
+  margin-top: .6vw;
+  border-radius: .5vw .5vw 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cardProduk-body {
+  padding: .6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cardProduk-title {
+  font-weight: bold;
+  font-size: 1.6vw;
+  margin-bottom: .8vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.cardProduk-text {
+  font-size: 1vw;
+  color: #000000;
+  font-weight: lighter;
+  margin-top: 0;
+  margin-bottom: 2vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  height: 4.6vw;
+}
+.cardProduk-footer {
+  font-size: 1vw;
+  color: #9b9b9b;
+  font-weight: lighter;
+  text-align: right;
+  text-decoration: underline;
+  background-color: #f7f7f7;
+  padding: .6vw;
+  border-top: .1vw solid #ddd;
+  transition: color 0.2s ease;
+  margin-top: 0;
+}
+.cardProduk-harga {
+  font-weight: 500;
+  font-size: 1vw;
+  color: #46C34C;
+  align-items: end;
+  margin-bottom: 0;
+}
+
+.produk-grid {
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(12vw, 1fr)); 
+  gap: 2vw;
+}
+
+
+/* cardProduk Scroll ============================================== */
+.scrollProduk {
+  max-width:250vw;
+  margin: 1vw 1vw 1vw 0;
+  overflow:auto;
+}
+.scrollProduk ul{
+  display:flex;
+  list-style-type:none;
+  padding:0;
+  margin: 0 0 2vw -.6vw;
+  
+}
+.scrollProduk li{
+  margin:0 .9vw;
+}
+.scrollProduk::-webkit-scrollbar {
+  height: .8vw;
+}
+
+/* Track */
+.scrollProduk::-webkit-scrollbar-track {
+  background: #CFF699; 
+}
+ 
+/* Handle */
+.scrollProduk::-webkit-scrollbar-thumb {
+  background: #AFDA00; 
+}
+
+/* Handle on hover */
+.scrollProduk::-webkit-scrollbar-thumb:hover {
+  background: #AFDA00;
+}
+
+
+/* PRODUK DETAILLLLL */
+/* foto */
+.produkdetail {
+  background-color: #f1f1f1;
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1);
+  border-radius: .5vw;
+  margin: 0;
+  width: 28vw;
+  height: 38vw;
+  display: flex;
+  flex-direction: column;
+  object-fit: cover;
+  padding: 0;
+}
+
+/* foto kecil */
+.produkdetail-fotokecil {
+  background-color: #f1f1f1;
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1);
+  border-radius: .5vw;
+  margin: 0;
+  width: 6vw;
+  height: 6vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  object-fit: cover;
+}
+
+/* produkdetail-text */
+
+.produkdetail-title {
+  font-weight: bold;
+  font-size: 3vw;
+  margin-bottom: 2vw;
+  margin-top: 0;
+}
+
+.produkdetail-text {
+  font-size: 1.5vw;
+  margin-top: 2vw;
+  color: #000000;
+  font-weight: lighter;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ~~~~~ Pop Ups: ~~~~~ */
+/* popup donate + other popups */
+.modal-dialog {
+  width: 94vw; height: auto;
+}
+
+.modal-body {
+  text-align: center;
+  padding: 2vw;
+}
+
+.modal-content {
+  border-radius: .8vw;
+}
+
+.modal-footer {
+  font-size: 1.2vw;
+  color: red;
+  justify-content: center;
+}
+
+/* ~~~~~ Maps Hubungi Kami ~~~~~ */
+#section-map {
+  background-image: url(mapsBG.webp);
+  background-position: center;
+  background-repeat:repeat;
+  object-fit: contain;
+  display: flex;
+  border-radius: .8vw;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 .4vw .8vw; 
+}
+
+.maps-box {
+  width: 45%;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+  margin-left: 4vw;
+  padding: 3vw;
+  background-color: #00000090;
+  border-radius: .8vw;
+}
+
+.maps-text p{
+  font-size: 1.2vw;
+  line-height: 1.6; /* Utk jarak enter/paragraf */
+  color: #f1f1f1;
+  margin: 2vw 0;
+}
+
+/* ~~~~~ Footer ~~~~~ */
+footer {
+  background-color: #f1f1f1;
+  color: #161616;
+  padding: 1.5vw 0;
+  margin-top: 3vw;
+}
+
+footer .container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5vw;
+}
+
+footer .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .col-md-4 {
+  /* width: 33.33%; */
+  text-align: center;
+}
+
+footer .logo {
+  text-align: left;    
+}
+
+footer .logo img {
+  width: auto;  
+  height: 4.6vw;
+}
+
+footer .social-media{
+  text-align: right;
+}
+
+footer .social-media ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: .8vw;
+}
+
+footer .social-media li {
+  display: inline-block;
+  margin: 0 2vw 0 0;
+  padding: 0;
+  font-size: 1.2vw;
+  background-color: rgba(255, 0, 0, 0);
+}
+
+footer .social-media a {
+  color: #161616;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-button {
+  width: 1.7vw; height: 1.7vw;
+  border-radius: .5vw;
+}
+.footer-button img {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-button:hover {
+  background-color: #AFDA00;
+  transition: .2s ease-in-out;
+  transition-delay: .2s;
+}
+
+/* footer .admin-popup {
+  font-size: 1.2vw; 
+  margin: 0;
+} */
+
+/* ----------PROFIL KOMUNITAS--------- */
+/* info */
+.text-info p, .text-info ul{
+  font-size: 1.2vw;
+  line-height: 1.5;
+  color: #19392A;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 0, 0, 0);
+}
+
+.text-info .row .col {
+  padding: 0;
+}
+
+.text-info li {
+  font-size: 1.2vw;
+  line-height: 1.5;
+  color: #19392A;
+  margin-left: 1.2vw;
+}
+
+
+
+
+/* anggota */
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+
+
+.anggota-text {
+  font-size: 3vw; 
+  color: #19392A; 
+  text-align: center;
+  margin: 0 0 1vw;
+  
+}
+
+.anggota-text th {
+  padding: 0;
+  
+}
+
+.anggota-text2 {
+  font-size: 1.2vw;
+  font-weight: 500;
+  text-align: center;
+  color: #19392A;
+  margin: 0;
+
+}
+
+.anggota-text2   th {
+  padding: 0;
+  
+}
+
+/* struktur */
+.struktur {
+  background-color: #CFF699;
+  height: auto;
+  width: auto;
+  border-radius:.8vw;
+  margin: 0 4vw;
+  padding: 4vw 2vw;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 .4vw .8vw; 
+}
+
+/* Foto Struktur Organisasi */
+.foto-struktur {
+  height: 15vw; width: 15vw;
+  border-radius: 100%;
+  object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 .4vw .8vw; 
+}
+
+.foto-struktur2 {
+  height: 12vw; width: 12vw;
+  border-radius: 100%;
+  object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 .4vw .8vw; 
+}
+
+.text-karyawan p{
+  text-align: center; 
+  font-weight:bold; 
+  margin-bottom: -0.3vw;
+  font-size: 1.6vw;
+}
+
+.text-karyawan2 p{
+  text-align: center;
+  margin-bottom: -0.3vw;
+  font-size: 1.1vw;
+}
+
+/* Halaman Galeri */
+.carousel-inner {
+  object-fit: cover;
+  height: 40vw; width: 100%;
+}
+.galeri-foto {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+  gap: 2vw;
+}
+.galeri-foto img {
+  width: 100%;
+  height: 20vw;
+  object-fit: contain;
+}
+
+/* Admin Login */
+.form-label {
+  text-align: left;
+}
+
+.form-control {
+  border-radius: .5vw;
+  color: #555555;
+}
+
+/* ---- */
+.forgot-password {
+  text-align: right;
+}
+
+/* @media (max-width: 360px) {
+ .forgot-password {
+    text-align: left;
+  }
+} */
+
+.card-title {
+  font-size: 2rem; /* Use rem for better scaling */
+}
+
+.card-content {
+  font-size: 1rem;
+}
+
+.footer-text p {
+  font-size: 0.85rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
