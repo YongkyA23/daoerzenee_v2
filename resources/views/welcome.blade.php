@@ -1,94 +1,102 @@
  @extends('layouts.frontend.master')
 
- @section('banner')
+
+ @section('content')
  <section class="banner-section">
      {{-- gambar --}}
      <div class="banner-image">
          <img src="{{ asset('photos/bannerBeranda.webp') }}" alt="Banner Beranda" class="banner-image">
-     </div>
-     {{-- text --}}
-     <div>
          <div class="banner-text" style="width: 75vw;">
              <h1 style="font-size: 5vw; font-weight: 650;">Welcome to Daoer Zenee</h1>
              <p style="font-size: 2vw; font-weight: 300;">Explore our products, gallery, and much more!</p>
          </div>
      </div>
  </section>
- @endsection
-
- @section('content')
  <section>
      {{-- Paper Background --}}
-     <div>
-         <img src="{{ asset('photos/SectionPaper.webp') }}" alt="Paper Background" class="section-paper" style="top: 100%; margin-top:-2vw;">
-     </div>
-     <div class="card1beranda">
-         <div class="row g-0">
-             {{-- CARD1 Beranda --}}
-             <div class="col-md-4 col-4">
-                 <img src="{{ asset('photos/homeCard1.webp') }}" alt="FotoKegiatanKomunitas" class="foto-section">
-             </div>
-             <div class="col-md-8 col-8">
-                 <div class="card-body" style="margin: 2vw; padding:0;">
-                     <h4 class="card-title">Daoer Zenee</h4>
-                     <p style="margin: 2vw;"></p>
-                     <p class="card-content">Komunitas kami memberdayakan umat KLMTD (kaum kecil, lemah, miskin, telantar, disabilitas) dengan tujuan untuk membuat produk daur ulang. Mereka membawa semangat partisipasi dengan langkah-langkah kecil yang mencintai dan menyelamatkan bumi melalui prinsip-prinsip 'reuse-reduce-recycle-renew'.</p>
+     <div class="section-paper">
+         <div class="card1beranda">
+             <div class="row g-0">
+                 {{-- CARD1 Beranda --}}
+                 <div class="col-md-8 col-8">
+                     <div class="card-body" style="margin: 6vw; padding:0;">
+                         <h4 class="card-title">Daoer Zenee</h4>
+                         <p style="margin: 2vw;"></p>
+                         <p class="card-content">Komunitas kami memberdayakan umat KLMTD (kaum kecil, lemah, miskin, telantar, disabilitas) dengan tujuan untuk membuat produk daur ulang. Mereka membawa semangat partisipasi dengan langkah-langkah kecil yang mencintai dan menyelamatkan bumi melalui prinsip-prinsip 'reuse-reduce-recycle-renew'.</p>
 
-                     <button class="small-btn" style="margin: 0; margin-top: 2vw">DONATE</button>
-                 </div>
+                         <button class="small-btn" style="margin: 0; margin-top: 2vw">DONATE</button>
+                     </div>
 
-                 {{-- PopUp-Donation --}}
-                 <div class="modal fade" id="donateModal" tabindex="-1" aria-labelledby="donateModalLabel" aria-hidden="true">
-                     <div class="modal-dialog">
-                         <div class="modal-content" style="background-image: url('bgPopup.png'); background-size: contain;">
-                             <div class="modal-body">
-                                 <div class="container">
-                                     <div class="row">
-                                         {{-- Whats APP: --}}
-                                         <div class="col-md-12 text-center">
-                                             <h3><b>Silahkan hubungi nomor dibawah ini:</b></h3>
-                                             <img src="{{ asset('photos/waLogo.webp') }}" alt="Logo WhatsApp" width="50px" height="50px" style="margin-bottom: 10px;">
-                                             <p style="font-size: 18px; margin-bottom: 0;">Whats App: 0818-152-242 (Linawaty)</p>
-                                             <button onclick="copynumber()" class="small-btn" style="font-size: 16px; width: 100px; height: 30px;">SALIN</button>
-                                         </div>
-                                         {{-- G Maps: --}}
-                                         <div class=" col-md-12 text-center" style="margin-top: 20px;">
-                                             <h3><b>Atau kirimkan ke:</b></h3>
-                                             <img src="{{ asset('photos/mapsLogo.webp') }}" alt="Logo Maps" width="50px" height="50px" style="margin-bottom: 10px;">
-                                             <p style="font-size: 18px; margin-bottom: 0;">Jl Cawang Baru No 45, Cawang Kapling, Jakarta Timur 13340, Cawang, Kramat Jati, Jakarta Timur, DKI Jakarta 203</p>
-                                             <a href="https://www.google.com/maps/place/Daoer+zenee/@-6.2415279,106.8732826,15z/data=!4m6!3m5!1s0x2e69f33af1b96e69:0xb0a16adb5841c6f4!8m2!3d-6.2415279!4d106.8732826!16s%2Fg%2F11j4_m2d46?entry=ttu">
-                                                 <button class="small-btn" style="font-size: 16px; width: 100px; height: 30px;">BUKA</button>
-                                             </a>
+                     {{-- PopUp-Donation --}}
+                     <div class="modal fade" id="donateModal" tabindex="-1" aria-labelledby="donateModalLabel" aria-hidden="true">
+                         <div class="modal-dialog">
+                             <div class="modal-content" style="background-image: url('bgPopup.png'); background-size: contain;">
+                                 <div class="modal-body">
+                                     <div class="container">
+                                         <div class="row">
+                                             {{-- Whats APP: --}}
+                                             <div class="col-md-12 text-center">
+                                                 <h3><b>Silahkan hubungi nomor dibawah ini:</b></h3>
+                                                 <img src="{{ asset('photos/waLogo.webp') }}" alt="Logo WhatsApp" width="50px" height="50px" style="margin-bottom: 10px;">
+                                                 <p style="font-size: 18px; margin-bottom: 0;">WhatsApp: <span class="phone-number">0818152242</span> (Linawaty)</p>
+                                                 <button onclick="copyPhoneNumber()" class="small-btn" style="font-size: 16px; width: 100px; height: 30px;">SALIN</button>
+                                                 <!-- Add a success message element -->
+                                                 <p id="copy-success" style="color: green; display: none;">Number copied to clipboard!</p>
+                                             </div>
+                                             {{-- G Maps: --}}
+                                             <div class=" col-md-12 text-center" style="margin-top: 20px;">
+                                                 <h3><b>Atau kirimkan ke:</b></h3>
+                                                 <img src="{{ asset('photos/mapsLogo.webp') }}" alt="Logo Maps" width="50px" height="50px" style="margin-bottom: 10px;">
+                                                 <p style="font-size: 18px; margin-bottom: 0;">Jl Cawang Baru No 45, Cawang Kapling, Jakarta Timur 13340, Cawang, Kramat Jati, Jakarta Timur, DKI Jakarta 203</p>
+                                                 <a href="https://www.google.com/maps/place/Daoer+zenee/@-6.2415279,106.8732826,15z/data=!4m6!3m5!1s0x2e69f33af1b96e69:0xb0a16adb5841c6f4!8m2!3d-6.2415279!4d106.8732826!16s%2Fg%2F11j4_m2d46?entry=ttu">
+                                                     <button class="small-btn" style="font-size: 16px; width: 100px; height: 30px;">BUKA</button>
+                                                 </a>
+                                             </div>
                                          </div>
                                      </div>
-                                 </div>
-                                 <div class="modal-footer" style="padding: 20px 0 0">
-                                     <h6>Kami hanya menerima donasi dalam bentuk natura.</h6>
+                                     <div class="modal-footer" style="padding: 20px 0 0">
+                                         <h6>Kami hanya menerima donasi dalam bentuk natura.</h6>
+                                     </div>
                                  </div>
                              </div>
                          </div>
                      </div>
                  </div>
+                 <div class="col-md-4 col-4">
+                     <img src="{{ asset('photos/homeCard1.webp') }}" alt="FotoKegiatanKomunitas" class="foto-section">
+                 </div>
              </div>
          </div>
-     </div>
-     {{-- Button Trigger --}}
-     <script>
-         document.querySelector('.small-btn').addEventListener('click', function() {
-             var modal = new bootstrap.Modal(document.getElementById('donateModal'))
-             modal.show()
-         })
-     </script>
-     <script>
-         function copynumber() {
-             navigator.clipboard.writeText("0818152242");
-         }
-     </script>
+         {{-- Button Trigger --}}
+         <div>
 
  </section>
+ <script>
+     document.querySelector('.small-btn').addEventListener('click', function() {
+         var modal = new bootstrap.Modal(document.getElementById('donateModal'))
+         modal.show()
+     })
 
- {{-- Section Break --}}
- <p style="margin: 8vw;"></p>
+     function copyPhoneNumber() {
+         // Use querySelector to select the phone number by class
+         const phoneNumber = document.querySelector('.phone-number').innerText;
+
+         // Use navigator.clipboard to copy the number
+         phoneNumber.select();
+         navigator.clipboard.writeText(phoneNumber.value).then(function() {
+             // Show success message
+             const successMessage = document.getElementById('copy-success');
+             successMessage.style.display = 'block';
+
+             // Hide the message after 2 seconds
+             setTimeout(function() {
+                 successMessage.style.display = 'none';
+             }, 2000);
+         }).catch(function(error) {
+             console.error('Failed to copy the number: ', error);
+         });
+     }
+ </script>
 
  <!-- Daur Ulang Article  -->
  <section class="card2beranda">
