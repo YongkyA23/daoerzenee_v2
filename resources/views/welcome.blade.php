@@ -2,4 +2,4 @@
 
  @section('title')
  Daoer Zenee
- @endsection 
+ @endsection
