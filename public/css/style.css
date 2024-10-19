@@ -1,31 +1,63 @@
 .navbar-custom {
-    background-color: #F6FFE3; /* Custom background color */
+    background-color: #f6ffe3; /* Custom background color */
 }
 
 .logo-nav {
-    width: 120px;
+    width: 150px;
 }
 
 .custom-footer-bg {
-    background-color: #F6FFE3; /* Replace #333 with your desired color */
+    background-color: #f8ffe5; /* Light green background */
+    padding: 15px 50px; /* Add padding to the top, bottom, left, and right */
 }
 
 .footer-logo {
-    width: 60px; /* Adjust logo size */
+    width: 100px;
     height: auto;
+    margin-right: 15px;
 }
 
 .footer-text p {
     font-size: 0.9rem;
     color: #333;
+    margin: 0;
 }
 
+/* Style for social media icons */
 .footer-right a {
     transition: transform 0.2s;
+    text-decoration: none;
+    margin-left: 15px;
 }
 
 .footer-right a:hover {
-    transform: scale(1.2); /* Slight zoom effect on hover */
+    transform: scale(1.2);
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 576px) {
+    .footer-left {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .footer-logo {
+        margin-left: -10px;
+        width: 80px;
+    }
+
+    .footer-text {
+        max-width: calc(100% - 80px);
+    }
+
+    .footer-text p {
+        font-size: 0.8rem;
+    }
+
+    .footer-right {
+        justify-content: center;
+        margin-top: 10px;
+    }
 }
 
 

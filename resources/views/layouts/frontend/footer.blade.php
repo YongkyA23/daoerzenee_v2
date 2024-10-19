@@ -41,23 +41,25 @@
 
         <!-- Right Section: Social Media Icons -->
         <div class="footer-right d-flex">
-            <li>
-                <a href="https://www.facebook.com/people/Daoerzenee-Cawang/61551373616539/?sk=photos" class="text-dark mx-2">
-                    <i class="bi bi-whatsapp fs-4"></i>
-                </a>
-            </li>
+
             <a href="#" class="text-dark mx-2">
+                <i class="bi bi-whatsapp fs-4"></i>
+            </a>
+
+            <a href="https://www.facebook.com/people/Daoerzenee-Cawang/61551373616539/?sk=photos" target="_blank"
+                class="text-dark mx-2">
                 <i class="bi bi-facebook fs-4"></i>
             </a>
             <a href="#" class="text-dark mx-2">
                 <i class="bi bi-instagram fs-4"></i>
             </a>
             <a href="#" class="text-dark mx-2">
-                <i class="bi bi-geo-alt fs-4"></i>
+                <i class="bi bi-geo-alt-fill fs-4"></i>
             </a>
         </div>
     </div>
 </footer>
+
 
 </body>
 
