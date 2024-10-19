@@ -1,0 +1,29 @@
+.navbar-custom {
+    background-color: #F6FFE3; /* Custom background color */
+}
+
+.logo-nav {
+    width: 120px;
+}
+
+.custom-footer-bg {
+    background-color: #F6FFE3; /* Replace #333 with your desired color */
+}
+
+.footer-logo {
+    width: 60px; /* Adjust logo size */
+    height: auto;
+}
+
+.footer-text p {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.footer-right a {
+    transition: transform 0.2s;
+}
+
+.footer-right a:hover {
+    transform: scale(1.2); /* Slight zoom effect on hover */
+}
