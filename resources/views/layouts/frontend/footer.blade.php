@@ -24,6 +24,7 @@
 </div> -->
 
 
+
 <footer class="custom-footer-bg py-4">
     <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-center">
         <!-- Left Section: Logo and Text -->
@@ -38,19 +39,17 @@
             </div>
         </div>
 
-        <!-- Center Section: Admin Login -->
-        <div class="footer-center mb-3 mb-lg-0">
-            <a href="#" class="text-dark text-decoration-none">Admin Login</a>
-        </div>
 
         <!-- Right Section: Social Media Icons -->
         <div class="footer-right d-flex">
-            <a href="{{ asset(photos/waLogoF.webp) }|" class="text-dark mx-2">
-                <i class="bi bi-whatsapp fs-4"></i>
-            </a>
+            <li>
+                <a href="https://www.facebook.com/people/Daoerzenee-Cawang/61551373616539/?sk=photos" class="text-dark mx-2">
+                    <i class="bi bi-whatsapp fs-4"></i>
+                </a>
+            </li>
             <a href="#" class="text-dark mx-2">
                 <i class="bi bi-facebook fs-4"></i>
-            </a> 
+            </a>
             <a href="#" class="text-dark mx-2">
                 <i class="bi bi-instagram fs-4"></i>
             </a>
