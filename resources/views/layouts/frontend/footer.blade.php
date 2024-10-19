@@ -24,8 +24,9 @@
 </div> -->
 
 
-<footer class="custom-footer-bg py-4">
-    <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-center">
+<footer class="custom-footer-bg py-md-4">
+    <div
+        class="container-md-fluid d-flex flex-column flex-md-row justify-content-md-between align-items-center px-md-5">
         <!-- Left Section: Logo and Text -->
         <div class="footer-left d-flex align-items-center mb-3 mb-lg-0">
             <img src="{{ asset('photos/logoF.webp') }}" alt="Daoer Zenee Logo" class="footer-logo me-3" />
@@ -38,24 +39,21 @@
             </div>
         </div>
 
-        <!-- Center Section: Admin Login -->
-        <div class="footer-center mb-3 mb-lg-0">
-            <a href="#" class="text-dark text-decoration-none">Admin Login</a>
-        </div>
+
 
         <!-- Right Section: Social Media Icons -->
         <div class="footer-right d-flex">
-            <a href="{{ asset(photos/waLogoF.webp) }|" class="text-dark mx-2">
+            <a href="#" class="text-dark mx-2">
                 <i class="bi bi-whatsapp fs-4"></i>
             </a>
             <a href="#" class="text-dark mx-2">
                 <i class="bi bi-facebook fs-4"></i>
-            </a> 
+            </a>
             <a href="#" class="text-dark mx-2">
                 <i class="bi bi-instagram fs-4"></i>
             </a>
             <a href="#" class="text-dark mx-2">
-                <i class="bi bi-geo-alt fs-4"></i>
+                <i class="bi bi-geo-alt-fill fs-4"></i>
             </a>
         </div>
     </div>
