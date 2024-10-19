@@ -24,7 +24,6 @@
 </div> -->
 
 
-
 <footer class="custom-footer-bg py-4">
     <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-center">
         <!-- Left Section: Logo and Text -->
@@ -59,3 +58,7 @@
         </div>
     </div>
 </footer>
+
+</body>
+
+</html>

@@ -55,10 +55,12 @@ box-shadow: rgba(0, 0, 0, 0.25) 0 .2vw .6vw;
 
 /* Background Main */
 body {
-  background-image: url("WebBG.webp");
-  background-color: #F2FFD8;
-  font-family: Arial, Helvetica, sans-serif;
-  overflow-x: hidden;
+    background: url('/photos/WebBG.webp');
+    background-size: cover;
+    background-color: #F2FFD8;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .bg-custom {
@@ -75,16 +77,13 @@ body {
 }
 
 .section-paper {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  z-index: -2;
+  background-image: url(/photos/SectionPaper.webp);
+  padding-top: 10vh;
 }
 
 .cardboard-card {
   border-radius: 1.5vw  ;
-  background-image: url('cbCard.webp');
+  background-image: url(/photos/cbCard.webp);
   background-size: cover;
   width: 100%;
   padding: 3.4vw 4vw;
@@ -95,16 +94,14 @@ body {
 /* ~~~~~ Banner Assets: ~~~~~ */
 .banner-section {
   width: 100%;
-  height: 90vh;
+  height: 80vh;
+  position: relative;
   background-color: rgba(220, 139, 41, 0);
 }
 
 .banner-image {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 90vh;
+  height: 80vh;
   object-fit: cover;
   z-index: -1;
   box-shadow: rgba(0, 0, 0, 0.25) 0 .4vw .8vw;
@@ -158,7 +155,6 @@ body {
   }
 
   .card1beranda {
-    width: 100%; /* Full width on smaller screens */
     margin-left: 0;
     padding: 5vw;
   }
@@ -295,7 +291,7 @@ body {
   width: 97vw;
   height: auto;
   margin-left: -10%;
-  padding: 2.5vw 2.5vw 2.5vw 9vw;
+  padding: 0vw 0vw 0vw 9vw;
   box-shadow: rgba(0, 0, 0, 0.25) 0 .4vw .8vw;
 }
 
@@ -348,9 +344,12 @@ body {
   font-size: 4vw;
   font-weight: bold;
   margin: 0;
-  text-decoration: underline;
   color: #1a1a1a;
+  border-bottom: 3px solid #1a1a1a; /* Underline with border */
+  padding-bottom: 0.2em; /* Control the gap here */
+  display: inline-block; /* Ensure it only affects the text */
 }
+
 
 .card-content {
   font-size: 1.5vw;
@@ -548,7 +547,7 @@ body {
 
 /* ~~~~~ Maps Hubungi Kami ~~~~~ */
 #section-map {
-  background-image: url(mapsBG.webp);
+  background-image: url(/photos/mapsBG.webp);
   background-position: center;
   background-repeat:repeat;
   object-fit: contain;
@@ -809,4 +808,7 @@ img {
   object-fit: cover;
 }
 
-
+.card-body {
+    margin-top: 0;
+    margin-bottom: 0;
+}
