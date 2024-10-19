@@ -24,9 +24,8 @@
 </div> -->
 
 
-<footer class="custom-footer-bg py-md-4">
-    <div
-        class="container-md-fluid d-flex flex-column flex-md-row justify-content-md-between align-items-center px-md-5">
+<footer class="custom-footer-bg py-4">
+    <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-center">
         <!-- Left Section: Logo and Text -->
         <div class="footer-left d-flex align-items-center mb-3 mb-lg-0">
             <img src="{{ asset('photos/logoF.webp') }}" alt="Daoer Zenee Logo" class="footer-logo me-3" />
@@ -60,3 +59,8 @@
         </div>
     </div>
 </footer>
+
+
+</body>
+
+</html>
