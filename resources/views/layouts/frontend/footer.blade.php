@@ -120,11 +120,14 @@
     </div>
 </div>
 <script>
+    //open popup
     document.querySelector('.small-btn').addEventListener('click', function() {
         var modal = new bootstrap.Modal(document.getElementById('donateModal'))
         modal.show()
     })
 
+
+    //script copy nomor
     function copyPhoneNumber() {
         const phoneNumber = document.querySelector('.phone-number').innerText;
         navigator.clipboard.writeText(phoneNumber).then(function() {
@@ -137,7 +140,19 @@
             console.error('Failed to copy the number: ', error);
         });
     }
+
+    //navbar script
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
 </script>
+
 </body>
 
 </html>

@@ -14,6 +14,10 @@ Route::get('/kontak', function () {
     return view('kontak');
 });
 
+Route::get('/galeri', function () {
+    return view('galeri');
+});
+
 
 
 Route::get('/products', [ProductController::class, 'index'])->name('products.index');
