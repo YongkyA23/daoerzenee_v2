@@ -2,87 +2,46 @@
 
 
  @section('content')
- <section class="banner-section">
-     {{-- gambar --}}
-     <div class="banner-image">
-         <img src="{{ asset('photos/bannerBeranda.webp') }}" alt="Banner Beranda" class="banner-image">
-         <div class="banner-text" style="width: 75vw;">
-             <h1 style="font-size: 6vw; font-weight: 650;">Daoer Zenee</h1>
-             <p style="font-size: 3vw; font-weight: 600;">Daur Ulang Menciptakan Peluang</p>
-         </div>
-     </div>
- </section>
- <section>
-     {{-- Paper Background --}}
-     <div class="section-paper">
-         <div class="card1beranda">
-             <div class="row g-0">
-                 {{-- CARD1 Beranda --}}
-                 <div class="col-8">
-                     <div class="card-body">
-                         <h4 class="card-title">Daoer Zenee</h4>
-                         <p class="card-content">Komunitas kami memberdayakan umat KLMTD (kaum kecil, lemah, miskin,
-                             telantar, disabilitas) dengan tujuan untuk membuat produk daur ulang. Mereka membawa
-                             semangat partisipasi dengan langkah-langkah kecil yang mencintai dan menyelamatkan bumi
-                             melalui prinsip-prinsip 'reuse-reduce-recycle-renew'.</p>
-                         <button class="small-btn">DONASI</button>
-                     </div>
-
-                     {{-- PopUp-Donation --}}
-                     <div class="modal fade" id="donateModal" tabindex="-1" aria-labelledby="donateModalLabel"
-                         aria-hidden="true">
-                         <div class="modal-dialog">
-                             <div class="modal-content"
-                                 style="background-image: url('bgPopup.png'); background-size: contain;">
-                                 <div class="modal-body">
-                                     <div class="container">
-                                         <div class="row">
-                                             {{-- Whats APP: --}}
-                                             <div class="col-md-12 text-center">
-                                                 <h3><b>Silahkan hubungi nomor dibawah ini:</b></h3>
-                                                 <img src="{{ asset('photos/waLogo.webp') }}" alt="Logo WhatsApp"
-                                                     width="50px" height="50px" style="margin-bottom: 10px;">
-                                                 <p style="font-size: 18px; margin-bottom: 0;">WhatsApp: <span
-                                                         class="phone-number">0818152242</span> (Linawaty)</p>
-                                                 <button onclick="copyPhoneNumber()" class="small-btn"
-                                                     style="font-size: 16px; width: 100px; height: 30px;">SALIN</button>
-                                                 <!-- Add a success message element -->
-                                                 <p id="copy-success" style="color: green; display: none;">Number copied
-                                                     to clipboard!</p>
-                                             </div>
-                                             {{-- G Maps: --}}
-                                             <div class=" col-md-12 text-center" style="margin-top: 20px;">
-                                                 <h3><b>Atau kirimkan ke:</b></h3>
-                                                 <img src="{{ asset('photos/mapsLogo.webp') }}" alt="Logo Maps"
-                                                     width="50px" height="50px" style="margin-bottom: 10px;">
-                                                 <p style="font-size: 18px; margin-bottom: 0;">Jl Cawang Baru No 45,
-                                                     Cawang Kapling, Jakarta Timur 13340, Cawang, Kramat Jati, Jakarta
-                                                     Timur, DKI Jakarta 203</p>
-                                                 <a
-                                                     href="https://www.google.com/maps/place/Daoer+zenee/@-6.2415279,106.8732826,15z/data=!4m6!3m5!1s0x2e69f33af1b96e69:0xb0a16adb5841c6f4!8m2!3d-6.2415279!4d106.8732826!16s%2Fg%2F11j4_m2d46?entry=ttu">
-                                                     <button class="small-btn"
-                                                         style="font-size: 16px; width: 100px; height: 30px;">BUKA</button>
-                                                 </a>
-                                             </div>
-                                         </div>
-                                     </div>
-                                     <div class="modal-footer" style="padding: 20px 0 0">
-                                         <h6>Kami hanya menerima donasi dalam bentuk natura.</h6>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-md-4 col-4">
-                     <img src="{{ asset('photos/homeCard1.webp') }}" alt="FotoKegiatanKomunitas" class="foto-section">
-                 </div>
+     <section class="banner-section">
+         {{-- gambar --}}
+         <div class="banner-image">
+             <img src="{{ asset('photos/bannerBeranda.webp') }}" alt="Banner Beranda" class="banner-image">
+             <div class="banner-text" style="width: 75vw;">
+                 <h1 style="font-size: 5vw; font-weight: 650;">Welcome to Daoer Zenee</h1>
+                 <p style="font-size: 2vw; font-weight: 300;">Explore our products, gallery, and much more!</p>
              </div>
          </div>
-         {{-- Button Trigger --}}
-         <div>
+     </section>
+     <section>
+         {{-- Paper Background --}}
+         <div class="section-paper">
+             <div class="card1beranda">
+                 <div class="row g-0">
+                     {{-- CARD1 Beranda --}}
+                     <div class="col-md-8 col-8">
+                         <div class="card-body" style="margin: 6vw; padding:0;">
+                             <h4 class="card-title">Daoer Zenee</h4>
+                             <p style="margin: 2vw;"></p>
+                             <p class="card-content">Komunitas kami memberdayakan umat KLMTD (kaum kecil, lemah, miskin,
+                                 telantar, disabilitas) dengan tujuan untuk membuat produk daur ulang. Mereka membawa
+                                 semangat partisipasi dengan langkah-langkah kecil yang mencintai dan menyelamatkan bumi
+                                 melalui prinsip-prinsip 'reuse-reduce-recycle-renew'.</p>
+
+                             <button class="small-btn" style="margin: 0; margin-top: 2vw">DONATE</button>
+                         </div>
+
+                     </div>
+                     <div class="col-md-4 col-4">
+                         <img src="{{ asset('photos/homeCard1.webp') }}" alt="FotoKegiatanKomunitas" class="foto-section">
+                     </div>
+                 </div>
+             </div>
+             {{-- Button Trigger --}}
+             <div>
 
  </section>
+     </section>
+
 
  <!-- Daur Ulang Article  -->
  <section class="card2beranda">
@@ -228,11 +187,10 @@
  </section>
 
 
- {{-- Cardboard Card --}}
- <section>
-     <div class="section-paper">
-         <div class="cardboard-card">
-             <h2 style="font-size: 7vw; font-weight: 650; color: #ffffff; ">Daoer Zenee</h2>
+     {{-- Cardboard Card --}}
+     <section>
+         <div class="cardboard-card" style="margin-top: 4vw">
+             <h2 style="font-size: 7vw; font-weight: 650; margin:0; color: #ffffff; ">Daoer Zenee</h2>
              <p style="margin: 2vw;"></p>
              <h4 style="font-size: 3vw; font-weight: 350; color: #ffffff">Komunitas Kreativitas Daur Ulang</h4>
          </div>

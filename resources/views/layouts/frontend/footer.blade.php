@@ -45,8 +45,7 @@
 
 
 <footer class="custom-footer-bg py-4">
-    <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-center">
-        <!-- Left Section: Logo and Text -->
+    <div class="container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center ">
         <div class="footer-left d-flex align-items-center mb-3 mb-lg-0">
             <img src="{{ asset('photos/logoF.webp') }}" alt="Daoer Zenee Logo" class="footer-logo me-3" />
             <div class="footer-text">
@@ -81,6 +80,64 @@
 </footer>
 
 
+<div class="modal fade" id="donateModal" tabindex="1" aria-labelledby="donateModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h3><b>Silahkan hubungi nomor dibawah ini:</b></h3>
+                            <img src="{{ asset('photos/waLogo.webp') }}" alt="Logo WhatsApp" width="50px"
+                                height="50px" style="margin-bottom: 10px;">
+                            <p style="font-size: 18px; margin-bottom: 0;">WhatsApp: <span
+                                    class="phone-number">0818152242</span> (Linawaty)</p>
+                            <button onclick="copyPhoneNumber()" class="small-btn"
+                                style="font-size: 16px; width: 100px; height: 30px;">SALIN</button>
+                            <p id="copy-success" style="color: green; display: none;">Number copied
+                                to clipboard!</p>
+                        </div>
+                        {{-- G Maps: --}}
+                        <div class=" col-md-12 text-center" style="margin-top: 20px;">
+                            <h3><b>Atau kirimkan ke:</b></h3>
+                            <img src="{{ asset('photos/mapsLogo.webp') }}" alt="Logo Maps" width="50px" height="50px"
+                                style="margin-bottom: 10px;">
+                            <p style="font-size: 18px; margin-bottom: 0;">Jl Cawang Baru No 45,
+                                Cawang Kapling, Jakarta Timur 13340, Cawang, Kramat Jati, Jakarta
+                                Timur, DKI Jakarta 203</p>
+                            <a
+                                href="https://www.google.com/maps/place/Daoer+zenee/@-6.2415279,106.8732826,15z/data=!4m6!3m5!1s0x2e69f33af1b96e69:0xb0a16adb5841c6f4!8m2!3d-6.2415279!4d106.8732826!16s%2Fg%2F11j4_m2d46?entry=ttu">
+                                <button class="small-btn">BUKA</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="padding: 20px 0 0">
+                    <h6>Kami hanya menerima donasi dalam bentuk natura.</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.querySelector('.small-btn').addEventListener('click', function() {
+        var modal = new bootstrap.Modal(document.getElementById('donateModal'))
+        modal.show()
+    })
+
+    function copyPhoneNumber() {
+        const phoneNumber = document.querySelector('.phone-number').innerText;
+        navigator.clipboard.writeText(phoneNumber).then(function() {
+            const successMessage = document.getElementById('copy-success');
+            successMessage.style.display = 'block';
+            setTimeout(function() {
+                successMessage.style.display = 'none';
+            }, 2000);
+        }).catch(function(error) {
+            console.error('Failed to copy the number: ', error);
+        });
+    }
+</script>
 </body>
 
 </html>
