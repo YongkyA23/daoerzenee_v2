@@ -36,7 +36,6 @@
                      </div>
                  </div>
              </div>
-             {{-- Button Trigger --}}
              <div>
 
      </section>
