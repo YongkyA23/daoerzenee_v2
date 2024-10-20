@@ -202,6 +202,10 @@ body {
     color: #1a1a1a;
 }
 
+.container-logo {
+    padding: 0 4%;
+}
+
 /* Utk navbar-partial */
 
 .navbar {
@@ -231,11 +235,6 @@ body {
     width: 12%;
     height: 5vh;
     box-shadow: rgba(0, 0, 0, 0.25) 0 0.2vw 0.6vw;
-}
-
-.maps-btn {
-    font-size: 20px;
-    width: 20%;
 }
 
 .small-btn:hover {
@@ -719,7 +718,9 @@ table {
     margin-bottom: -0.3vw;
     font-size: 1.1vw;
 }
-
+.carousel {
+    margin: 2% 5%;
+}
 /* Halaman Galeri */
 .carousel-inner {
     object-fit: cover;
@@ -787,10 +788,68 @@ img {
     color: #b7ff00;
 }
 
+.maps-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: end;
+}
+
+.maps-btn {
+    font-size: 20px;
+    width: 150px; /* Fixed width */
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.galeri-foto {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-auto-rows: 250px;
+    gap: 10px;
+    max-width: 100%;
+    padding: 0 4vw;
+    margin: 0 auto;
+}
+
+.galeri-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s ease-in-out;
+    border-radius: 5px;
+}
+
+.galeri-foto img:hover {
+    transform: scale(1.05);
+}
+
+.galeri-foto img:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.galeri-foto img:nth-child(3) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.galeri-foto img:nth-child(5) {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
 @media (max-width: 768px) {
+    .container-logo {
+        padding: 0;
+    }
     .maps-btn {
-        width: 30%;
-        height: 15%;
+        width: 100px;
+        height: 35px;
         font-size: 16px;
     }
 
@@ -849,10 +908,32 @@ img {
 }
 
 @media (max-width: 576px) {
+    .galeri-foto {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-auto-rows: 250px;
+        gap: 10px;
+        max-width: 100%;
+        padding: 0 4vw;
+        margin: 0 auto;
+    }
+
+    .banner-galeri {
+        margin-top: 5%;
+    }
+
+    .gallery h2 {
+        font-size: 20px;
+    }
+
     .maps-box {
         width: 80%;
-
         border-radius: 10px;
+    }
+    .maps-btn {
+        width: 100px;
+        height: 35px;
+        font-size: 16px;
     }
     .section-paper-kontak {
         padding-top: 5vh;
@@ -922,6 +1003,11 @@ img {
     .small-btn {
         width: 30%;
         height: 15%;
+        font-size: 16px;
+    }
+    .maps-btn {
+        width: 100px;
+        height: 35px;
         font-size: 16px;
     }
 
