@@ -119,6 +119,24 @@ body {
     box-shadow: rgba(0, 0, 0, 0.25) 0 0.4vw 0.8vw;
 }
 
+.cardboard-card-home-luar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10% 0 10% 5%;
+}
+
+.cardboard-card-home {
+    border-radius: 1.5vw;
+    background-image: url(/photos/cbCard.webp);
+    background-size: cover;
+    padding: 3.4vw 4vw;
+    text-align: right;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 0.4vw 0.8vw;
+    width: 80%;
+}
+
+
 .kontak-title {
     font-size: 3rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add shadow to the title */
@@ -223,13 +241,12 @@ body {
 /* ~~~~~ Button Assets: ~~~~~ */
 /* 1) Small Button */
 
-.card3katalog .small-btn {
-    display: flex;
-    margin: auto; /* Optional: adds spacing and centers the button */
-    align-content: center;
-    justify-content: center; /* Horizontally centers the content */
-    align-items: center; /
-  }
+.card3katalog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .small-btn {
     background-color: #afda00;
@@ -334,13 +351,10 @@ body {
 }
 
 .card2beranda {
-  width: 60%;
+  width: 75%;
   margin: auto;
   padding-bottom: 20vh;
-    border-radius: 0.8vw;
-    width: 85%;
-    margin: auto;
-    padding: 0;
+
 }
 
 /* .card img {
@@ -351,13 +365,6 @@ body {
 
 /* typography: */
 .card-title {
-  font-size: 4vw;
-  font-weight: bold;
-  color: #1a1a1a;
-  border-bottom: 4px solid #1a1a1a; /* Underline with border */
-  padding-bottom: 0.2em; /* Control the gap here */
-  display: inline-block; /* Ensure it only affects the text */
-  text-align: left; /* Ensure title aligns to the left */
     font-size: 4vw;
     font-weight: bold;
     margin: 0;
@@ -365,6 +372,16 @@ body {
     border-bottom: 3px solid #1a1a1a; /* Underline with border */
     padding-bottom: 0.2em; /* Control the gap here */
     display: inline-block; /* Ensure it only affects the text */
+}
+
+.card-title-katalog {
+  font-weight: bold;
+  color: #1a1a1a;
+  border-bottom: 4px solid #1a1a1a; /* Underline with border */
+  padding-bottom: 0.2em; /* Control the gap here */
+  display: inline-block; /* Ensure it only affects the text */
+  text-align: left; /* Ensure title aligns to the left */
+  margin-bottom: 3vh;
 }
 
 .card-content {
@@ -435,7 +452,6 @@ body {
 .cardProduk-text {
     font-size: 1vw;
     color: #000000;
-    font-weight: lighter;
     margin-top: 0;
     margin-bottom: 2vw;
     overflow: hidden;
@@ -444,6 +460,7 @@ body {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     height: 4.6vw;
+    text-align: justify;
 }
 .cardProduk-footer {
     font-size: 1vw;
@@ -791,6 +808,7 @@ table {
     grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
     gap: 2vw;
 }
+
 .galeri-foto img {
     width: 100%;
     height: 20vw;

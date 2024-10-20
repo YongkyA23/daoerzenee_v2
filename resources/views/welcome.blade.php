@@ -2,44 +2,43 @@
 
 
  @section('content')
-     <section class="banner-section">
-         {{-- gambar --}}
-         <div class="banner-image">
-             <img src="{{ asset('photos/bannerBeranda.webp') }}" alt="Banner Beranda" class="banner-image">
-             <div class="banner-text" style="width: 75vw;">
-                 <h1 style="font-size: 5vw; font-weight: 650;">Welcome to Daoer Zenee</h1>
-                 <p style="font-size: 2vw; font-weight: 300;">Explore our products, gallery, and much more!</p>
-             </div>
+ <section class="banner-section">
+     {{-- gambar --}}
+     <div class="banner-image">
+         <img src="{{ asset('photos/bannerBeranda.webp') }}" alt="Banner Beranda" class="banner-image">
+         <div class="banner-text" style="width: 75vw;">
+             <h1 style="font-size: 5vw; font-weight: 650;">Welcome to Daoer Zenee</h1>
+             <p style="font-size: 2vw; font-weight: 300;">Explore our products, gallery, and much more!</p>
          </div>
-     </section>
-     <section>
-         {{-- Paper Background --}}
-         <div class="section-paper">
-             <div class="card1beranda">
-                 <div class="row g-0">
-                     {{-- CARD1 Beranda --}}
-                     <div class="col-md-8 col-8">
-                         <div class="card-body" style="margin: 6vw; padding:0;">
-                             <h4 class="card-title">Daoer Zenee</h4>
-                             <p style="margin: 2vw;"></p>
-                             <p class="card-content">Komunitas kami memberdayakan umat KLMTD (kaum kecil, lemah, miskin,
-                                 telantar, disabilitas) dengan tujuan untuk membuat produk daur ulang. Mereka membawa
-                                 semangat partisipasi dengan langkah-langkah kecil yang mencintai dan menyelamatkan bumi
-                                 melalui prinsip-prinsip 'reuse-reduce-recycle-renew'.</p>
+     </div>
+ </section>
+ <section>
+     {{-- Paper Background --}}
+     <div class="section-paper">
+         <div class="card1beranda">
+             <div class="row g-0">
+                 {{-- CARD1 Beranda --}}
+                 <div class="col-md-8 col-8">
+                     <div class="card-body" style="margin: 6vw; padding:0;">
+                         <h4 class="card-title">Daoer Zenee</h4>
+                         <p style="margin: 2vw;"></p>
+                         <p class="card-content">Komunitas kami memberdayakan umat KLMTD (kaum kecil, lemah, miskin,
+                             telantar, disabilitas) dengan tujuan untuk membuat produk daur ulang. Mereka membawa
+                             semangat partisipasi dengan langkah-langkah kecil yang mencintai dan menyelamatkan bumi
+                             melalui prinsip-prinsip 'reuse-reduce-recycle-renew'.</p>
 
-                             <button class="small-btn" style="margin: 0; margin-top: 2vw">DONATE</button>
-                         </div>
+                         <button class="small-btn" style="margin: 0; margin-top: 2vw">DONATE</button>
+                     </div>
 
-                     </div>
-                     <div class="col-md-4 col-4">
-                         <img src="{{ asset('photos/homeCard1.webp') }}" alt="FotoKegiatanKomunitas" class="foto-section">
-                     </div>
+                 </div>
+                 <div class="col-md-4 col-4">
+                     <img src="{{ asset('photos/homeCard1.webp') }}" alt="FotoKegiatanKomunitas" class="foto-section">
                  </div>
              </div>
-             <div>
+         </div>
+         <div>
 
  </section>
-     </section>
 
 
  <!-- Daur Ulang Article  -->
@@ -59,10 +58,10 @@
 
  {{-- Produk Katalog --}}
  <section class="card3katalog">
-     <div>
-         <h2 class="card-title">KATALOG PRODUK</h2>
-     </div>
      <div class="scrollProduk">
+         <div>
+             <h2 class="card-title-katalog">KATALOG PRODUK</h2>
+         </div>
          <ul>
              <li>
                  <div class="cardProduk h-100">
@@ -177,20 +176,22 @@
                  </div>
              </li>
          </ul>
+         <span>
+             <a href="/produk" style="color: black; text-decoration: none;">
+                 <center>
+                     <button class="small-btn">MORE</button>
+                 </center>
+             </a>
+         </span>
      </div>
-     <span>
-         <a href="/produk" style="color: black; text-decoration: none;">
-             <button class="small-btn">MORE</button>
-         </a>
-     </span>
  </section>
 
 
-     {{-- Cardboard Card --}}
-     <section>
-         <div class="cardboard-card" style="margin-top: 4vw">
-             <h2 style="font-size: 7vw; font-weight: 650; margin:0; color: #ffffff; ">Daoer Zenee</h2>
-             <p style="margin: 2vw;"></p>
+ {{-- Cardboard Card --}}
+ <section>
+     <div class="cardboard-card-home-luar">
+         <div class="cardboard-card-home">
+             <h2 style="font-size: 7vw; font-weight: 650; color: #ffffff; ">Daoer Zenee</h2>
              <h4 style="font-size: 3vw; font-weight: 350; color: #ffffff">Komunitas Kreativitas Daur Ulang</h4>
          </div>
      </div>
