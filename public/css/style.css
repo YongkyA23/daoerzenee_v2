@@ -35,31 +35,6 @@
 }
 
 /* Mobile-specific adjustments */
-@media (max-width: 576px) {
-    .footer-left {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
-    .footer-logo {
-        margin-left: -10px;
-        width: 80px;
-    }
-
-    .footer-text {
-        max-width: calc(100% - 80px);
-    }
-
-    .footer-text p {
-        font-size: 0.8rem;
-    }
-
-    .footer-right {
-        justify-content: center;
-        margin-top: 10px;
-    }
-}
-
 
 
 
@@ -87,7 +62,7 @@ box-shadow: rgba(0, 0, 0, 0.25) 0 .2vw .6vw;
 
 /* Background Main */
 body {
-    background: url('/photos/WebBG.webp');
+    background: url(/photos/WebBG.webp);
     background-size: cover;
     background-color: #F2FFD8;
     margin: 0;
@@ -109,15 +84,24 @@ body {
 }
 
 .section-paper {
-  background-image: url(/photos/SectionPaper.webp);
-  padding-top: 10vh;
+    background-image: url(/photos/SectionPaper.webp);
+    background-size: 100%;
+    padding-top: 10vh;
+    padding-bottom: 8vh;
+    position: relative;
+}
+
+.cardboard {
+  background-image: url(/photos/SectionPaper);
+  background-size: auto;
+  padding-left: 40vh;
 }
 
 .cardboard-card {
   border-radius: 1.5vw  ;
   background-image: url(/photos/cbCard.webp);
   background-size: cover;
-  width: 100%;
+  width: 70%;
   padding: 3.4vw 4vw;
   text-align: right;
   box-shadow: rgba(0, 0, 0, 0.25) 0 .4vw .8vw; 
@@ -126,7 +110,7 @@ body {
 /* ~~~~~ Banner Assets: ~~~~~ */
 .banner-section {
   width: 100%;
-  height: 80vh;
+  height: 100%;
   position: relative;
   background-color: rgba(220, 139, 41, 0);
 }
@@ -149,6 +133,13 @@ body {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-shadow: rgba(0, 0, 0, 0.85) 0 .4vw .8vw; 
+}
+
+
+.card3katalog {
+  width: 90%; /* Make the container span the full width */
+  margin: 0 auto;
+  padding-bottom: 15vh;
 }
 
 /* {{-- Media Queries --}} */
@@ -175,62 +166,6 @@ body {
     background-color: rgba(220, 41, 41, 0);
   }
 } */
-
-/* Tablet Screens */
-@media (max-width: 768px) {
-  .navbar li {
-    font-size: 3vw; /* Reduce font size */
-  }
-
-  .banner-image, .banner-section {
-    height: 50vw; /* Adjust height for tablets */
-  }
-
-  .card1beranda {
-    margin-left: 0;
-    padding: 5vw;
-  }
-
-  .produk-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for products */
-    gap: 3vw;
-  }
-
-  .footer-logo {
-    width: 40px; /* Smaller logo */
-  }
-}
-
-/* Mobile Screens */
-@media (max-width: 480px) {
-  .navbar-nav {
-    padding: 0 1vw; /* Reduce padding */
-  }
-
-  .small-btn {
-    width: 100%; /* Full-width button on mobile */
-    height: auto;
-  }
-
-  .banner-text {
-    font-size: 4vw; /* Smaller font on mobile */
-    text-align: center;
-  }
-
-  .cardProduk {
-    width: 90%; /* Make product cards responsive */
-    height: auto;
-    margin: 1vw auto;
-  }
-
-  .scrollProduk ul {
-    flex-direction: column; /* Stack product cards */
-  }
-
-  .footer-logo {
-    width: 30px; /* Adjust logo size */
-  }
-}
 
 /* ~~~~~ Navbar: ~~~~~ */
 /* elemen navbar */
@@ -289,6 +224,15 @@ body {
 
 /* ~~~~~ Button Assets: ~~~~~ */
 /* 1) Small Button */
+
+.card3katalog .small-btn {
+    display: flex;
+    margin: auto; /* Optional: adds spacing and centers the button */
+    align-content: center;
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center; /
+  }
+
 .small-btn {
   background-color: #AFDA00;
   color: #1a1a1a;
@@ -320,21 +264,19 @@ body {
 .card1beranda {
   border-radius: 0 1.5vw 1.5vw 0;
   background-color: #CFF699;
-  width: 97vw;
+  width: 90%;
   height: auto;
-  margin-left: -10%;
   padding: 0vw 0vw 0vw 9vw;
   box-shadow: rgba(0, 0, 0, 0.25) 0 .4vw .8vw;
+  margin: 10vh 0 8vh 0;
 }
 
 .foto-section {
-  height: 25vw;
-  width: 25vw;
-  object-fit: cover;
+  height: 23vw;
+  width: 23vw;
   margin: 2vw;
   border-radius: .8vw;
   display: flex;
-  justify-content: center;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.25) 0 .4vw .8vw;
 }
@@ -345,6 +287,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 13vw; 
+  width: 13vw; 
+  margin: 5vw 2.5vw 0 0;
 }
 
 .foto-komunitas {
@@ -359,10 +304,9 @@ body {
 }
 
 .card2beranda {
-  border-radius: .8vw;
-  width: 85%;
+  width: 60%;
   margin: auto;
-  padding: 0;
+  padding-bottom: 20vh;
 }
 
 /* .card img {
@@ -375,11 +319,11 @@ body {
 .card-title {
   font-size: 4vw;
   font-weight: bold;
-  margin: 0;
   color: #1a1a1a;
-  border-bottom: 3px solid #1a1a1a; /* Underline with border */
+  border-bottom: 4px solid #1a1a1a; /* Underline with border */
   padding-bottom: 0.2em; /* Control the gap here */
   display: inline-block; /* Ensure it only affects the text */
+  text-align: left; /* Ensure title aligns to the left */
 }
 
 
@@ -387,8 +331,18 @@ body {
   font-size: 1.5vw;
   line-height: 1.6; /* Utk jarak enter/paragraf */
   color: #19392A;
-  margin: 0;
+  margin-top: 2vh;
+  padding-right: 4vw;
   text-align: justify;
+}
+
+.card-content-2 {
+  font-size: 1vw;
+  line-height: 1.6; /* Utk jarak enter/paragraf */
+  color: #19392A;
+  margin-top: 2vh;
+  text-align: justify;
+  padding-top: 1vw;
 }
 
 /* card Produk */
@@ -824,6 +778,7 @@ table {
 
 .card-title {
   font-size: 2rem; /* Use rem for better scaling */
+  text-align: left;
 }
 
 .card-content {
@@ -841,6 +796,90 @@ img {
 }
 
 .card-body {
-    margin-top: 0;
-    margin-bottom: 0;
+    padding-top: 6vw; /* Adjust the top padding to match the layout */
+    text-align: left; /* Ensure the text aligns to the left */
+}
+
+
+@media (max-width: 480px) {
+  .navbar-nav {
+    padding: 0 1vw; /* Reduce padding */
+  }
+
+  .small-btn {
+    width: 100%; /* Full-width button on mobile */
+    height: auto;
+  }
+
+  .banner-text {
+    font-size: 4vw; /* Smaller font on mobile */
+    text-align: center;
+  }
+
+  .cardProduk {
+    width: 90%; /* Make product cards responsive */
+    height: auto;
+    margin: 1vw auto;
+  }
+
+  .scrollProduk ul {
+    flex-direction: column; /* Stack product cards */
+  }
+
+  .footer-logo {
+    width: 30px; /* Adjust logo size */
+  }
+}
+
+@media (max-width: 576px) {
+    .footer-left {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .footer-logo {
+        margin-left: -10px;
+        width: 80px;
+    }
+
+    .footer-text {
+        max-width: calc(100% - 80px);
+    }
+
+    .footer-text p {
+        font-size: 0.8rem;
+    }
+
+    .footer-right {
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
+
+@media (max-width: 768px) {
+  .navbar li {
+    font-size: 3vw; /* Reduce font size */
+  }
+
+  .banner-image, .banner-section {
+    height: 50vw; /* Adjust height for tablets */
+  }
+
+  .card1beranda {
+    border-radius: 0 1.5vw 1.5vw 0;
+    background-color: #CFF699;
+    width: 90%;
+    height: auto;
+    padding: 2vw 4vw; /* Adjust padding for better alignment */
+  }
+
+  .produk-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for products */
+    gap: 3vw;
+  }
+
+  .footer-logo {
+    width: 40px; /* Smaller logo */
+  }
 }
