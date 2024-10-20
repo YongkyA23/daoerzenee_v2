@@ -45,13 +45,12 @@
         </div>
     </nav>
     <script>
-        // Get the current URL path
         const currentPath = window.location.pathname;
 
-        // Select all the nav links
+
         const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
-        // Loop through each nav link and check if it matches the current URL
+
         navLinks.forEach(link => {
             if (link.getAttribute('href') === currentPath) {
                 link.classList.add('active');
