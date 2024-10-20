@@ -23,6 +23,26 @@
     </footer>
 </div> -->
 
+<script>
+    document.querySelector('.small-btn').addEventListener('click', function() {
+        var modal = new bootstrap.Modal(document.getElementById('donateModal'))
+        modal.show()
+    })
+
+    function copyPhoneNumber() {
+        const phoneNumber = document.querySelector('.phone-number').innerText;
+        navigator.clipboard.writeText(phoneNumber).then(function() {
+            const successMessage = document.getElementById('copy-success');
+            successMessage.style.display = 'block';
+            setTimeout(function() {
+                successMessage.style.display = 'none';
+            }, 2000);
+        }).catch(function(error) {
+            console.error('Failed to copy the number: ', error);
+        });
+    }
+</script>
+
 
 <footer class="custom-footer-bg py-4">
     <div class="container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center ">

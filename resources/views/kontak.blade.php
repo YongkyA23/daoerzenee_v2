@@ -31,6 +31,21 @@
                      <p>JI Cawang Baru No 45, Cawang Kapling, Jakarta Timur 13340, CAWANG, KRAMAT JATI, JAKARTA TIMUR, DKI
                          JAKARTA 203</p>
                  </div>
+                 <a href="https://www.google.com/maps/place/Daoer+zenee/@-6.2415279,106.8732826,15z/data=!4m6!3m5!1s0x2e69f33af1b96e69:0xb0a16adb5841c6f4!8m2!3d-6.2415279!4d106.8732826!16s%2Fg%2F11j4_m2d46?entry=ttu"
+                     target="_blank">
+                     <button class="small-btn maps-btn">BUKA</button>
+                 </a>
+             </div>
+         </div>
+     </div>
+     <div id="section-map">
+         <div class="maps-box">
+             <h1><i class="bi bi-geo-alt-fill me-3"></i>LOKASI</h1>
+             <div class="maps-content">
+                 <div class="maps-text">
+                     <p>JI Cawang Baru No 45, Cawang Kapling, Jakarta Timur 13340, CAWANG, KRAMAT JATI, JAKARTA TIMUR, DKI
+                         JAKARTA 203</p>
+                 </div>
                  <div>
                      <a href="https://www.google.com/maps/place/Daoer+zenee/@-6.2415279,106.8732826,15z/data=!4m6!3m5!1s0x2e69f33af1b96e69:0xb0a16adb5841c6f4!8m2!3d-6.2415279!4d106.8732826!16s%2Fg%2F11j4_m2d46?entry=ttu"
                          target="_blank">
