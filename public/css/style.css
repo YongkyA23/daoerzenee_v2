@@ -248,12 +248,6 @@ body {
 /* ~~~~~ Button Assets: ~~~~~ */
 /* 1) Small Button */
 
-.card3katalog {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .small-btn {
     background-color: #afda00;
     color: #1a1a1a;
@@ -361,9 +355,9 @@ body {
 .card2beranda {
     width: 100%;
     display: flex;
-    justify-content: center; /* Center the entire section horizontally */
-    align-items: center; /* Center the content vertically */
-    padding: 10vh 0 20vh 0; /* Add vertical padding */
+    justify-content: center;
+    align-items: center;
+    padding: 10vh 0 20vh 0;
 }
 
 .content-wrapper-card2 {
@@ -379,11 +373,6 @@ body {
     max-width: 250px; /* Prevent the image from becoming too large */
     object-fit: cover; /* Ensure the image keeps its aspect ratio */
     margin-right: 2rem; /* Space between image and text */
-}
-
-.card-title-2,
-.card-content-2 {
-    width: 100%; /* Text container takes up remaining space */
 }
 
 .card-title-2 {
@@ -414,7 +403,7 @@ body {
     font-weight: bold;
     margin-bottom: 1rem;
     color: #1a1a1a;
-    border-bottom: 3px solid #1a1a1a; /* Underline with border */
+    border-bottom: 4px solid #1a1a1a; /* Underline with border */
     padding-bottom: 0.2em; /* Control the gap here */
     display: inline-block; /* Ensure it only affects the text */
 }
@@ -423,7 +412,7 @@ body {
     font-weight: bold;
     margin-bottom: 1rem;
     color: #1a1a1a;
-    border-bottom: 3px solid #1a1a1a;
+    border-bottom: 4px solid #1a1a1a;
     padding-bottom: 0.2em;
     display: inline-block;
 }
@@ -454,8 +443,7 @@ body {
     border-radius: 0.5vw;
     overflow: hidden;
     margin: 0;
-    width: 16vw;
-    height: 28vw;
+    width: 250px;
     display: flex;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.25) 0 0.2vw 0.6vw;
@@ -466,7 +454,7 @@ body {
     object-fit: cover;
     border: 0.2vw solid #afda00;
     margin: auto;
-    margin-top: 0.6vw;
+    margin-top: 4%;
     border-radius: 0.5vw 0.5vw 0 0;
     display: flex;
     flex-direction: column;
@@ -474,14 +462,14 @@ body {
     align-items: center;
 }
 .cardProduk-body {
-    padding: 0.6vw;
+    padding: 4%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 .cardProduk-title {
     font-weight: bold;
-    font-size: 1.6vw;
+    font-size: 20px;
     margin-bottom: 0.8vw;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -490,16 +478,16 @@ body {
     -webkit-box-orient: vertical;
 }
 .cardProduk-text {
-    font-size: 1vw;
+    font-size: 16px;
     color: #000000;
     margin-top: 0;
     margin-bottom: 2vw;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
-    height: 4.6vw;
+
     text-align: justify;
 }
 .cardProduk-footer {
@@ -526,6 +514,46 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12vw, 1fr));
     gap: 2vw;
+}
+
+.card3katalog {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.card-katalog-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-produk {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.btn-product-home {
+    font-size: 25px;
+    width: 150px;
+    height: auto;
+    margin: 20% 0;
+    background-color: #afda00;
+    color: #1a1a1a;
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+
+    margin: 25% 0;
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0 0.2vw 0.6vw;
 }
 
 /* cardProduk Scroll ============================================== */
@@ -1037,6 +1065,10 @@ img {
 }
 
 @media (max-width: 768px) {
+    .btn-product-home {
+        font-size: 18px;
+        width: 100px;
+    }
     .section-detail-produk {
         flex-direction: column;
         margin: 0 2% 0 2%;
@@ -1189,9 +1221,9 @@ img {
         font-weight: bold;
         margin-bottom: 1rem;
         color: #1a1a1a;
-        border-bottom: 3px solid #1a1a1a; /* Underline with border */
-        padding-bottom: 0.2em; /* Control the gap here */
-        display: inline-block; /* Ensure it only affects the text */
+        border-bottom: 4px solid #1a1a1a;
+        padding-bottom: 0.1em;
+        display: inline-block;
         text-align: left;
     }
 
@@ -1218,6 +1250,107 @@ img {
 }
 
 @media (max-width: 576px) {
+    .card1beranda {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        width: 100%;
+        padding-left: 0;
+        box-shadow: none;
+        margin-top: 5%;
+    }
+
+    .card-body-card1 {
+        display: flex;
+        align-items: center;
+        width: 70%;
+        margin-top: 5%;
+        margin-left: 0;
+    }
+
+    .card-title-card1 {
+        font-size: 30px;
+        display: flex;
+        align-self: flex-start;
+        text-align: left;
+    }
+
+    .card-content-card1 {
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .btn-donate-home {
+        margin-top: 8%;
+        width: 60% !important;
+        padding: 2% 0 2% 0;
+        font-size: 24px !important;
+    }
+
+    .section-paper {
+        padding: 0;
+    }
+
+    .foto-section {
+        margin: 0;
+        width: 70%;
+        border-radius: 20px;
+    }
+
+    .card2beranda {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        width: 100%;
+        padding-left: 0;
+        box-shadow: none;
+    }
+
+    .content-wrapper-card2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+    }
+
+    .card-body-card2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5%;
+        margin-left: 0;
+    }
+
+    .card-title-2 {
+        font-size: 30px;
+        display: flex;
+        align-self: flex-start;
+        text-align: left;
+    }
+
+    .card-content-2 {
+        font-size: 16px;
+        width: 100%;
+        margin-top: 2vh;
+    }
+
+    .foto-section2 {
+        width: 100%;
+        margin: 0;
+    }
+
+    .card-title-katalog {
+        display: flex;
+        align-self: flex-start;
+        text-align: left;
+    }
+
     .produkdetail-foto {
         width: 350px;
         height: 350px;
