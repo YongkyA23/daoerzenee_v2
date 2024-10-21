@@ -151,6 +151,37 @@
             link.classList.remove('active');
         }
     });
+
+    function changeMainPhoto(thumbnail) {
+
+        var newSrc = thumbnail.src;
+
+
+        var mainPhoto = document.getElementById('main-photo');
+        mainPhoto.src = newSrc;
+
+
+        var thumbnails = document.querySelectorAll('.thumbnail');
+        thumbnails.forEach(function(img) {
+            img.classList.remove('selected');
+        });
+
+
+        thumbnail.classList.add('selected');
+    }
+
+    document.getElementById('buy-button').addEventListener('click', function() {
+
+        var waPhoneNumber =
+            '6281234567890';
+        var productMessage = "Hello, I am interested in buying the Lingkaran Advent product.";
+
+
+        var waLink = "https://wa.me/" + waPhoneNumber + "?text=" + encodeURIComponent(productMessage);
+
+
+        window.open(waLink, '_blank');
+    });
 </script>
 
 </body>

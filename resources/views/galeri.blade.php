@@ -50,11 +50,6 @@
             <img src="photos/prosesProduksi7.webp" alt="Foto 7">
             <img src="photos/prosesProduksi8.webp" alt="Foto 8">
             <img src="photos/prosesProduksi5.webp" alt="Foto 5">
-            <img src="photos/prosesProduksi6.webp" alt="Foto 6">
-            <img src="photos/prosesProduksi7.webp" alt="Foto 7">
-            <img src="photos/prosesProduksi8.webp" alt="Foto 8">
-            <img src="photos/prosesProduksi5.webp" alt="Foto 5">
-            <img src="photos/prosesProduksi6.webp" alt="Foto 6">
             <img src="photos/prosesProduksi7.webp" alt="Foto 7">
             <img src="photos/prosesProduksi8.webp" alt="Foto 8">
         </div>

@@ -18,6 +18,11 @@ Route::get('/galeri', function () {
     return view('galeri');
 });
 
+Route::get('/detailproduk', function () {
+    return view('produk.detail');
+});
+
+
 
 
 Route::get('/products', [ProductController::class, 'index'])->name('products.index');
