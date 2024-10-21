@@ -12,6 +12,10 @@
     width: 150px;
 }
 
+.nav-item .active {
+    font-weight: 600;
+}
+
 .custom-footer-bg {
     background-color: #f8ffe5; /* Light green background */
     padding: 15px 50px; /* Add padding to the top, bottom, left, and right */
@@ -120,10 +124,10 @@ body {
 }
 
 .cardboard-card-home-luar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10% 0 10% 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10% 0 10% 5%;
 }
 
 .cardboard-card-home {
@@ -135,7 +139,6 @@ body {
     box-shadow: rgba(0, 0, 0, 0.25) 0 0.4vw 0.8vw;
     width: 80%;
 }
-
 
 .kontak-title {
     font-size: 3rem;
@@ -155,10 +158,10 @@ body {
 
 /* ~~~~~ Banner Assets: ~~~~~ */
 .banner-section {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  background-color: rgba(220, 139, 41, 0);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: rgba(220, 139, 41, 0);
     width: 100%;
     height: 80vh;
     position: relative;
@@ -245,13 +248,6 @@ body {
 /* ~~~~~ Button Assets: ~~~~~ */
 /* 1) Small Button */
 
-.card3katalog {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
 .small-btn {
     background-color: #afda00;
     color: #1a1a1a;
@@ -285,7 +281,7 @@ body {
 
 /* ~~~~~ Card Assets: ~~~~~ */
 .card1beranda {
-  display: flex;
+    display: flex;
     border-radius: 0 1.5vw 1.5vw 0;
     background-color: #cff699;
     width: 87%;
@@ -320,8 +316,8 @@ body {
 /* .card2beranda {
   width: 100%;
   display: flex;
-  justify-content: center;  
-  align-items: center;   
+  justify-content: center;
+  align-items: center;
   padding-bottom: 20vh;
 }
 
@@ -329,21 +325,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%; 
-  
+  width: 80%;
+
 }
 
 .foto-section2 {
-  width: 25%;        
-  max-width: 200px;    
-  object-fit: cover;   
-  margin-right: 2rem;  
+  width: 25%;
+  max-width: 200px;
+  object-fit: cover;
+  margin-right: 2rem;
 }
 
 .card-title-2 {
   width: 65%;
   margin-bottom: 1rem;
-  font-size: 2rem; 
+  font-size: 2rem;
 }
 
 .card-content-2 {
@@ -357,52 +353,43 @@ body {
 } */
 
 .card2beranda {
-  width: 100%;                 
-  display: flex;
-  justify-content: center;      /* Center the entire section horizontally */
-  align-items: center;          /* Center the content vertically */
-  padding: 10vh 0 20vh 0;              /* Add vertical padding */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh 0 20vh 0;
 }
 
 .content-wrapper-card2 {
-  display: flex;
-  justify-content: center;      /* Center the content horizontally inside the wrapper */
-  align-items: center;          /* Ensure image and text are vertically aligned */
-  width: 70%;                   /* Ensure the container takes up 80% of the available width */
-  max-width: 1200px;            /* Limit the width for larger screens */
+    display: flex;
+    justify-content: center; /* Center the content horizontally inside the wrapper */
+    align-items: center; /* Ensure image and text are vertically aligned */
+    width: 70%; /* Ensure the container takes up 80% of the available width */
+    max-width: 1200px; /* Limit the width for larger screens */
 }
 
 .foto-section2 {
-  width: 25%;                   /* Set image width */
-  max-width: 250px;             /* Prevent the image from becoming too large */
-  object-fit: cover;            /* Ensure the image keeps its aspect ratio */
-  margin-right: 2rem;           /* Space between image and text */
-}
-
-.card-title-2,
-.card-content-2 {
-  width: 100%;                   /* Text container takes up remaining space */
+    width: 25%; /* Set image width */
+    max-width: 250px; /* Prevent the image from becoming too large */
+    object-fit: cover; /* Ensure the image keeps its aspect ratio */
+    margin-right: 2rem; /* Space between image and text */
 }
 
 .card-title-2 {
-  font-weight: bold;
-  color: #1a1a1a;
-  border-bottom: 4px solid #1a1a1a; /* Underline with border */
-  padding-bottom: 0.1em; /* Control the gap here */
-  display: inline; /* Change to inline to fit the text only */
-  text-align: left; /* Ensure title aligns to the left */
+    font-weight: bold;
+    color: #1a1a1a;
+    border-bottom: 4px solid #1a1a1a; /* Underline with border */
+    padding-bottom: 0.1em; /* Control the gap here */
+    display: inline; /* Change to inline to fit the text only */
+    text-align: left; /* Ensure title aligns to the left */
 }
-
 
 .card-content-2 {
-  font-size: 1.2rem;            /* Adjust the text size */
-  line-height: 1.6;             /* Set line height for readability */
-  text-align: justify;          /* Align text for neat look */
-  margin-top: 5vh;
+    font-size: 1.2rem; /* Adjust the text size */
+    line-height: 1.6; /* Set line height for readability */
+    text-align: justify; /* Align text for neat look */
+    margin-top: 5vh;
 }
-
-
-
 
 /* .card img {
   border-top-left-radius: .8vw;
@@ -416,7 +403,7 @@ body {
     font-weight: bold;
     margin-bottom: 1rem;
     color: #1a1a1a;
-    border-bottom: 3px solid #1a1a1a; /* Underline with border */
+    border-bottom: 4px solid #1a1a1a; /* Underline with border */
     padding-bottom: 0.2em; /* Control the gap here */
     display: inline-block; /* Ensure it only affects the text */
 }
@@ -425,28 +412,28 @@ body {
     font-weight: bold;
     margin-bottom: 1rem;
     color: #1a1a1a;
-    border-bottom: 3px solid #1a1a1a; /* Underline with border */
-    padding-bottom: 0.2em; /* Control the gap here */
-    display: inline-block; /* Ensure it only affects the text */
+    border-bottom: 4px solid #1a1a1a;
+    padding-bottom: 0.2em;
+    display: inline-block;
 }
 
 .card-title-katalog {
-  font-weight: bold;
-  color: #1a1a1a;
-  border-bottom: 4px solid #1a1a1a; /* Underline with border */
-  padding-bottom: 0.2em; /* Control the gap here */
-  display: inline-block; /* Ensure it only affects the text */
-  text-align: left; /* Ensure title aligns to the left */
-  margin-bottom: 3vh;
+    font-weight: bold;
+    color: #1a1a1a;
+    border-bottom: 4px solid #1a1a1a;
+    padding-bottom: 0.2em;
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 3vh;
 }
 
 .card-content-card1 {
-  color: #19392A;
-  margin-top: 2vh;
-  padding-right: 4vw;
-  text-align: justify;
-  font-size: 18px;
-  line-height: 1.6; /* Utk jarak enter/paragraf */
+    color: #19392a;
+    margin-top: 2vh;
+    padding-right: 4vw;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.6; /* Utk jarak enter/paragraf */
 }
 
 /* card Produk */
@@ -456,8 +443,7 @@ body {
     border-radius: 0.5vw;
     overflow: hidden;
     margin: 0;
-    width: 16vw;
-    height: 28vw;
+    width: 250px;
     display: flex;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.25) 0 0.2vw 0.6vw;
@@ -468,7 +454,7 @@ body {
     object-fit: cover;
     border: 0.2vw solid #afda00;
     margin: auto;
-    margin-top: 0.6vw;
+    margin-top: 4%;
     border-radius: 0.5vw 0.5vw 0 0;
     display: flex;
     flex-direction: column;
@@ -476,14 +462,14 @@ body {
     align-items: center;
 }
 .cardProduk-body {
-    padding: 0.6vw;
+    padding: 4%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 .cardProduk-title {
     font-weight: bold;
-    font-size: 1.6vw;
+    font-size: 20px;
     margin-bottom: 0.8vw;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -492,16 +478,16 @@ body {
     -webkit-box-orient: vertical;
 }
 .cardProduk-text {
-    font-size: 1vw;
+    font-size: 16px;
     color: #000000;
     margin-top: 0;
     margin-bottom: 2vw;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
-    height: 4.6vw;
+
     text-align: justify;
 }
 .cardProduk-footer {
@@ -528,6 +514,46 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12vw, 1fr));
     gap: 2vw;
+}
+
+.card3katalog {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.card-katalog-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-produk {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.btn-product-home {
+    font-size: 25px;
+    width: 150px;
+    height: auto;
+    margin: 20% 0;
+    background-color: #afda00;
+    color: #1a1a1a;
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+
+    margin: 25% 0;
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0 0.2vw 0.6vw;
 }
 
 /* cardProduk Scroll ============================================== */
@@ -565,50 +591,101 @@ body {
 }
 
 /* PRODUK DETAILLLLL */
-/* foto */
-.produkdetail {
+.container-fotodetail {
+    width: 35%;
+}
+
+.group-fotodetail {
+    margin-right: 3%;
+}
+
+.image-gallery {
+    margin-top: 2%;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    gap: 2%;
+    margin-bottom: 5%;
+}
+
+.image-gallery .thumbnail {
+    width: 125px;
+    height: 100px;
+    border-radius: 10%;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.thumbnail.selected {
+    opacity: 1;
+    border: 2px solid #007bff;
+}
+
+.thumbnail:hover {
+    opacity: 1;
+}
+
+.produkdetail-foto {
+    width: 650px;
+    height: 650px;
     background-color: #f1f1f1;
     box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1);
-    border-radius: 0.5vw;
-    margin: 0;
-    width: 28vw;
-    height: 38vw;
-    display: flex;
+    border-radius: 10px;
+    display: block;
     flex-direction: column;
     object-fit: cover;
-    padding: 0;
 }
 
 /* foto kecil */
-.produkdetail-fotokecil {
-    background-color: #f1f1f1;
-    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1);
-    border-radius: 0.5vw;
-    margin: 0;
-    width: 6vw;
-    height: 6vw;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    object-fit: cover;
-}
 
-/* produkdetail-text */
+.section-detail-produk {
+    display: flex;
+}
 
 .produkdetail-title {
     font-weight: bold;
-    font-size: 3vw;
-    margin-bottom: 2vw;
+    font-size: 26px;
     margin-top: 0;
 }
 
 .produkdetail-text {
-    font-size: 1.5vw;
-    margin-top: 2vw;
+    font-size: 18px;
     color: #000000;
-    font-weight: lighter;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.produkdetail-kategori {
+    font-size: 12px;
+    color: grey;
+}
+
+.btn-buy {
+    background-color: #afda00;
+    color: #1a1a1a;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    width: 100%;
+    height: 5vh;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 0.2vw 0.6vw;
+}
+
+.btn-buy:hover {
+    background-color: #d2eb6e;
+}
+
+.produkdetail-harga {
+    font-size: 32px;
+}
+
+.detail-produk {
+    padding: 1%;
 }
 
 /* ~~~~~ Pop Ups: ~~~~~ */
@@ -881,8 +958,8 @@ table {
 } */
 
 .card-title {
-  font-size: 2rem; /* Use rem for better scaling */
-  text-align: left;
+    font-size: 2rem; /* Use rem for better scaling */
+    text-align: left;
     font-size: 2rem; /* Use rem for better scaling */
 }
 
@@ -903,14 +980,22 @@ img {
 .card-body {
     margin-top: 0;
     margin-bottom: 0;
-} 
+}
 
-.card-body-card1{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  margin-left: 10vh;
+.card-body-card1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 10vh;
+}
+
+.card-body-card1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 10vh;
 }
 
 .maps-box h1 {
@@ -939,9 +1024,13 @@ img {
 }
 .galeri-foto {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    grid-auto-rows: 250px;
-    gap: 10px;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(400px, 1fr)
+    ); /* Adjust column size */
+    grid-auto-rows: 250px; /* Set the base row size */
+    gap: 25px;
+    grid-auto-flow: dense; /* Fill in the gaps densely */
     max-width: 100%;
     padding: 0 4vw;
     margin: 0 auto;
@@ -959,22 +1048,46 @@ img {
     transform: scale(1.05);
 }
 
-.galeri-foto img:nth-child(1) {
+/* Apply spans for specific images (optional) */
+.galeri-foto img:nth-child(4n + 1) {
     grid-column: span 2;
     grid-row: span 2;
 }
 
-.galeri-foto img:nth-child(3) {
+.galeri-foto img:nth-child(4n + 3) {
     grid-column: span 1;
     grid-row: span 2;
 }
 
-.galeri-foto img:nth-child(5) {
+.galeri-foto img:nth-child(4n + 5) {
     grid-column: span 2;
     grid-row: span 1;
 }
 
 @media (max-width: 768px) {
+    .btn-product-home {
+        font-size: 18px;
+        width: 100px;
+    }
+    .section-detail-produk {
+        flex-direction: column;
+        margin: 0 2% 0 2%;
+    }
+    .container-fotodetail {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .group-fotodetail {
+        width: 80%;
+        margin-right: 0;
+        margin-bottom: 2%;
+    }
+
     .container-logo {
         padding: 0;
     }
@@ -1032,114 +1145,243 @@ img {
         width: 70px;
     }
 
-.foto-section {
+    .foto-section {
         width: 100%;
         border-radius: 0.5vw;
         margin: auto;
-      }
+    }
 
-.card-title {
-    font-size: 100%;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: #1a1a1a;
-    border-bottom: 3px solid #1a1a1a; /* Underline with border */
-    padding-bottom: 0.2em; /* Control the gap here */
-    display: inline-block; /* Ensure it only affects the text */
-}
+    .card-title {
+        font-size: 100%;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: #1a1a1a;
+        border-bottom: 3px solid #1a1a1a; /* Underline with border */
+        padding-bottom: 0.2em; /* Control the gap here */
+        display: inline-block; /* Ensure it only affects the text */
+    }
 
-.card-content {
-  font-size: 80%;
-  line-height: 1.6; /* Utk jarak enter/paragraf */
-  color: #19392A;
-  margin-top: 2vh;
-  text-align: justify;
-    font-size: 1.5vw;
-    line-height: 1.6; /* Utk jarak enter/paragraf */
-    color: #19392a;
-    text-align: justify;
-}
+    .card-content {
+        font-size: 80%;
+        line-height: 1.6; /* Utk jarak enter/paragraf */
+        color: #19392a;
+        margin-top: 2vh;
+        text-align: justify;
+        font-size: 1.5vw;
+        line-height: 1.6; /* Utk jarak enter/paragraf */
+        color: #19392a;
+        text-align: justify;
+    }
 
-.small-btn {
-    background-color: #afda00;
-    color: #1a1a1a;
-    text-align: center;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 80%;
-    margin: 1.5vw 0;
-    width: 30%;
-    height: 1.8rem;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 0.2vw 0.6vw;
-}
+    .small-btn {
+        background-color: #afda00;
+        color: #1a1a1a;
+        text-align: center;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 80%;
+        margin: 1.5vw 0;
+        width: 30%;
+        height: 1.8rem;
+        box-shadow: rgba(0, 0, 0, 0.25) 0 0.2vw 0.6vw;
+    }
 
-.section-paper {
-    background-image: url(/photos/SectionPaper.webp);
-    background-size: cover;
-    background-position: center;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    position: relative;
-    z-index: 0;
-    overflow: hidden;
-}
+    .section-paper {
+        background-image: url(/photos/SectionPaper.webp);
+        background-size: cover;
+        background-position: center;
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+        position: relative;
+        z-index: 0;
+        overflow: hidden;
+    }
 
-.card1beranda {
-  display: flex;
-    border-radius: 0 1.5vw 1.5vw 0;
-    background-color: #cff699;
-    width: 87%;
-    padding-left: 2vh;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 0.4vw 0.8vw;
-}
+    .card1beranda {
+        display: flex;
+        border-radius: 0 1.5vw 1.5vw 0;
+        background-color: #cff699;
+        width: 87%;
+        padding-left: 2vh;
+        box-shadow: rgba(0, 0, 0, 0.25) 0 0.4vw 0.8vw;
+    }
 
-.card-body-card1{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  margin-left: 4vh;
-}
+    .card-body-card1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-left: 4vh;
+    }
 
+    .card-title-card1 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: #1a1a1a;
+        border-bottom: 4px solid #1a1a1a;
+        padding-bottom: 0.1em;
+        display: inline-block;
+        text-align: left;
+    }
 
-.card-title-card1 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: #1a1a1a;
-    border-bottom: 3px solid #1a1a1a; /* Underline with border */
-    padding-bottom: 0.2em; /* Control the gap here */
-    display: inline-block; /* Ensure it only affects the text */
-    text-align: left;
-}
+    .card-content-card1 {
+        color: #19392a;
+        margin-top: 2vh;
+        padding-right: 1vw;
+        text-align: justify;
+        font-size: 10px;
+        line-height: 1.6; /* Utk jarak enter/paragraf */
+    }
 
-
-.card-content-card1 {
-  color: #19392A;
-  margin-top: 2vh;
-  padding-right: 1vw;
-  text-align: justify;
-  font-size: 10px;
-  line-height: 1.6; /* Utk jarak enter/paragraf */
-}
-
-.foto-section {
-    width: 35%;
-    height: 35%;
-    object-fit: cover;
-    margin: 2rem;
-    border-radius: 0.8vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 0.4vw 0.8vw;
-}
-
+    .foto-section {
+        width: 35%;
+        height: 35%;
+        object-fit: cover;
+        margin: 2rem;
+        border-radius: 0.8vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.25) 0 0.4vw 0.8vw;
+    }
 }
 
 @media (max-width: 576px) {
+    .card1beranda {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        width: 100%;
+        padding-left: 0;
+        box-shadow: none;
+        margin-top: 5%;
+    }
+
+    .card-body-card1 {
+        display: flex;
+        align-items: center;
+        width: 70%;
+        margin-top: 5%;
+        margin-left: 0;
+    }
+
+    .card-title-card1 {
+        font-size: 30px;
+        display: flex;
+        align-self: flex-start;
+        text-align: left;
+    }
+
+    .card-content-card1 {
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .btn-donate-home {
+        margin-top: 8%;
+        width: 60% !important;
+        padding: 2% 0 2% 0;
+        font-size: 24px !important;
+    }
+
+    .section-paper {
+        padding: 0;
+    }
+
+    .foto-section {
+        margin: 0;
+        width: 70%;
+        border-radius: 20px;
+    }
+
+    .card2beranda {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        width: 100%;
+        padding-left: 0;
+        box-shadow: none;
+    }
+
+    .content-wrapper-card2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+    }
+
+    .card-body-card2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5%;
+        margin-left: 0;
+    }
+
+    .card-title-2 {
+        font-size: 30px;
+        display: flex;
+        align-self: flex-start;
+        text-align: left;
+    }
+
+    .card-content-2 {
+        font-size: 16px;
+        width: 100%;
+        margin-top: 2vh;
+    }
+
+    .foto-section2 {
+        width: 100%;
+        margin: 0;
+    }
+
+    .card-title-katalog {
+        display: flex;
+        align-self: flex-start;
+        text-align: left;
+    }
+
+    .produkdetail-foto {
+        width: 350px;
+        height: 350px;
+    }
+
+    .image-gallery .thumbnail {
+        width: 70px;
+        height: 70px;
+    }
+    .group-fotodetail {
+        width: 80%;
+        margin: 0;
+    }
+
+    .container-fotodetail {
+        margin: 0;
+    }
+
+    .produkdetail-title {
+        margin-top: 4%;
+        font-size: 22px;
+    }
+
+    .produkdetail-text {
+        font-size: 14px;
+    }
+
+    .produkdetail-kategori {
+        font-size: 12px;
+    }
+
     .galeri-foto {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -1256,5 +1498,19 @@ img {
 
     .scrollProduk ul {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 375px) {
+    .group-fotodetail {
+        width: 70%;
+    }
+    .produkdetail-foto {
+        width: 250px;
+        height: 250px;
+    }
+    .image-gallery .thumbnail {
+        width: 50px;
+        height: 50px;
     }
 }
