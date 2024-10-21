@@ -262,10 +262,10 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 100%;
     margin: 1.5vw 0;
-    width: 12%;
-    height: 5vh;
+    width: 20%;
+    height: 2rem;
     box-shadow: rgba(0, 0, 0, 0.25) 0 0.2vw 0.6vw;
 }
 
@@ -287,55 +287,23 @@ body {
 
 /* ~~~~~ Card Assets: ~~~~~ */
 .card1beranda {
+    display: flex;
     border-radius: 0 1.5vw 1.5vw 0;
     background-color: #cff699;
-    width: 90%;
-    height: auto;
-    padding: 0vw 0vw 0vw 9vw;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 0.4vw 0.8vw;
-    margin: 10vh 0 8vh 0;
-    border-radius: 0 1.5vw 1.5vw 0;
-    background-color: #cff699;
-    width: 97vw;
-    height: auto;
-    margin-left: -10%;
-    padding: 0vw 0vw 0vw 9vw;
+    width: 87%;
+    padding-left: 2vh;
     box-shadow: rgba(0, 0, 0, 0.25) 0 0.4vw 0.8vw;
 }
 
 .foto-section {
-    height: 23vw;
-    width: 23vw;
-    margin: 2vw;
-    border-radius: 0.8vw;
-    display: flex;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 0.4vw 0.8vw;
-    height: 25vw;
-    width: 25vw;
+    width: 350px;
     object-fit: cover;
-    margin: 2vw;
+    margin: 2rem;
     border-radius: 0.8vw;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.25) 0 0.4vw 0.8vw;
-}
-
-.foto-section2 {
-    object-fit: cover;
-    border-radius: 0.8vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 13vw;
-    width: 13vw;
-    margin: 5vw 2.5vw 0 0;
-    object-fit: cover;
-    border-radius: 0.8vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .foto-komunitas {
@@ -351,10 +319,87 @@ body {
     margin: 0;
 }
 
+/* .card2beranda {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20vh;
+}
+
+.content-wrapper-card2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+
+}
+
+.foto-section2 {
+  width: 25%;
+  max-width: 200px;
+  object-fit: cover;
+  margin-right: 2rem;
+}
+
+.card-title-2 {
+  width: 65%;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.card-content-2 {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #19392A;
+  margin-top: 2vh;
+  text-align: justify;
+  padding-top: 1vw;
+  width: 65%;
+} */
+
 .card2beranda {
-    width: 75%;
-    margin: auto;
-    padding-bottom: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the entire section horizontally */
+    align-items: center; /* Center the content vertically */
+    padding: 10vh 0 20vh 0; /* Add vertical padding */
+}
+
+.content-wrapper-card2 {
+    display: flex;
+    justify-content: center; /* Center the content horizontally inside the wrapper */
+    align-items: center; /* Ensure image and text are vertically aligned */
+    width: 70%; /* Ensure the container takes up 80% of the available width */
+    max-width: 1200px; /* Limit the width for larger screens */
+}
+
+.foto-section2 {
+    width: 25%; /* Set image width */
+    max-width: 250px; /* Prevent the image from becoming too large */
+    object-fit: cover; /* Ensure the image keeps its aspect ratio */
+    margin-right: 2rem; /* Space between image and text */
+}
+
+.card-title-2,
+.card-content-2 {
+    width: 100%; /* Text container takes up remaining space */
+}
+
+.card-title-2 {
+    font-weight: bold;
+    color: #1a1a1a;
+    border-bottom: 4px solid #1a1a1a; /* Underline with border */
+    padding-bottom: 0.1em; /* Control the gap here */
+    display: inline; /* Change to inline to fit the text only */
+    text-align: left; /* Ensure title aligns to the left */
+}
+
+.card-content-2 {
+    font-size: 1.2rem; /* Adjust the text size */
+    line-height: 1.6; /* Set line height for readability */
+    text-align: justify; /* Align text for neat look */
+    margin-top: 5vh;
 }
 
 /* .card img {
@@ -365,9 +410,18 @@ body {
 
 /* typography: */
 .card-title {
-    font-size: 20px;
+    font-size: 5vw;
     font-weight: bold;
-
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+    border-bottom: 3px solid #1a1a1a; /* Underline with border */
+    padding-bottom: 0.2em; /* Control the gap here */
+    display: inline-block; /* Ensure it only affects the text */
+}
+.card-title-card1 {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 1rem;
     color: #1a1a1a;
     border-bottom: 3px solid #1a1a1a;
     padding-bottom: 0.2em;
@@ -384,27 +438,13 @@ body {
     margin-bottom: 3vh;
 }
 
-.card-content {
-    font-size: 1.5vw;
-    line-height: 1.6; /* Utk jarak enter/paragraf */
+.card-content-card1 {
     color: #19392a;
     margin-top: 2vh;
     padding-right: 4vw;
     text-align: justify;
-    font-size: 1.5vw;
+    font-size: 18px;
     line-height: 1.6; /* Utk jarak enter/paragraf */
-    color: #19392a;
-    margin: 0;
-    text-align: justify;
-}
-
-.card-content-2 {
-    font-size: 1vw;
-    line-height: 1.6; /* Utk jarak enter/paragraf */
-    color: #19392a;
-    margin-top: 2vh;
-    text-align: justify;
-    padding-top: 1vw;
 }
 
 /* card Produk */
@@ -914,6 +954,22 @@ img {
     margin-bottom: 0;
 }
 
+.card-body-card1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 10vh;
+}
+
+.card-body-card1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 10vh;
+}
+
 .maps-box h1 {
     font-weight: bold;
     font-size: 3vw;
@@ -1044,11 +1100,6 @@ img {
         height: 50vw;
     }
 
-    .card1beranda {
-        margin-left: 0;
-        padding: 5vw;
-    }
-
     .produk-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 3vw;
@@ -1060,6 +1111,109 @@ img {
 
     .footer-logo {
         width: 70px;
+    }
+
+    .foto-section {
+        width: 100%;
+        border-radius: 0.5vw;
+        margin: auto;
+    }
+
+    .card-title {
+        font-size: 100%;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: #1a1a1a;
+        border-bottom: 3px solid #1a1a1a; /* Underline with border */
+        padding-bottom: 0.2em; /* Control the gap here */
+        display: inline-block; /* Ensure it only affects the text */
+    }
+
+    .card-content {
+        font-size: 80%;
+        line-height: 1.6; /* Utk jarak enter/paragraf */
+        color: #19392a;
+        margin-top: 2vh;
+        text-align: justify;
+        font-size: 1.5vw;
+        line-height: 1.6; /* Utk jarak enter/paragraf */
+        color: #19392a;
+        text-align: justify;
+    }
+
+    .small-btn {
+        background-color: #afda00;
+        color: #1a1a1a;
+        text-align: center;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 80%;
+        margin: 1.5vw 0;
+        width: 30%;
+        height: 1.8rem;
+        box-shadow: rgba(0, 0, 0, 0.25) 0 0.2vw 0.6vw;
+    }
+
+    .section-paper {
+        background-image: url(/photos/SectionPaper.webp);
+        background-size: cover;
+        background-position: center;
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+        position: relative;
+        z-index: 0;
+        overflow: hidden;
+    }
+
+    .card1beranda {
+        display: flex;
+        border-radius: 0 1.5vw 1.5vw 0;
+        background-color: #cff699;
+        width: 87%;
+        padding-left: 2vh;
+        box-shadow: rgba(0, 0, 0, 0.25) 0 0.4vw 0.8vw;
+    }
+
+    .card-body-card1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-left: 4vh;
+    }
+
+    .card-title-card1 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: #1a1a1a;
+        border-bottom: 3px solid #1a1a1a; /* Underline with border */
+        padding-bottom: 0.2em; /* Control the gap here */
+        display: inline-block; /* Ensure it only affects the text */
+        text-align: left;
+    }
+
+    .card-content-card1 {
+        color: #19392a;
+        margin-top: 2vh;
+        padding-right: 1vw;
+        text-align: justify;
+        font-size: 10px;
+        line-height: 1.6; /* Utk jarak enter/paragraf */
+    }
+
+    .foto-section {
+        width: 35%;
+        height: 35%;
+        object-fit: cover;
+        margin: 2rem;
+        border-radius: 0.8vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.25) 0 0.4vw 0.8vw;
     }
 }
 
