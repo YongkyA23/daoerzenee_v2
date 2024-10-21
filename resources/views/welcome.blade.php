@@ -7,46 +7,38 @@
      <div class="banner-image">
          <img src="{{ asset('photos/bannerBeranda.webp') }}" alt="Banner Beranda" class="banner-image">
          <div class="banner-text" style="width: 75vw;">
-             <h1 style="font-size: 5vw; font-weight: 650;">Welcome to Daoer Zenee</h1>
-             <p style="font-size: 2vw; font-weight: 300;">Explore our products, gallery, and much more!</p>
+             <h1 style="font-size: 5vw; font-weight: 650;">DAOER ZENEE</h1>
+             <p style="font-size: 2vw; font-weight: 500;">Daur Ulang Menciptakan Peluang</p>
          </div>
      </div>
  </section>
+
  <section>
      {{-- Paper Background --}}
      <div class="section-paper">
          <div class="card1beranda">
-             <div class="row g-0">
-                 {{-- CARD1 Beranda --}}
-                 <div class="col-md-8 col-8">
-                     <div class="card-body" style="margin: 6vw; padding:0;">
-                         <h4 class="card-title">Daoer Zenee</h4>
-                         <p style="margin: 2vw;"></p>
-                         <p class="card-content">Komunitas kami memberdayakan umat KLMTD (kaum kecil, lemah, miskin,
-                             telantar, disabilitas) dengan tujuan untuk membuat produk daur ulang. Mereka membawa
-                             semangat partisipasi dengan langkah-langkah kecil yang mencintai dan menyelamatkan bumi
-                             melalui prinsip-prinsip 'reuse-reduce-recycle-renew'.</p>
-
-                         <button class="small-btn" style="margin: 0; margin-top: 2vw">DONATE</button>
-                     </div>
-
-                 </div>
-                 <div class="col-md-4 col-4">
-                     <img src="{{ asset('photos/homeCard1.webp') }}" alt="FotoKegiatanKomunitas" class="foto-section">
-                 </div>
+             {{-- CARD1 Beranda --}}
+             <div class="card-body-card1">
+                 <h4 class="card-title-card1">Daoer Zenee</h4>
+                 <p class="card-content-card1">Komunitas kami memberdayakan umat KLMTD (kaum kecil, lemah, miskin,
+                     telantar, disabilitas) dengan tujuan untuk membuat produk daur ulang. Mereka membawa
+                     semangat partisipasi dengan langkah-langkah kecil yang mencintai dan menyelamatkan bumi
+                     melalui prinsip-prinsip 'reuse-reduce-recycle-renew'.</p>
+                 <button class="small-btn">DONATE</button>
              </div>
+             <img src="{{ asset('photos/homeCard1.webp') }}" alt="FotoKegiatanKomunitas" class="foto-section">
          </div>
-         <div>
+     </div>
 
  </section>
 
 
  <!-- Daur Ulang Article  -->
  <section class="card2beranda">
-     <div style="display: flex;">
+     <div class="content-wrapper-card2">
          <img src="{{ asset('photos/recycleLogo.webp') }}" alt="Logo Recycle" class="foto-section2">
          <div>
-             <h2 class="card-title mt-5 pt-4">Daur Ulang</h2>
+             <h2 class="card-title-2">Daur Ulang</h2>
              <p class="card-content-2">
                  Daur ulang adalah langkah penting untuk kelestarian lingkungan, dan komunitas Daoer Zenee berperan
                  aktif dalam mendorong praktik ini. Mereka mengedukasi masyarakat tentang pengurangan limbah dan
@@ -54,6 +46,7 @@
                  daur ulang. Ini memperkuat kesadaran lingkungan di kalangan anggota dan masyarakat luas.
              </p>
          </div>
+     </div>
  </section>
 
  {{-- Produk Katalog --}}
