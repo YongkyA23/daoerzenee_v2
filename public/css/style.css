@@ -510,12 +510,6 @@ body {
     margin-bottom: 0;
 }
 
-.produk-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12vw, 1fr));
-    gap: 2vw;
-}
-
 .card3katalog {
     display: flex;
 
@@ -529,9 +523,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .card-produk {
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: space-around;
