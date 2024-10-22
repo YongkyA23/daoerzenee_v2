@@ -24,7 +24,7 @@
                     telantar, disabilitas) dengan tujuan untuk membuat produk daur ulang. Mereka membawa
                     semangat partisipasi dengan langkah-langkah kecil yang mencintai dan menyelamatkan bumi
                     melalui prinsip-prinsip 'reuse-reduce-recycle-renew'.</p>
-                <button class="small-btn btn-donate-home">DONATE</button>
+                <button class="small-btn btn-donate-home">DONASI</button>
             </div>
             <img src="{{ asset('photos/homeCard1.webp') }}" alt="FotoKegiatanKomunitas" class="foto-section">
         </div>
@@ -52,10 +52,8 @@
     {{-- Produk Katalog --}}
     <section class="card3katalog">
         <div class="card-katalog-wrapper">
-            <h2 class="card-title-katalog">KATALOG PRODUK</h2>
+            <h2 class="card-title-katalog">Katalog Produk</h2>
             <div class="card-produk">
-
-
                 <div class="cardProduk h-100">
                     <img src="{{ asset('photos/smallPouch.webp') }}" class="img-product" alt="...">
                     <div class="cardProduk-body">
@@ -69,15 +67,13 @@
                     </div>
                     <div class="cardProduk-footer mt-auto">
                         <small>
-                            <a href="/produkdetail" style="color: black; text-decoration: none;"
+                            <a href="/produkdetail" style="color: black; text-decoration: none; font-weight: 400;"
                                 onmouseover="this.style.color='blue';" onmouseout="this.style.color='black';">
                                 Telusuri Lebih Lanjut
                             </a>
                         </small>
                     </div>
                 </div>
-
-
                 <div class="cardProduk h-100">
                     <img src="{{ asset('photos/smallPouch.webp') }}" class="img-product" alt="...">
                     <div class="cardProduk-body">
@@ -167,7 +163,7 @@
 
 
             <a href="/produk" style="color: black; text-decoration: none;">
-                <button class="btn-product-home">MORE</button>
+                <button class="btn-product-home">LEBIH BANYAK</button>
             </a>
 
         </div>
@@ -178,8 +174,8 @@
     <section>
         <div class="cardboard-card-home-luar">
             <div class="cardboard-card-home">
-                <h2 style="font-size: 7vw; font-weight: 650; color: #ffffff; ">Daoer Zenee</h2>
-                <h4 style="font-size: 3vw; font-weight: 350; color: #ffffff">Komunitas Kreativitas Daur Ulang</h4>
+                <h2>Daoer Zenee</h2>
+                <h4>Komunitas Kreativitas Daur Ulang</h4>
             </div>
         </div>
     </section>
