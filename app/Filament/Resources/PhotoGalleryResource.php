@@ -60,7 +60,7 @@ class PhotoGalleryResource extends Resource
 
                     Forms\Components\FileUpload::make('pathFoto')
                         ->label('Upload Photo')
-                        ->directory('photos')  // Store images in "storage/app/public/photos"
+                        ->directory('photos')
                         ->image()
                         ->required(),
 
