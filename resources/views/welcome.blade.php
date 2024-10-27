@@ -34,8 +34,6 @@
 </div>
 
 
-
-
 <!-- Daur Ulang Article  -->
 <section class="card2beranda">
     <div class="content-wrapper-card2">
@@ -53,126 +51,43 @@
 </section>
 
 {{-- Produk Katalog --}}
-<section class="card3katalog">
-    <div class="card-katalog-wrapper">
-        <h2 class="card-title-katalog">KATALOG PRODUK</h2>
-        <div class="card-produk">
 
-
-            <div class="cardProduk h-100">
-                <img src="{{ asset('photos/smallPouch.webp') }}" class="img-product" alt="...">
-                <div class="cardProduk-body">
-                    <h5 class="cardProduk-title">Small Pouch and Rosario</h5>
-                    <p class="cardProduk-text">Kombinasi unik small pouch dan kalung rosario, karya buatan tangan
-                        teman-teman KLMTD. Small pouch ini dirajut dengan penuh ketelitian dan cinta, sementara
-                        kalung rosario dibuat dengan tangan yang terampil, menjadikannya pilihan yang istimewa
-                        untuk Anda. Produk ini dapat dikustomisasi sesuai keinginan Anda. Untuk informasi lebih
-                        lanjut dan pemesanan, hubungi kami melalui WhatsApp.</p>
-                    <p class="cardProduk-harga">Rp000.000 - Rp000.000</p>
-                </div>
-                <div class="cardProduk-footer mt-auto">
-                    <small>
-                        <a href="/produkdetail" style="color: black; text-decoration: none;"
-                            onmouseover="this.style.color='blue';" onmouseout="this.style.color='black';">
-                            Telusuri Lebih Lanjut
-                        </a>
-                    </small>
-                </div>
-            </div>
-
-
-            <div class="cardProduk h-100">
-                <img src="{{ asset('photos/smallPouch.webp') }}" class="img-product" alt="...">
-                <div class="cardProduk-body">
-                    <h5 class="cardProduk-title">Small Pouch and Rosario</h5>
-                    <p class="cardProduk-text">Kombinasi unik small pouch dan kalung rosario, karya buatan tangan
-                        teman-teman KLMTD. Small pouch ini dirajut dengan penuh ketelitian dan cinta, sementara
-                        kalung rosario dibuat dengan tangan yang terampil, menjadikannya pilihan yang istimewa
-                        untuk Anda. Produk ini dapat dikustomisasi sesuai keinginan Anda. Untuk informasi lebih
-                        lanjut dan pemesanan, hubungi kami melalui WhatsApp.</p>
-                    <p class="cardProduk-harga">Rp000.000 - Rp000.000</p>
-                </div>
-                <div class="cardProduk-footer mt-auto">
-                    <small>
-                        <a href="/produkdetail" style="color: black; text-decoration: none;"
-                            onmouseover="this.style.color='blue';" onmouseout="this.style.color='black';">
-                            Telusuri Lebih Lanjut
-                        </a>
-                    </small>
-                </div>
-            </div>
-
-            <div class="cardProduk h-100">
-                <img src="{{ asset('photos/dompetKoin.webp') }}" class="img-product" alt="...">
-                <div class="cardProduk-body">
-                    <h5 class="cardProduk-title">Dompet Koin</h5>
-                    <p class="cardProduk-text">Dompet koin ini dirancang dari kain perca dengan berbagai tekstur
-                        dan warna yang menarik, menciptakan aksesori kecil yang penuh gaya dan fungsional.
-                        Kompartemen yang praktis memungkinkan Anda menyimpan koin dengan rapi dan mudah dijangkau.
-                        Setiap dompet menampilkan kombinasi kain yang unik, menambahkan sentuhan kreatif pada
-                        barang-barang sehari-hari Anda. Untuk pesanan kustom atau informasi lebih lanjut, hubungi
-                        kami di WhatsApp.</p>
-                    <p class="cardProduk-harga">Rp000.000 - Rp000.000</p>
-                </div>
-                <div class="cardProduk-footer mt-auto">
-                    <small>
-                        <a href="/produkdetail" style="color: black; text-decoration: none;"
-                            onmouseover="this.style.color='blue';" onmouseout="this.style.color='black';">
-                            Telusuri Lebih Lanjut
-                        </a>
-                    </small>
-                </div>
-            </div>
-
-            <div class="cardProduk h-100">
-                <img src="{{ asset('photos/Ornamen_Pohon_Natal.webp') }}" class="img-product" alt="...">
-                <div class="cardProduk-body">
-                    <h5 class="cardProduk-title">Ornamen Pohon Natal</h5>
-                    <p class="cardProduk-text">Ornamen Pohon Natal ini dibuat dari kertas yang digulung dan
-                        dijalin dengan penuh keahlian, menghasilkan desain yang indah dan penuh warna. Setiap
-                        ornamen dihiasi dengan detail yang menarik, menambah keindahan dan keceriaan pada pohon
-                        Natal Anda. Produk ini juga dapat disesuaikan sesuai keinginan Anda. Untuk informasi lebih
-                        lanjut atau pesanan kustom, silakan hubungi kami di WhatsApp.</p>
-                    <p class="cardProduk-harga">Rp000.000 - Rp000.000</p>
-                </div>
-                <div class="cardProduk-footer mt-auto">
-                    <small>
-                        <a href="/produkdetail" style="color: black; text-decoration: none;"
-                            onmouseover="this.style.color='blue';" onmouseout="this.style.color='black';">
-                            Telusuri Lebih Lanjut
-                        </a>
-                    </small>
-                </div>
-            </div>
-
-            <div class="cardProduk h-100">
-                <img src="{{ asset('photos/ponco.webp') }}" class="img-product" alt="...">
-                <div class="cardProduk-body">
-                    <h5 class="cardProduk-title">Ponco</h5>
-                    <p class="cardProduk-text">Tambahkan sentuhan chic ke dalam gaya Anda dengan ponco rajutan
-                        buatan tangan teman-teman KLMTD. Dirajut dengan penuh perhatian, ponco ini menghadirkan
-                        kehangatan dan keleluasaan dengan desain yang modern dan stylish. Tersedia dalam pilihan
-                        warna yang menarik, ponco ini sempurna untuk menambah gaya dan kenyamanan Anda. Kami juga
-                        menawarkan opsi kustomisasi untuk memastikan ponco Anda mencerminkan kepribadian Anda.
-                        Untuk informasi lebih lanjut dan pemesanan, hubungi kami melalui WhatsApp.</p>
-                    <p class="cardProduk-harga">Rp000.000 - Rp000.000</p>
-                </div>
-                <div class="cardProduk-footer mt-auto">
-                    <small>
-                        <a href="/produkdetail" style="color: black; text-decoration: none;"
-                            onmouseover="this.style.color='blue';" onmouseout="this.style.color='black';">
-                            Telusuri Lebih Lanjut
-                        </a>
-                    </small>
-                </div>
-            </div>
+<section class="product-categories">
+    <div class="container">
+        @foreach ($categories->take(1) as $category)
+        <!-- Category Name -->
+        <div class="title-container">
+            <h1 class="card-title-katalog">KATALOG PRODUK</h1>
         </div>
 
-
-        <a href="/produk" style="color: black; text-decoration: none;">
-            <button class="btn-product-home">MORE</button>
-        </a>
-
+        <!-- Product Row for Each Category -->
+        <div class="product-row row row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+            @forelse ($category->produk->take(5) as $product)
+            <div class="col">
+                <div class="product-card">
+                    <div class="isicard-atas">
+                        <img src="{{ $product->fotoProduk }}" alt="Product Image" onerror="this.src='https://via.placeholder.com/150';" style="border: 0.2vw solid #afda00;">
+                        <h6 class="mt-3">{{ $category->namaKategori }}</h6>
+                        <p>{{ $product->namaProduk }}</p>
+                        <p class="price">Rp. {{ number_format($product->hargaProduk, 0, ',', '.') }}</p>
+                        <p style="font-size: 10px;">Lebih banyak pilihan tersedia</p>
+                    </div>
+                    <a href="#" class="icon-link"><i class="bi bi-chevron-double-right rotated-icon"></i></a>
+                </div>
+            </div>
+            @empty
+            <!-- No Products Available -->
+            <div class="col-12">
+                <p class="text-center">Tidak ada produk tersedia dalam kategori ini.</p>
+            </div>
+            @endforelse
+        </div> <!-- End of Product Row -->
+        @endforeach
+        <div class="button-container-home">
+            <a href="/produk" style="color: black; text-decoration: none;">
+                <button class="btn-product-home">MORE</button>
+            </a>
+        </div>
     </div>
 </section>
 

@@ -7,9 +7,7 @@ use App\Http\Controllers\ProductCategoryController;
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Route::get('/kontak', function () {
     return view('kontak');
@@ -33,6 +31,8 @@ Route::get('/detailproduk', function () {
 
 Route::get('/products', [ProductCategoryController::class, 'index'])->name('products.index');
 Route::get('/products/{slug}', [ProductCategoryController::class, 'show'])->name('products.show');
+
+Route::get('/', [ProductCategoryController::class, 'welcome'])->name('welcome');
 
 
 Route::get('/galleries', [PhotoGalleryController::class, 'index'])->name('galleries.index');

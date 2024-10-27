@@ -32,4 +32,13 @@ class ProductCategoryController extends Controller
         // Pass the category and its products to the view
         return view('products.show', compact('category'));
     }
+
+    public function welcome()
+    {
+        // Fetch all categories with their related products
+        $categories = KategoriProduk::with('produk')->get();
+
+        // Pass the data to the view
+        return view('welcome', compact('categories'));
+    }
 }

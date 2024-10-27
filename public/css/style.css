@@ -388,7 +388,6 @@ body {
     border-bottom: 4px solid #1a1a1a;
     padding-bottom: 0.2em;
     display: inline-block;
-    text-align: left;
     margin-bottom: 3vh;
 }
 
@@ -507,23 +506,26 @@ body {
     font-size: 25px;
     width: 150px;
     height: auto;
-    margin: 20% 0;
     background-color: #afda00;
     color: #1a1a1a;
-
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-
-    margin: 25% 0;
-
     box-shadow: rgba(0, 0, 0, 0.25) 0 0.2vw 0.6vw;
+    color: black; 
+    text-decoration: none; 
 }
+
+.button-container-home{
+    text-align: center; 
+    margin: 30px 0 0 0;
+}
+
 
 /* General styling for the product categories section */
 .product-categories {
-    margin: 8% 0 8% 0;
+    margin: 10px 0 8% 0;
 }
 
 /* Product Card Styling */
@@ -1151,14 +1153,17 @@ img {
 }
 
 @media (max-width: 768px) {
+
     .btn-product-home {
         font-size: 18px;
         width: 100px;
     }
+
     .section-detail-produk {
         flex-direction: column;
         margin: 0 2% 0 2%;
     }
+
     .container-fotodetail {
         width: 100%;
         display: flex;
@@ -1177,6 +1182,7 @@ img {
     .container-logo {
         padding: 0;
     }
+
     .maps-btn {
         width: 100px;
         height: 35px;
@@ -1199,14 +1205,17 @@ img {
         padding-top: 5vh;
         padding-bottom: 5vh;
     }
+
     .cardboard-card {
         width: 100%;
     }
+
     .cardboard-card h1 {
         font-size: 3rem;
         text-shadow: rgba(0, 0, 0, 0.25) 0 0.4vw 0.8vw;
         letter-spacing: 0.5rem;
     }
+
     .cardboard-card h2 {
         font-size: 1.5rem;
         font-weight: 300;
@@ -1578,6 +1587,18 @@ img {
         gap: 10px; /* Add space between the cards */
 
     }
+
+    .product-card {
+        flex: 0 0 auto; /* Prevent cards from shrinking */
+        width: 240px; /* Set a fixed width for each card */
+        margin-right: 15px; /* Add some space between cards */
+    }
+
+
+    .row-cols-md-5 .col {
+        flex: 0 0 50%; /* Full-width cards on small screens */
+        max-width: 50%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1636,8 +1657,20 @@ img {
         flex-wrap: nowrap; /* Prevent wrapping of cards */
         overflow-x: auto; /* Enable horizontal scroll */
         -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
-        gap: 1px; /* Add space between the cards */
+        gap: 0.5px; /* Add space between the cards */
 
+    }
+
+    .product-card {
+        flex: 0 1 auto; /* Prevent cards from shrinking */
+        width: 200px; /* Set a fixed width for each card */
+        margin-right: 1px; /* Add some space between cards */
+    }
+
+
+    .row-cols-sm-5 .col {
+        flex: 0 0 50%; /* Full-width cards on small screens */
+        max-width: 50%;
     }
 }
 
