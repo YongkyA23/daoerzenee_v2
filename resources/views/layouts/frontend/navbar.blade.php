@@ -30,7 +30,7 @@
                         <a class="nav-link" href="/">Beranda</a>
                     </li>
                     <li class="nav-item me-4">
-                        <a class="nav-link" href="/produk">Produk</a>
+                        <a class="nav-link" href="/products">Produk</a>
                     </li>
                     <li class="nav-item me-4">
                         <a class="nav-link" href="/profil">Profil Komunitas</a>
