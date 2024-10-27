@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PhotoGalleryController;
+use App\Http\Controllers\ProductCategoryController;
 
 
 
@@ -18,6 +19,10 @@ Route::get('/galeri', function () {
     return view('galeri');
 });
 
+Route::get('/profil', function () {
+    return view('profil');
+});
+
 Route::get('/detailproduk', function () {
     return view('produk.detail');
 });
@@ -25,8 +30,9 @@ Route::get('/detailproduk', function () {
 
 
 
-Route::get('/products', [ProductController::class, 'index'])->name('products.index');
-Route::get('/products/{slug}', [ProductController::class, 'show'])->name('products.show');
+
+Route::get('/products', [ProductCategoryController::class, 'index'])->name('products.index');
+Route::get('/products/{slug}', [ProductCategoryController::class, 'show'])->name('products.show');
 
 
 Route::get('/galleries', [PhotoGalleryController::class, 'index'])->name('galleries.index');
