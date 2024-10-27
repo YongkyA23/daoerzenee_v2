@@ -8,6 +8,8 @@ use App\Models\Produk;
 use App\Models\KategoriProduk;
 use Filament\Actions\Modal\Actions\Action;
 use Filament\Forms;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Repeater;
 use Filament\Forms\Form;
 use Filament\Forms\Set;
 use Filament\Resources\Resource;
@@ -82,17 +84,23 @@ class ProductResource extends Resource
                                 ->helperText('Provide a short description of this product category.'),
                         ])
                         ->required(),
-                    Forms\Components\FileUpload::make('fotoProduk')
-                        ->label('Product Image')
-                        ->directory('products')
-                        ->image()
-                        ->required()
-                        ->maxSize(10240)
-                        ->imageCropAspectRatio('1:1')
-                        ->imageResizeMode('contain')
-                        ->imageResizeTargetWidth(2000)
-                        ->imageResizeTargetHeight(2000)
-                        ->rules('dimensions:max_width=2000,max_height=2000')
+                    Repeater::make('images')
+                        ->relationship('images')
+                        ->schema([
+                            FileUpload::make('pathFoto')
+                                ->label('Product Image')
+                                ->directory('products')
+                                ->image()
+                                ->required()
+                                ->maxSize(10240)
+                                ->imageCropAspectRatio('1:1')
+                                ->imageResizeMode('contain')
+                                ->imageResizeTargetWidth(2000)
+                                ->imageResizeTargetHeight(2000)
+                        ])
+                        ->label('Product Images')
+                        ->minItems(1)
+                        ->maxItems(10),
                 ]),
             ]);
     }
@@ -106,9 +114,11 @@ class ProductResource extends Resource
                     ->sortable()
                     ->searchable(),
 
-                Tables\Columns\ImageColumn::make('fotoProduk')
+
+                Tables\Columns\ImageColumn::make('images.pathFoto')
                     ->disk('public')
-                    ->label('Product Image'),
+                    ->size(150)
+                    ->limit(1),
 
                 Tables\Columns\TextColumn::make('deskripsiProduk')
                     ->label('Description'),
