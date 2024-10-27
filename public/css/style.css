@@ -184,6 +184,14 @@ body {
     text-shadow: rgba(0, 0, 0, 0.85) 0 0.4vw 0.8vw;
 }
 
+.banner-text h1 {
+    font-size: 48px;
+}
+
+.banner-text p {
+    font-size: 24px;
+}
+
 .banner-text-produk {
     margin: 0;
     position: absolute;
@@ -205,8 +213,6 @@ body {
     display: flex;
 }
 
-
-
 .input-group {
     width: 10%;
     height: 10%;
@@ -220,37 +226,6 @@ body {
     display: flex;
 }
 
-/* {{-- Media Queries --}} */
-/* @media(max-width: 1280px) {
-  .banner-image {
-    width: 100%;
-    height: 60vw;
-  }
-  .banner-section {
-    width: 100%;
-    height: 60vw;
-    background-color: rgba(220, 41, 202, 0);
-  }
-}
-
-@media(max-width: 480px) {
-  .banner-image {
-    width: 100%;
-    height: 30vw;
-  }
-  .banner-section {
-    width: 100%;
-    height: 30vw;
-    background-color: rgba(220, 41, 41, 0);
-  }
-} */
-
-/* Tablet Screens */
-
-/* Mobile Screens */
-
-/* ~~~~~ Navbar: ~~~~~ */
-/* elemen navbar */
 #my-navbar .navbar-light {
     color: #1a1a1a;
 }
@@ -276,9 +251,6 @@ body {
 .navbar li {
     font-size: 18px;
 }
-
-/* ~~~~~ Button Assets: ~~~~~ */
-/* 1) Small Button */
 
 .small-btn {
     background-color: #afda00;
@@ -344,45 +316,6 @@ body {
     height: 18vw;
     margin: 0;
 }
-
-/* .card2beranda {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 20vh;
-}
-
-.content-wrapper-card2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-
-}
-
-.foto-section2 {
-  width: 25%;
-  max-width: 200px;
-  object-fit: cover;
-  margin-right: 2rem;
-}
-
-.card-title-2 {
-  width: 65%;
-  margin-bottom: 1rem;
-  font-size: 2rem;
-}
-
-.card-content-2 {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #19392A;
-  margin-top: 2vh;
-  text-align: justify;
-  padding-top: 1vw;
-  width: 65%;
-} */
 
 .card2beranda {
     width: 100%;
