@@ -175,6 +175,10 @@ body {
 .banner-text {
     margin: 0;
     position: absolute;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 50%;
     left: 50%;
     color: #fff;
@@ -186,6 +190,23 @@ body {
 
 .banner-text h1 {
     font-size: 48px;
+}
+
+.banner-text p {
+    font-size: 24px;
+}
+
+/* {{-- Media Queries --}} */
+/* @media(max-width: 1280px) {
+  .banner-image {
+    width: 100%;
+    height: 60vw;
+  }
+  .banner-section {
+    width: 100%;
+    height: 60vw;
+    background-color: rgba(220, 41, 202, 0);
+  }
 }
 
 .banner-text p {
@@ -322,7 +343,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10vh 0 10vh 0;
+    padding: 15% 0 15% 0;
 }
 
 .content-wrapper-card2 {
@@ -388,7 +409,6 @@ body {
     border-bottom: 4px solid #1a1a1a;
     padding-bottom: 0.2em;
     display: inline-block;
-    margin-bottom: 3vh;
     text-align: left;
     margin-bottom: 4%;
 }
@@ -415,8 +435,8 @@ body {
     box-shadow: rgba(0, 0, 0, 0.25) 0 0.2vw 0.6vw;
 }
 .img-product {
-    width: 15vw;
-    height: 14vw;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border: 0.2vw solid #afda00;
     margin: auto;
@@ -457,7 +477,7 @@ body {
     text-align: justify;
 }
 .cardProduk-footer {
-    font-size: 1vw;
+    font-size: 16px;
     color: #9b9b9b;
     font-weight: lighter;
     text-align: right;
@@ -470,21 +490,14 @@ body {
 }
 .cardProduk-harga {
     font-weight: 500;
-    font-size: 1vw;
+    font-size: 16px;
     color: #46c34c;
     align-items: end;
     margin-bottom: 0;
 }
 
-.produk-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12vw, 1fr));
-    gap: 2vw;
-}
-
 .card3katalog {
     display: flex;
-
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -495,18 +508,19 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .card-produk {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2%;
 }
 
 .btn-product-home {
     font-size: 25px;
-    width: 150px;
+    width: 250px;
     height: auto;
     background-color: #afda00;
     color: #1a1a1a;
@@ -1154,16 +1168,105 @@ img {
     grid-row: span 1;
 }
 
-@media (max-width: 768px) {
+.cardboard-card-home h2 {
+    font-size: 48px;
+    font-weight: 650;
+    color: #ffffff;
+}
 
+.cardboard-card-home h4 {
+    font-size: 36px;
+    font-weight: 350;
+    color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+    .card1beranda {
+        display: flex;
+        border-radius: 0 1.5vw 1.5vw 0;
+        background-color: #cff699;
+        width: 87%;
+        padding-left: 2vh;
+        box-shadow: rgba(0, 0, 0, 0.25) 0 0.4vw 0.8vw;
+    }
+
+    .card-body-card1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-left: 4vh;
+    }
+
+    .card-title-card1 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: #1a1a1a;
+        border-bottom: 4px solid #1a1a1a;
+        padding-bottom: 0.1em;
+        display: inline-block;
+        text-align: left;
+    }
+
+    .card-content-card1 {
+        color: #19392a;
+        margin-top: 2vh;
+        padding-right: 1vw;
+        text-align: justify;
+        font-size: 14px;
+        line-height: 1.6; /* Utk jarak enter/paragraf */
+    }
+
+    .foto-section {
+        width: 35%;
+        height: 35%;
+        object-fit: cover;
+        margin: 2rem;
+        border-radius: 0.8vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.25) 0 0.4vw 0.8vw;
+    }
+
+    .card-title-2 {
+        font-size: 24px;
+    }
+
+    .card-content-2 {
+        font-size: 14px;
+    }
+
+    .card-produk {
+        flex-wrap: wrap;
+    }
+
+    .cardProduk {
+        margin-top: 2%;
+    }
+
+    .cardboard-card-home h2 {
+        font-size: 36px;
+        font-weight: 650;
+        color: #ffffff;
+    }
+
+    .cardboard-card-home h4 {
+        font-size: 24px;
+        font-weight: 350;
+        color: #ffffff;
+    }
+}
+
+@media (max-width: 768px) {
     .banner-text p {
         text-align: center;
         font-size: 24px;
     }
-
     .btn-product-home {
         font-size: 18px;
-        width: 100px;
+        width: 150px;
     }
 
     .section-detail-produk {
@@ -1378,6 +1481,25 @@ img {
 }
 
 @media (max-width: 576px) {
+    .banner-text h1 {
+        font-size: 28px;
+    }
+
+    .banner-text p {
+        font-size: 16px;
+    }
+    .cardboard-card-home h2 {
+        font-size: 28px;
+    }
+
+    .cardboard-card-home h4 {
+        font-size: 16px;
+    }
+
+    .card-produk {
+        flex-wrap: wrap;
+    }
+
     .card1beranda {
         display: flex;
         flex-direction: column-reverse;
@@ -1413,9 +1535,9 @@ img {
 
     .btn-donate-home {
         margin-top: 8%;
-        width: 60% !important;
-        padding: 2% 0 2% 0;
-        font-size: 24px !important;
+        width: 40% !important;
+
+        font-size: 20px !important;
     }
 
     .section-paper {
@@ -1458,7 +1580,7 @@ img {
     .card-title-2 {
         font-size: 30px;
         display: flex;
-        align-self: flex-start;
+        align-self: flex-end;
         text-align: left;
     }
 
@@ -1474,6 +1596,7 @@ img {
     }
 
     .card-title-katalog {
+        font-size: 30px;
         display: flex;
         align-self: flex-start;
         text-align: left;
@@ -1510,6 +1633,10 @@ img {
         font-size: 12px;
     }
 
+    .card-katalog-wrapper {
+        width: 70%;
+    }
+
     .galeri-foto {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -1541,6 +1668,7 @@ img {
         padding-top: 5vh;
         padding-bottom: 5vh;
     }
+
     .cardboard-card {
         width: 100%;
     }
@@ -1645,7 +1773,7 @@ img {
     }
 
     .cardProduk {
-        width: 90%;
+        width: 100%;
         height: auto;
         margin: 1vw auto;
     }

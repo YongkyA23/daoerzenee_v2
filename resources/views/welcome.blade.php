@@ -85,7 +85,7 @@
         @endforeach
         <div class="button-container-home">
             <a href="/produk" style="color: black; text-decoration: none;">
-                <button class="btn-product-home">MORE</button>
+                <button class="btn-product-home">LEBIH BANYAK</button>
             </a>
         </div>
     </div>
@@ -96,9 +96,10 @@
 <section>
     <div class="cardboard-card-home-luar">
         <div class="cardboard-card-home">
-            <h2 style="font-size: 7vw; font-weight: 650; color: #ffffff; ">Daoer Zenee</h2>
-            <h4 style="font-size: 3vw; font-weight: 350; color: #ffffff">Komunitas Kreativitas Daur Ulang</h4>
+            <h2>Daoer Zenee</h2>
+            <h4>Komunitas Kreativitas Daur Ulang</h4>
         </div>
+    </div>
     </div>
 </section>
 @endsection
