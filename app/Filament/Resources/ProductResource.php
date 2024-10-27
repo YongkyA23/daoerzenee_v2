@@ -92,15 +92,16 @@ class ProductResource extends Resource
                                 ->directory('products')
                                 ->image()
                                 ->required()
-                                ->maxSize(10240)
+                                ->maxSize(5120)
                                 ->imageCropAspectRatio('1:1')
                                 ->imageResizeMode('contain')
-                                ->imageResizeTargetWidth(2000)
-                                ->imageResizeTargetHeight(2000)
+                                ->imageResizeTargetWidth(1000)
+                                ->imageResizeTargetHeight(1000)
                         ])
                         ->label('Product Images')
                         ->minItems(1)
-                        ->maxItems(10),
+                        ->maxItems(5)
+                        ->addButtonLabel('Add New Product Image'),
                 ]),
             ]);
     }
