@@ -389,6 +389,8 @@ body {
     padding-bottom: 0.2em;
     display: inline-block;
     margin-bottom: 3vh;
+    text-align: left;
+    margin-bottom: 4%;
 }
 
 .card-content-card1 {
@@ -1153,6 +1155,11 @@ img {
 }
 
 @media (max-width: 768px) {
+
+    .banner-text p {
+        text-align: center;
+        font-size: 24px;
+    }
 
     .btn-product-home {
         font-size: 18px;
