@@ -1,5 +1,176 @@
 @extends('layouts.frontend.master')
 
-@section('Content')
+@section('content')
+<section class="banner-section">
+    {{-- gambar --}}
+    <div class="banner-image">
+        <img src="{{ asset('photos/bannerProfilKomunitas.webp') }}" alt="Banner Beranda" class="banner-image">
+        <div class="banner-text-profil">
+            <h1>DAOER ZENEE</h1>
+            <p>Komunitas kami memberdayakan umat KLMTD (kaum kecil, lemah, miskin, telantar, disabilitas) dengan tujuan untuk membuat produk daur ulang. Mereka membawa semangat partisipasi dengan langkah-langkah kecil yang mencintai dan menyelamatkan bumi melalui prinsip-prinsip 'reuse-reduce-recycle-renew'.</p>
+        </div>
+    </div>
+</section>
+
+<section class="community-profile">
+    <!-- Profile Section -->
+    <div class="profile-section">
+        <div class="profile-text">
+            <h2 class="underline-title">PROFIL KOMUNITAS</h2>
+            <p><strong>Berdiri sejak :</strong> 14 November 2005</p>
+            <p><strong>Lokasi :</strong> Jl. Cawang Baru Utara No.45, RT 3 / RW 12 Cawang Kapling, Jakarta Timur 13340t</p>
+            <p><strong>Visi :</strong> Mendaur ulang dan menciptakan peluang.</p>
+            <p><strong>Misi :</strong></p>
+            <ul>
+                <li>Kreativitas daur ulang dan mengelola barang donasi.</li>
+                <li>Meningkatkan kreativitas (berbagai ilmu).</li>
+                <li>Memperoleh penghasilan.</li>
+                <li>Pengembangan bisnis.</li>
+            </ul>
+        </div>
+        <div class="profil-image">
+            <img src="{{ asset('photos/placeholder.webp') }}" alt="Profile Image">
+        </div>
+    </div>
+
+    <div class="member-count-section">
+        <h2 class="underline-title">JUMLAH ANGGOTA</h2>
+        <div class="member-count-boxes d-flex flex-wrap gap-2 justify-content-around">
+            <div class="count-box">
+                <span>39</span>
+                <p>Total</p>
+            </div>
+            <div class="count-box">
+                <span>10</span>
+                <p>Disabilitas</p>
+            </div>
+            <div class="count-box">
+                <span>2</span>
+                <p>Ortu Disabilitas</p>
+            </div>
+            <div class="count-box">
+                <span>5</span>
+                <p>Transpuan</p>
+            </div>
+            <div class="count-box">
+                <span>10</span>
+                <p>ODGJ</p>
+            </div>
+            <div class="count-box">
+                <span>2</span>
+                <p>Single Mom</p>
+            </div>
+            <div class="count-box">
+                <span>10</span>
+                <p>Lansia Produktif*</p>
+            </div>
+        </div>
+        <p class="note">*orang wanita yang berdampak covid19, Kelompok Usaha Pucuk Si Loo Agung</p>
+    </div>
+</section>
+
+<div class="org-structure">
+    <h2 class="section-title">STRUKTUR ORGANISASI</h2>
+
+    <!-- Leadership Team -->
+    <div class="leadership-team">
+        <div class="member">
+            <img src="{{ asset('photos/magdalena.webp') }}" alt="Magdalena">
+            <h3>Magdalena</h3>
+            <p>Founder, Keuangan dan Produksi</p>
+        </div>
+        <div class="member">
+            <img src="{{ asset('photos/williamKristiandi.webp') }}" alt="William Kristiandi">
+            <h3>William Kristiandi</h3>
+            <p>Penanggung jawab</p>
+        </div>
+        <div class="member">
+            <img src="{{ asset('photos/linawati.webp') }}" alt="Linawaty">
+            <h3>Linawaty</h3>
+            <p>Sekretariat dan Humas</p>
+        </div>
+    </div>
+
+    <!-- Marketing Title with Separator -->
+    <div class="marketing-title">
+        <hr class="separator">
+        <h3>Marketing</h3>
+        <hr class="separator">
+    </div>
+
+    <!-- Marketing Team -->
+    <div class="marketing-team">
+        <div class="member">
+            <img src="{{ asset('photos/userAvatar.webp') }}" alt="Yuni Vio">
+            <h3>Yuni Vio</h3>
+            <p>Marketing Jakarta</p>
+            <p>0821-2327-7859</p>
+        </div>
+        <div class="member">
+            <img src="{{ asset('photos/finny.webp') }}" alt="Finny Melati">
+            <h3>Finny Melati</h3>
+            <p>Marketing Jakarta</p>
+            <p>0812-992-4607</p>
+        </div>
+        <div class="member">
+            <img src="{{ asset('photos/userAvatar.webp') }}" alt="Lenny Muliaty">
+            <h3>Lenny Muliaty</h3>
+            <p>Marketing Serpong - Tangerang</p>
+            <p>0812-9014-9461</p>
+        </div>
+        <div class="member">
+            <img src="{{ asset('photos/userAvatar.webp') }}" alt="Tina Suryawinata">
+            <h3>Tina Suryawinata</h3>
+            <p>Marketing Cimanggis - Bogor</p>
+            <p>0896-0325-8507</p>
+        </div>
+        <div class="member">
+            <img src="{{ asset('photos/userAvatar.webp') }}" alt="Linawaty">
+            <h3>Linawaty</h3>
+            <p>Marketing Bekasi - Depok</p>
+            <p>0818-152-242</p>
+        </div>
+    </div>
+</div>
+
+<section class="cardboard-profil">
+    <div class="cardboard-card-profil-luar">
+        <div class="cardboard-card-profil">
+            <h2>Sejarah</h2>
+            <h2>Awal Berdiri Daoer Zenee</h2>
+        </div>
+    </div>
+    <p class="isi-profil">
+        Pada akhir tahun 2005, berawal dari banyaknya kertas sisa percetakan, Daoer Zenee terinspirasi untuk memanfaatkan sisa kertas tersebut sebagai media pengembangan kreativitas anak-anak sekolah Minggu Cawang Kapling.
+    </p>
+
+    <p class="isi-profil">
+        Berkembang dari kegiatan tersebut, Daoer Zenee mengadakan kegiatan fundraising yang menunjang berbagai acara Sekolah Minggu dan muda mudi Katolik.
+    </p>
+
+    <p class="isi-profil">
+        Seiring berjalannya waktu, karya Daoer Zenee mulai dikenali orang secara lisan dan berbagai macam forum. Popilaritas Daoer Zenee juga semakin meningkat melalui media sosial disaat pandemi.
+    </p>
+
+    <p class="isi-profil">
+        Karya Daoer zenee seringkali diminta untuk membuat dekorasi diberbagai acara lintas paroki dan rutan/penjara. Selebihnya, Kami juga aktif dalam mengikuti berbagai lomba kreativitas dari bahan daur ulang.
+    </p>
+</section>
+
+<div id="section-map">
+    <div class="maps-box">
+        <h1><i class="bi bi-geo-alt-fill me-3"></i>LOKASI</h1>
+        <div class="maps-content">
+            <div class="maps-text">
+                <p>JI Cawang Baru No 45, Cawang Kapling, Jakarta Timur 13340, CAWANG, KRAMAT JATI, JAKARTA TIMUR, DKI
+                    JAKARTA 203</p>
+            </div>
+            <a href="https://www.google.com/maps/place/Daoer+zenee/@-6.2415279,106.8732826,15z/data=!4m6!3m5!1s0x2e69f33af1b96e69:0xb0a16adb5841c6f4!8m2!3d-6.2415279!4d106.8732826!16s%2Fg%2F11j4_m2d46?entry=ttu"
+                target="_blank">
+                <button class="small-btn-maps">BUKA</button>
+            </a>
+        </div>
+    </div>
+</div>
 
 @endsection

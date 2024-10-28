@@ -100,6 +100,5 @@
             <h4>Komunitas Kreativitas Daur Ulang</h4>
         </div>
     </div>
-    </div>
 </section>
 @endsection

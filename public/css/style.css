@@ -130,6 +130,55 @@ body {
     padding: 10% 0 10% 5%;
 }
 
+
+.cardboard-profil {
+    margin-bottom: 8%;
+}
+
+.cardboard-card-profil-luar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10% 0 3% 2%;
+}
+
+.cardboard-card-profil {
+    border-radius: 1.5vw;
+    background-image: url(/photos/cbCard.webp);
+    background-size: cover;
+    padding: 3.4vw 4vw;
+    text-align: right;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 0.4vw 0.8vw;
+    width: 80%;
+    color: white; /* Set text color to white */
+}
+
+.cardboard-card-profil h2 {
+    color: white; /* Make sure the text is white */
+    text-shadow: 
+        1px 1px 0 #000,  /* Subtle black shadow */
+        2px 2px 3px rgba(0, 0, 0, 0.3); /* Slightly blurred grey shadow */
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+/* Responsive Text for Headings */
+.cardboard-card-profil h2:first-child {
+    font-size: 4vw; /* Adjust title font size responsively */
+}
+
+.cardboard-card-profil h2:nth-child(2) {
+    font-size: 3vw; /* Adjust subtitle font size responsively */
+}
+
+.isi-profil {
+    text-align: justify;
+    margin: 2% 10%; /* Reduce margin for smaller screens */
+    font-size: 20px;
+    color: #333; /* Body text color */
+}
+
+
 .cardboard-card-home {
     border-radius: 1.5vw;
     background-image: url(/photos/cbCard.webp);
@@ -194,6 +243,34 @@ body {
 
 .banner-text p {
     font-size: 24px;
+}
+
+    .banner-text-profil {
+    margin: 0;
+    position: absolute;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    z-index: 1;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-shadow: rgba(0, 0, 0, 0.85) 0 0.4vw 0.8vw;
+}
+
+.banner-text-profil h1 {
+    font-size: 48px;
+    color: #B7FF00;
+    letter-spacing: 13px;
+    font-weight: bold;
+}
+
+.banner-text-profil p {
+    font-size: 24px;
+    text-align:justify;
 }
 
 /* {{-- Media Queries --}} */
@@ -845,6 +922,32 @@ body {
     margin: 2vw 0;
 }
 
+.small-btn-maps {
+    background-color: #afda00;
+    color: #1a1a1a;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.5rem 2.5rem; /* Set a decent padding for click area */
+    width: 100%; /* Button will take full width */
+    max-width: 200px; /* Max width to prevent it from getting too large */
+    box-shadow: rgba(0, 0, 0, 0.25) 0 0.2vw 0.6vw;
+    margin-top: 1rem; /* Space above the button */
+}
+
+.small-btn-maps:hover {
+    background-color: #d2eb6e;
+}
+
+.small-btn-maps:active {
+    background-color: rgba(255, 0, 0, 0.367);
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+    transform: scale(0.95);
+}
+
 /* ~~~~~ Footer ~~~~~ */
 footer {
     background-color: #f1f1f1;
@@ -1180,6 +1283,201 @@ img {
     color: #ffffff;
 }
 
+/* General Styling */
+
+.community-profile {
+    max-width: 1400px; /* Limits the container width */
+    margin: 0 auto;    /* Centers the container horizontally */
+    padding: 2rem 4rem; /* Adds padding inside the container */
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 7% 3%;
+}
+
+.profile-text {
+    flex: 0 0 66.66%; /* 8 columns out of 12 (8/12 * 100 = 66.66%) */
+    padding-right: 2rem;}
+
+.profile-text h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.profile-text p, .profile-text ul {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.profile-text ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-text ul li::before {
+    content: "• ";
+    color: #333;
+    font-weight: bold;
+}
+
+.profil-image {
+    flex: 0 0 33.33%; /* 4 columns out of 12 (4/12 * 100 = 33.33%) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd; /* Placeholder background color */
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.profil-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Member Count Section */
+/* Member Count Section */
+.member-count-section {
+    border-radius: 10px;
+    text-align: left;
+    margin: 10% 3%;
+}
+
+.member-count-section h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.member-count-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+.count-box {
+    background-color: transparent; /* Make the box background transparent */
+    border: 1.5px solid;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+    flex: 1 1 100px; /* Adjust width for responsive design */
+    box-shadow: none; /* Remove shadow for a cleaner look */
+}
+
+.count-box span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: block;
+}
+
+.count-box p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.note {
+    font-size: 0.85rem;
+    margin-top: 10px;
+}
+
+
+.underline-title {
+        position: relative;
+    padding-bottom: 5px; /* Space between text and underline */
+    border-bottom: 3px solid black; /* Adjust thickness and color */
+    display: inline-block;
+
+}
+
+.org-structure {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #cfff99;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 10px;
+    display: inline-block;
+    border-bottom: 3px solid black;
+}
+
+/* Leadership Team */
+.leadership-team {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.member {
+    text-align: center;
+    max-width: 180px;
+}
+
+.member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.member h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.member p {
+    font-size: 0.9rem;
+    color: #333;
+    margin: 0.2rem 0;
+}
+
+/* Marketing Title with Separator */
+.marketing-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.marketing-title h3 {
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.separator {
+    flex: 1;
+    height: 1px;
+    background-color: black;
+    margin: 0 1rem;
+}
+
+/* Marketing Team */
+.marketing-team {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
 @media (max-width: 1024px) {
     .card1beranda {
         display: flex;
@@ -1257,13 +1555,67 @@ img {
         font-weight: 350;
         color: #ffffff;
     }
+        .community-profile {
+        padding: 1.5rem;
+    }
+    .profile-section {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .profile-text {
+        flex: 2;
+    }
+    .profile-image {
+        flex: 1;
+    }
+
+    .banner-text-profil h1 {
+    font-size: 36px;
+    letter-spacing: 10px;
+    
 }
+
+.banner-text-profil p {
+    font-size: 16px;
+}
+
+    .cardboard-card-profil-luar {
+        padding: 4% 0 2% 3%;
+    }
+
+    .cardboard-card-profil {
+        padding: 3vw 3vw;
+        width: 85%;
+    }
+
+    .cardboard-card-profil h2:first-child {
+        font-size: 4vw; /* Reduce size */
+    }
+
+    .cardboard-card-profil h2:nth-child(2) {
+        font-size: 2.5vw; /* Reduce size */
+    }
+
+    .isi-profil {
+        margin: 1% 8%;
+        font-size: 18px;
+    }
+
+        .small-btn-maps {
+        font-size: 0.9rem;
+        padding: 0.4rem 2rem;
+    }
+}
+
+
 
 @media (max-width: 768px) {
     .banner-text p {
         text-align: center;
         font-size: 24px;
     }
+
     .btn-product-home {
         font-size: 18px;
         width: 150px;
@@ -1478,7 +1830,109 @@ img {
         max-width: 50%;
     }
 
+    .profile-section {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .profile-text, .profile-image {
+        width: 100%;
+        padding: 0;
+    }
+    .community-profile {
+        padding: 1rem;
+    }
+
+.banner-text-profil h1 {
+    font-size: 32px;
+    letter-spacing: 8px;
+    
 }
+
+.banner-text-profil p {
+    font-size: 15px;
+}
+
+    .org-structure {
+        padding: 1.2rem;
+        max-width: 95%; /* Allow layout to take more horizontal space */
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .leadership-team, .marketing-team {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .member {
+        max-width: 220px; /* Make members wider for better readability */
+        flex-basis: 40%; /* Take more space per row */
+    }
+
+    .member img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .marketing-title h3 {
+        font-size: 1.2rem;
+    }
+
+        .org-structure {
+        padding: 1.5rem;
+        max-width: 900px; /* Use more space at this size */
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .leadership-team, .marketing-team {
+        gap: 1rem;
+    }
+
+    .member {
+        flex-basis: 30%; /* Allow each member to take up more space */
+    }
+
+    .marketing-title h3 {
+        font-size: 1.3rem;
+    }
+
+    .cardboard-card-profil-luar {
+        padding: 3% 0 1% 2%;
+    }
+
+    .cardboard-card-profil {
+        padding: 2.5vw 2.5vw;
+        width: 90%;
+    }
+
+    .cardboard-card-profil h2:first-child {
+        font-size: 30px; /* Reduce size further for smaller screens */
+    }
+
+    .cardboard-card-profil h2:nth-child(2) {
+        font-size: 22px;
+    }
+
+    .isi-profil {
+        margin: 1.5% 6%;
+        font-size: 16px;
+    }
+
+        .small-btn-maps {
+        font-size: 0.85rem; /* Make button text smaller */
+        padding: 0.4rem 1.5rem;
+        max-width: 180px; /* Reduce max width for the button */
+    }
+}
+
+
 
 @media (max-width: 576px) {
     .banner-text h1 {
@@ -1734,7 +2188,85 @@ img {
         flex: 0 0 50%; /* Full-width cards on small screens */
         max-width: 50%;
     }
+
+        .community-profile {
+        padding: 0.8rem;
+    }
+    .profile-text p, .misi-list li {
+        font-size: 0.9rem;
+    }
+    .profile-section {
+        align-items: center;
+    }
+
+    .banner-text-profil h1 {
+    font-size: 22px;
+    letter-spacing: 6px;
+    
 }
+
+.banner-text-profil p {
+    font-size: 12px;
+}
+
+    .org-structure {
+        padding: 1rem;
+        max-width: 90%; /* Use almost full width on smaller screens */
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+    }
+
+    .leadership-team, .marketing-team {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .member {
+        max-width: 100%; /* Full-width for readability */
+    }
+
+    .member img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .member h3 {
+        font-size: 1.1rem;
+    }
+
+    .cardboard-card-profil-luar {
+        padding: 2% 0 1% 1%;
+    }
+
+    .cardboard-card-profil {
+        padding: 2vw 2vw;
+        width: 95%;
+        text-align: center; /* Align text center on small screens */
+    }
+
+    .cardboard-card-profil h2:first-child {
+        font-size: 24px; /* Further reduce the title size */
+    }
+
+    .cardboard-card-profil h2:nth-child(2) {
+        font-size: 18px; /* Adjust the subtitle size */
+    }
+
+    .isi-profil {
+        margin: 2% 5%;
+        font-size: 15px;
+    }
+
+        .small-btn-maps {
+        font-size: 0.8rem; /* Smaller button text */
+        padding: 0.35rem 1rem;
+        max-width: 160px;
+    }
+}
+
 
 @media (max-width: 480px) {
     .container-notice {
@@ -1807,7 +2339,81 @@ img {
         flex: 0 0 50%; /* Full-width cards on small screens */
         max-width: 50%;
     }
+
+        .profile-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .profile-image {
+        margin-bottom: 1rem;
+    }
+    .profile-text p, .misi-list li {
+        font-size: 0.85rem;
+    }
+
+    .banner-text-profil h1 {
+    font-size: 18px;
+    letter-spacing: 3px;
+    
 }
+
+.banner-text-profil p {
+    font-size: 9px;
+}
+
+    .section-title {
+        font-size: 1.2rem;
+    }
+
+        .org-structure {
+        padding: 0.8rem;
+        max-width: 100%; /* Use full width for extra small devices */
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .member img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .member h3 {
+        font-size: 1rem;
+    }
+
+    .cardboard-card-profil-luar {
+        padding: 1.5% 0;
+    }
+
+    .cardboard-card-profil {
+        padding: 1.5vw 1.5vw;
+        width: 100%; /* Use full width */
+        text-align: center;
+    }
+
+    .cardboard-card-profil h2:first-child {
+        font-size: 22px; /* Smaller title on extra small screens */
+    }
+
+    .cardboard-card-profil h2:nth-child(2) {
+        font-size: 16px; /* Smaller subtitle */
+    }
+
+    .isi-profil {
+        margin: 2% 4%;
+        font-size: 12px;
+    }
+
+        .small-btn-maps {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.9rem;
+        max-width: 150px; /* Button gets smaller */
+    }
+}
+
 
 @media (max-width: 375px) {
     .group-fotodetail {
@@ -1834,5 +2440,80 @@ img {
         -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
         gap: 6  px; /* Add space between the cards */
 
+    }
+
+        .community-profile {
+        padding: 0.5rem;
+    }
+    .profile-text p, .misi-list li {
+        font-size: 0.8rem;
+    }
+
+    
+    .banner-text-profil h1 {
+    font-size: 16px;
+    
+}
+
+.banner-text-profil p {
+    font-size: 8px;
+}
+
+    .org-structure {
+        padding: 0.5rem;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+    }
+
+    .leadership-team, .marketing-team {
+        gap: 1rem;
+    }
+
+    .member {
+        max-width: 100%; /* Full width on the smallest screens */
+    }
+
+    .member img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .member h3 {
+        font-size: 0.9rem;
+    }
+
+    .marketing-title h3 {
+        font-size: 0.9rem;
+    }
+
+    .cardboard-card-profil-luar {
+        padding: 1.5% 0;
+    }
+
+    .cardboard-card-profil {
+        padding: 1.2vw 1.2vw;
+        width: 100%; /* Full width for smallest screens */
+        text-align: center;
+    }
+
+    .cardboard-card-profil h2:first-child {
+        font-size: 20px; /* Even smaller title on very small screens */
+    }
+
+    .cardboard-card-profil h2:nth-child(2) {
+        font-size: 14px; /* Smaller subtitle */
+    }
+
+    .isi-profil {
+        margin: 3% 3%;
+        font-size: 11px;
+    }
+
+        .small-btn-maps {
+        font-size: 0.7rem; /* Smaller button */
+        padding: 0.25rem 0.7rem;
+        max-width: 140px;
     }
 }
