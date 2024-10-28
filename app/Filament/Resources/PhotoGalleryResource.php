@@ -62,7 +62,8 @@ class PhotoGalleryResource extends Resource
                         ->label('Upload Photo')
                         ->directory('photos')
                         ->image()
-                        ->required(),
+                        ->required()
+                        ->maxSize(10240),
 
                     Forms\Components\Select::make('kategoriFoto_id')
                         ->label('Photo Category')
