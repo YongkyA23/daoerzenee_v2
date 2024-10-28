@@ -34,6 +34,5 @@ Route::get('/products/{slug}', [ProductCategoryController::class, 'show'])->name
 
 Route::get('/', [ProductCategoryController::class, 'welcome'])->name('welcome');
 
-
 Route::get('/galleries', [PhotoGalleryController::class, 'index'])->name('galleries.index');
 Route::get('/galleries/{slug}', [PhotoGalleryController::class, 'show'])->name('galleries.show');
