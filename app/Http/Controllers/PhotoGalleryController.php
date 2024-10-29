@@ -7,27 +7,19 @@ use Illuminate\Http\Request;
 
 class PhotoGalleryController extends Controller
 {
-    /**
-     * Display a listing of the galleries.
-     */
+
     public function index()
     {
-        // Fetch all galleries with their categories
-        $galleries = Galeri::with('kategoriFoto')->get();
+        // Fetch only "Banner" images for the carousel
+        $bannerGalleries = Galeri::whereHas('kategoriFoto', function ($query) {
+            $query->where('namaKategoriFoto', 'Banner');
+        })->get();
 
-        // Pass the data to the view
-        return view('galleries.index', compact('galleries'));
-    }
+        // Fetch non-"Banner" images for the gallery below the carousel
+        $otherGalleries = Galeri::whereDoesntHave('kategoriFoto', function ($query) {
+            $query->where('namaKategoriFoto', 'Banner');
+        })->get();
 
-    /**
-     * Display the specified gallery by slug.
-     */
-    public function show($slug)
-    {
-        // Find the gallery by its slug instead of ID
-        $gallery = Galeri::with('kategoriFoto')->where('slug', $slug)->firstOrFail();
-
-        // Pass the data to the view
-        return view('galleries.show', compact('gallery'));
+        return view('galeri', compact('bannerGalleries', 'otherGalleries'));
     }
 }

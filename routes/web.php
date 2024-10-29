@@ -11,9 +11,10 @@ use App\Http\Controllers\SiteSettingsController;
 
 Route::get('/kontak', [SiteSettingsController::class, 'index']);
 
-Route::get('/galeri', function () {
-    return view('galeri');
-});
+
+
+Route::get('/galeri', [PhotoGalleryController::class, 'index'])->name('galeri');
+
 
 Route::get('/profil', function () {
     return view('profil');

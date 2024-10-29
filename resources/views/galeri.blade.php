@@ -1,26 +1,38 @@
 @extends('layouts.frontend.master')
 @section('content')
+    <!-- Carousel for "Banner" Images -->
     <div id="carouselExampleIndicators" class="carousel slide banner-galeri" data-bs-ride="carousel">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
+            @if ($bannerGalleries->isNotEmpty())
+                @foreach ($bannerGalleries->take(3) as $index => $gallery)
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $index }}"
+                        class="{{ $index === 0 ? 'active' : '' }}" aria-current="true"
+                        aria-label="Slide {{ $index + 1 }}"></button>
+                @endforeach
+            @else
+                <!-- Placeholder indicator -->
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Placeholder Slide"></button>
+            @endif
         </div>
+
         <div class="carousel-inner"
             style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; border-radius: 20px; width: 100%; height: 38vw">
-            <div class="carousel-item active">
-                <img src="{{ asset('photos/acaraKegiatan2.webp') }}" class="d-block w-100" alt="Foto 1">
-            </div>
-            <div class="carousel-item">
-                <img src="{{ asset('photos/acaraKegiatan6.webp') }}" class="d-block w-100" alt="Foto 2">
-            </div>
-            <div class="carousel-item">
-                <img src="{{ asset('photos/prosesProduksi5.webp') }}" class="d-block w-100" alt="Foto 3">
-            </div>
+            @if ($bannerGalleries->isNotEmpty())
+                @foreach ($bannerGalleries->take(3) as $index => $gallery)
+                    <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+                        <img src="{{ asset('storage/' . $gallery->pathFoto) }}" class="d-block w-100"
+                            alt="{{ $gallery->namaFoto }}">
+                    </div>
+                @endforeach
+            @else
+                <!-- Placeholder Image from via.placeholder.com -->
+                <div class="carousel-item active">
+                    <img src="https://placehold.co/1200x500" class="d-block w-100" alt="Placeholder Image">
+                </div>
+            @endif
         </div>
+
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
             data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -32,22 +44,19 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <section class="gallery">
-        <h2 class="card-title mb-3">Acara Kegiatan</h2>
-        <div class="galeri-foto mb-5">
-            @foreach (['acaraKegiatan1.webp', 'acaraKegiatan2.webp', 'acaraKegiatan3.webp', 'acaraKegiatan4.webp', 'acaraKegiatan5.webp', 'acaraKegiatan6.webp', 'prosesProduksi5.webp', 'prosesProduksi6.webp', 'prosesProduksi7.webp', 'prosesProduksi8.webp'] as $image)
-                <img src="photos/{{ $image }}" alt="Foto" class="preview-image" style="cursor: pointer;">
-            @endforeach
-        </div>
 
-        <h2 class="card-title mb-3">Proses Produksi</h2>
+    <!-- Gallery Section for Other Images -->
+    <section class="gallery">
+        <h2 class="card-title mb-3">Gallery</h2>
         <div class="galeri-foto mb-5">
-            @foreach (['prosesProduksi1.webp', 'prosesProduksi2.webp', 'prosesProduksi3.webp', 'prosesProduksi4.webp', 'prosesProduksi5.webp', 'prosesProduksi6.webp', 'prosesProduksi7.webp', 'prosesProduksi8.webp', 'prosesProduksi9.webp', 'prosesProduksi10.webp'] as $image)
-                <img src="photos/{{ $image }}" alt="Foto" class="preview-image" style="cursor: pointer;">
+            @foreach ($otherGalleries as $gallery)
+                <img src="{{ asset('storage/' . $gallery->pathFoto) }}" alt="{{ $gallery->namaFoto }}" class="preview-image"
+                    style="cursor: pointer;">
             @endforeach
         </div>
     </section>
 
+    <!-- Modal for Image Preview -->
     <div class="modal fade" id="imagePreviewModal" tabindex="-1" aria-labelledby="imagePreviewModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -59,6 +68,7 @@
         </div>
     </div>
 
+    <!-- JavaScript for handling image preview modal -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const images = document.querySelectorAll('.preview-image');
