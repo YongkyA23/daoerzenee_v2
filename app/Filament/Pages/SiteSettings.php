@@ -57,7 +57,7 @@ class SiteSettings extends Page
             TextInput::make('wa_number')
                 ->label('WhatsApp Number')
                 ->prefix('+62')
-                ->placeholder('e.g., 1234567890')
+                ->placeholder('e.g., 8789919228')
                 ->disabled(!$this->isEditing)
                 ->reactive(),
 
@@ -92,6 +92,11 @@ class SiteSettings extends Page
 
     public function save()
     {
+
+        if (substr($this->wa_number, 0, 1) === '0') {
+            $this->wa_number = ltrim($this->wa_number, '0');
+        }
+
         $this->settings->wa_number = $this->wa_number;
         $this->settings->ig_link = $this->ig_link;
         $this->settings->facebook_link = $this->facebook_link;
