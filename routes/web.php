@@ -4,18 +4,17 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PhotoGalleryController;
 use App\Http\Controllers\ProductCategoryController;
+use App\Http\Controllers\SiteSettingsController;
 
 
 
 
+Route::get('/kontak', [SiteSettingsController::class, 'index']);
 
-Route::get('/kontak', function () {
-    return view('kontak');
-});
 
-Route::get('/galeri', function () {
-    return view('galeri');
-});
+
+Route::get('/galeri', [PhotoGalleryController::class, 'index'])->name('galeri');
+
 
 Route::get('/profil', function () {
     return view('profil');

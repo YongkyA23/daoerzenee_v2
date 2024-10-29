@@ -23,25 +23,6 @@
     </footer>
 </div> -->
 
-<script>
-    document.querySelector('.small-btn').addEventListener('click', function() {
-        var modal = new bootstrap.Modal(document.getElementById('donateModal'))
-        modal.show()
-    })
-
-    function copyPhoneNumber() {
-        const phoneNumber = document.querySelector('.phone-number').innerText;
-        navigator.clipboard.writeText(phoneNumber).then(function() {
-            const successMessage = document.getElementById('copy-success');
-            successMessage.style.display = 'block';
-            setTimeout(function() {
-                successMessage.style.display = 'none';
-            }, 2000);
-        }).catch(function(error) {
-            console.error('Failed to copy the number: ', error);
-        });
-    }
-</script>
 
 
 <footer class="custom-footer-bg py-4">
@@ -60,22 +41,32 @@
 
         <!-- Right Section: Social Media Icons -->
         <div class="footer-right d-flex">
+            @if ($settings && $settings->wa_number)
+                <a href="https://wa.me/+62{{ ltrim($settings->wa_number, '0') }}" class="text-dark mx-2"
+                    target="_blank">
+                    <i class="bi bi-whatsapp fs-4"></i>
+                </a>
+            @endif
 
-            <a href="#" class="text-dark mx-2">
-                <i class="bi bi-whatsapp fs-4"></i>
-            </a>
+            @if ($settings && $settings->facebook_link)
+                <a href="{{ $settings->facebook_link }}" target="_blank" class="text-dark mx-2">
+                    <i class="bi bi-facebook fs-4"></i>
+                </a>
+            @endif
 
-            <a href="https://www.facebook.com/people/Daoerzenee-Cawang/61551373616539/?sk=photos" target="_blank"
-                class="text-dark mx-2">
-                <i class="bi bi-facebook fs-4"></i>
-            </a>
-            <a href="#" class="text-dark mx-2">
-                <i class="bi bi-instagram fs-4"></i>
-            </a>
-            <a href="#" class="text-dark mx-2">
-                <i class="bi bi-geo-alt-fill fs-4"></i>
-            </a>
+            @if ($settings && $settings->ig_link)
+                <a href="{{ $settings->ig_link }}" class="text-dark mx-2" target="_blank">
+                    <i class="bi bi-instagram fs-4"></i>
+                </a>
+            @endif
+
+            @if ($settings && $settings->maps_link)
+                <a href="{{ $settings->maps_link }}" class="text-dark mx-2" target="_blank">
+                    <i class="bi bi-geo-alt-fill fs-4"></i>
+                </a>
+            @endif
         </div>
+
     </div>
 </footer>
 
@@ -91,9 +82,9 @@
                             <img src="{{ asset('photos/waLogo.webp') }}" alt="Logo WhatsApp" width="50px"
                                 height="50px" style="margin-bottom: 10px;">
                             <p style="font-size: 18px; margin-bottom: 0;">WhatsApp: <span
-                                    class="phone-number">0818152242</span> (Linawaty)</p>
-                            <button onclick="copyPhoneNumber()" class="small-btn"
-                                style="font-size: 16px; width: 100px; height: 30px;">SALIN</button>
+                                    class="phone-number">{{ $settings->wa_number }}</span> (Linawaty)</p>
+                            <button onclick="openWhatsAppLink()" class="small-btn"
+                                style="font-size: 16px; width: 100px; height: 30px;">CHAT</button>
                             <p id="copy-success" style="color: green; display: none;">Number copied
                                 to clipboard!</p>
                         </div>
@@ -128,17 +119,21 @@
 
 
     //script copy nomor
-    function copyPhoneNumber() {
-        const phoneNumber = document.querySelector('.phone-number').innerText;
-        navigator.clipboard.writeText(phoneNumber).then(function() {
-            const successMessage = document.getElementById('copy-success');
-            successMessage.style.display = 'block';
-            setTimeout(function() {
-                successMessage.style.display = 'none';
-            }, 2000);
-        }).catch(function(error) {
-            console.error('Failed to copy the number: ', error);
-        });
+    function openWhatsAppLink() {
+        const phoneNumberElement = document.querySelector('.phone-number');
+        let phoneNumber = phoneNumberElement.innerText.trim();
+
+        // Remove leading '0' if it exists and add the country code +62
+        if (phoneNumber.startsWith('0')) {
+            phoneNumber = '62' + phoneNumber.slice(1);
+        } else if (!phoneNumber.startsWith('62')) {
+            phoneNumber = '62' + phoneNumber;
+        }
+
+        const waLink = `https://wa.me/${phoneNumber}`;
+
+        // Open the WhatsApp link in a new tab
+        window.open(waLink, '_blank');
     }
 
     //navbar script
@@ -173,7 +168,7 @@
     document.getElementById('buy-button').addEventListener('click', function() {
 
         var waPhoneNumber =
-            '6281234567890';
+            {{ $settings->wa_number }};
         var productMessage = "Hello, I am interested in buying the Lingkaran Advent product.";
 
 
