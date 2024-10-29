@@ -32,40 +32,47 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <section class="gallery ">
+    <section class="gallery">
         <h2 class="card-title mb-3">Acara Kegiatan</h2>
         <div class="galeri-foto mb-5">
-            <img src="photos/acaraKegiatan1.webp" alt="Foto 1">
-            <img src="photos/acaraKegiatan2.webp" alt="Foto 2">
-            <img src="photos/acaraKegiatan3.webp" alt="Foto 3">
-            <img src="photos/acaraKegiatan4.webp" alt="Foto 4">
-            <img src="photos/acaraKegiatan5.webp" alt="Foto 5">
-            <img src="photos/acaraKegiatan6.webp" alt="Foto 6">
-            <img src="photos/prosesProduksi5.webp" alt="Foto 5">
-            <img src="photos/prosesProduksi6.webp" alt="Foto 6">
-            <img src="photos/prosesProduksi7.webp" alt="Foto 7">
-            <img src="photos/prosesProduksi8.webp" alt="Foto 8">
-            <img src="photos/prosesProduksi5.webp" alt="Foto 5">
-            <img src="photos/prosesProduksi6.webp" alt="Foto 6">
-            <img src="photos/prosesProduksi7.webp" alt="Foto 7">
-            <img src="photos/prosesProduksi8.webp" alt="Foto 8">
-            <img src="photos/prosesProduksi5.webp" alt="Foto 5">
-            <img src="photos/prosesProduksi7.webp" alt="Foto 7">
-            <img src="photos/prosesProduksi8.webp" alt="Foto 8">
+            @foreach (['acaraKegiatan1.webp', 'acaraKegiatan2.webp', 'acaraKegiatan3.webp', 'acaraKegiatan4.webp', 'acaraKegiatan5.webp', 'acaraKegiatan6.webp', 'prosesProduksi5.webp', 'prosesProduksi6.webp', 'prosesProduksi7.webp', 'prosesProduksi8.webp'] as $image)
+                <img src="photos/{{ $image }}" alt="Foto" class="preview-image" style="cursor: pointer;">
+            @endforeach
         </div>
 
         <h2 class="card-title mb-3">Proses Produksi</h2>
         <div class="galeri-foto mb-5">
-            <img src="photos/prosesProduksi1.webp" alt="Foto 1">
-            <img src="photos/prosesProduksi2.webp" alt="Foto 2">
-            <img src="photos/prosesProduksi3.webp" alt="Foto 3">
-            <img src="photos/prosesProduksi4.webp" alt="Foto 4">
-            <img src="photos/prosesProduksi5.webp" alt="Foto 5">
-            <img src="photos/prosesProduksi6.webp" alt="Foto 6">
-            <img src="photos/prosesProduksi7.webp" alt="Foto 7">
-            <img src="photos/prosesProduksi8.webp" alt="Foto 8">
-            <img src="photos/prosesProduksi9.webp" alt="Foto 9">
-            <img src="photos/prosesProduksi10.webp" alt="Foto 10">
+            @foreach (['prosesProduksi1.webp', 'prosesProduksi2.webp', 'prosesProduksi3.webp', 'prosesProduksi4.webp', 'prosesProduksi5.webp', 'prosesProduksi6.webp', 'prosesProduksi7.webp', 'prosesProduksi8.webp', 'prosesProduksi9.webp', 'prosesProduksi10.webp'] as $image)
+                <img src="photos/{{ $image }}" alt="Foto" class="preview-image" style="cursor: pointer;">
+            @endforeach
         </div>
     </section>
+
+    <div class="modal fade" id="imagePreviewModal" tabindex="-1" aria-labelledby="imagePreviewModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <img id="modalImage" src="" alt="Preview" class="w-100" style="border-radius: 8px;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.preview-image');
+            const modalImage = document.getElementById('modalImage');
+            const imagePreviewModal = new bootstrap.Modal(document.getElementById('imagePreviewModal'));
+
+            images.forEach(image => {
+                image.addEventListener('click', function() {
+                    // Set the modal image source to the clicked image source
+                    modalImage.src = this.src;
+                    // Show the modal
+                    imagePreviewModal.show();
+                });
+            });
+        });
+    </script>
 @endsection

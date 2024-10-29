@@ -9,7 +9,8 @@ use App\Http\Controllers\SiteSettingsController;
 
 
 
-Route::get('/kontak', [SiteSettingsController::class, 'kontak']);
+Route::get('/kontak', [SiteSettingsController::class, 'index']);
+
 Route::get('/galeri', function () {
     return view('galeri');
 });

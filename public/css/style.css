@@ -130,7 +130,6 @@ body {
     padding: 10% 0 10% 5%;
 }
 
-
 .cardboard-profil {
     margin-bottom: 8%;
 }
@@ -155,9 +154,8 @@ body {
 
 .cardboard-card-profil h2 {
     color: white; /* Make sure the text is white */
-    text-shadow: 
-        1px 1px 0 #000,  /* Subtle black shadow */
-        2px 2px 3px rgba(0, 0, 0, 0.3); /* Slightly blurred grey shadow */
+    text-shadow: 1px 1px 0 #000,
+        /* Subtle black shadow */ 2px 2px 3px rgba(0, 0, 0, 0.3); /* Slightly blurred grey shadow */
     letter-spacing: 4px;
     font-weight: bold;
 }
@@ -177,7 +175,6 @@ body {
     font-size: 20px;
     color: #333; /* Body text color */
 }
-
 
 .cardboard-card-home {
     border-radius: 1.5vw;
@@ -245,7 +242,7 @@ body {
     font-size: 24px;
 }
 
-    .banner-text-profil {
+.banner-text-profil {
     margin: 0;
     position: absolute;
     flex-direction: column;
@@ -263,14 +260,14 @@ body {
 
 .banner-text-profil h1 {
     font-size: 48px;
-    color: #B7FF00;
+    color: #b7ff00;
     letter-spacing: 13px;
     font-weight: bold;
 }
 
 .banner-text-profil p {
     font-size: 24px;
-    text-align:justify;
+    text-align: justify;
 }
 
 /* {{-- Media Queries --}} */
@@ -606,15 +603,14 @@ body {
     cursor: pointer;
     font-weight: bold;
     box-shadow: rgba(0, 0, 0, 0.25) 0 0.2vw 0.6vw;
-    color: black; 
-    text-decoration: none; 
+    color: black;
+    text-decoration: none;
 }
 
-.button-container-home{
-    text-align: center; 
+.button-container-home {
+    text-align: center;
     margin: 30px 0 0 0;
 }
-
 
 /* General styling for the product categories section */
 .product-categories {
@@ -629,12 +625,10 @@ body {
     padding: 15px;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     background-color: #fff;
-
 }
 
-.isicard-atas{
-        text-align: justify;
-
+.isicard-atas {
+    text-align: justify;
 }
 /* Hover effect for product card */
 .product-card:hover {
@@ -671,7 +665,7 @@ body {
 /* Price Styling */
 .product-card .price {
     font-size: 1.2rem;
-    color: #46C34C;
+    color: #46c34c;
     font-weight: bold;
     margin: 10px 0;
 }
@@ -680,7 +674,6 @@ body {
 .product-card .btn {
     margin-top: 10px;
 }
-
 
 /* Container to align the button on the right side */
 .button-container {
@@ -703,20 +696,17 @@ body {
     text-decoration: none;
 }
 
-
-
 .rotated-icon {
     display: inline-block;
     transform: rotate(45deg);
-    font-size: 1.5rem;           /* Adjust the size of the icon */
+    font-size: 1.5rem; /* Adjust the size of the icon */
     transition: transform 0.3s ease;
 }
 
-
 .icon-link {
-    text-decoration: none;   /* Remove underline */
-    color: inherit;          /* Inherit the color from the parent element */
-        position: absolute;
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the color from the parent element */
+    position: absolute;
     bottom: 15px;
     right: 15px;
 }
@@ -738,7 +728,6 @@ body {
     padding-bottom: 0.2em;
     display: inline-block;
 }
-
 
 /* cardProduk Scroll ============================================== */
 .scrollProduk {
@@ -1255,7 +1244,7 @@ img {
 }
 
 .galeri-foto img:hover {
-    transform: scale(1.05);
+    transform: translateY(-2%);
 }
 
 /* Apply spans for specific images (optional) */
@@ -1290,7 +1279,7 @@ img {
 
 .community-profile {
     max-width: 1400px; /* Limits the container width */
-    margin: 0 auto;    /* Centers the container horizontally */
+    margin: 0 auto; /* Centers the container horizontally */
     padding: 2rem 4rem; /* Adds padding inside the container */
 }
 
@@ -1304,7 +1293,8 @@ img {
 
 .profile-text {
     flex: 0 0 66.66%; /* 8 columns out of 12 (8/12 * 100 = 66.66%) */
-    padding-right: 2rem;}
+    padding-right: 2rem;
+}
 
 .profile-text h2 {
     font-size: 1.8rem;
@@ -1312,7 +1302,8 @@ img {
     margin-bottom: 1rem;
 }
 
-.profile-text p, .profile-text ul {
+.profile-text p,
+.profile-text ul {
     font-size: 1rem;
     line-height: 1.6;
     color: #333;
@@ -1393,13 +1384,11 @@ img {
     margin-top: 10px;
 }
 
-
 .underline-title {
-        position: relative;
+    position: relative;
     padding-bottom: 5px; /* Space between text and underline */
     border-bottom: 3px solid black; /* Adjust thickness and color */
     display: inline-block;
-
 }
 
 .org-structure {
@@ -1558,7 +1547,7 @@ img {
         font-weight: 350;
         color: #ffffff;
     }
-        .community-profile {
+    .community-profile {
         padding: 1.5rem;
     }
     .profile-section {
@@ -1574,14 +1563,13 @@ img {
     }
 
     .banner-text-profil h1 {
-    font-size: 36px;
-    letter-spacing: 10px;
-    
-}
+        font-size: 36px;
+        letter-spacing: 10px;
+    }
 
-.banner-text-profil p {
-    font-size: 16px;
-}
+    .banner-text-profil p {
+        font-size: 16px;
+    }
 
     .cardboard-card-profil-luar {
         padding: 4% 0 2% 3%;
@@ -1605,13 +1593,11 @@ img {
         font-size: 18px;
     }
 
-        .small-btn-maps {
+    .small-btn-maps {
         font-size: 0.9rem;
         padding: 0.4rem 2rem;
     }
 }
-
-
 
 @media (max-width: 768px) {
     .banner-text p {
@@ -1818,7 +1804,6 @@ img {
         overflow-x: auto; /* Enable horizontal scroll */
         -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
         gap: 30px; /* Add space between the cards */
-
     }
 
     .product-card {
@@ -1826,7 +1811,6 @@ img {
         width: 250px; /* Set a fixed width for each card */
         margin-right: 15px; /* Add some space between cards */
     }
-
 
     .row-cols-md-5 .col {
         flex: 0 0 50%; /* Full-width cards on small screens */
@@ -1838,7 +1822,8 @@ img {
         align-items: flex-start;
         text-align: left;
     }
-    .profile-text, .profile-image {
+    .profile-text,
+    .profile-image {
         width: 100%;
         padding: 0;
     }
@@ -1846,15 +1831,14 @@ img {
         padding: 1rem;
     }
 
-.banner-text-profil h1 {
-    font-size: 32px;
-    letter-spacing: 8px;
-    
-}
+    .banner-text-profil h1 {
+        font-size: 32px;
+        letter-spacing: 8px;
+    }
 
-.banner-text-profil p {
-    font-size: 15px;
-}
+    .banner-text-profil p {
+        font-size: 15px;
+    }
 
     .org-structure {
         padding: 1.2rem;
@@ -1865,7 +1849,8 @@ img {
         font-size: 1.6rem;
     }
 
-    .leadership-team, .marketing-team {
+    .leadership-team,
+    .marketing-team {
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
@@ -1885,7 +1870,7 @@ img {
         font-size: 1.2rem;
     }
 
-        .org-structure {
+    .org-structure {
         padding: 1.5rem;
         max-width: 900px; /* Use more space at this size */
     }
@@ -1894,7 +1879,8 @@ img {
         font-size: 1.8rem;
     }
 
-    .leadership-team, .marketing-team {
+    .leadership-team,
+    .marketing-team {
         gap: 1rem;
     }
 
@@ -1928,14 +1914,12 @@ img {
         font-size: 16px;
     }
 
-        .small-btn-maps {
+    .small-btn-maps {
         font-size: 0.85rem; /* Make button text smaller */
         padding: 0.4rem 1.5rem;
         max-width: 180px; /* Reduce max width for the button */
     }
 }
-
-
 
 @media (max-width: 576px) {
     .banner-text h1 {
@@ -2166,18 +2150,16 @@ img {
         margin: 5px;
     }
 
-        .text-produk {
+    .text-produk {
         font-size: 20px;
     }
 
-    
     .product-row {
         display: flex; /* Use flexbox for horizontal alignment */
         flex-wrap: nowrap; /* Prevent wrapping of cards */
         overflow-x: auto; /* Enable horizontal scroll */
         -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
         gap: 10px; /* Add space between the cards */
-
     }
 
     .product-card {
@@ -2186,16 +2168,16 @@ img {
         margin-right: 15px; /* Add some space between cards */
     }
 
-
     .row-cols-md-5 .col {
         flex: 0 0 50%; /* Full-width cards on small screens */
         max-width: 50%;
     }
 
-        .community-profile {
+    .community-profile {
         padding: 0.8rem;
     }
-    .profile-text p, .misi-list li {
+    .profile-text p,
+    .misi-list li {
         font-size: 0.9rem;
     }
     .profile-section {
@@ -2203,14 +2185,13 @@ img {
     }
 
     .banner-text-profil h1 {
-    font-size: 22px;
-    letter-spacing: 6px;
-    
-}
+        font-size: 22px;
+        letter-spacing: 6px;
+    }
 
-.banner-text-profil p {
-    font-size: 12px;
-}
+    .banner-text-profil p {
+        font-size: 12px;
+    }
 
     .org-structure {
         padding: 1rem;
@@ -2221,7 +2202,8 @@ img {
         font-size: 1.4rem;
     }
 
-    .leadership-team, .marketing-team {
+    .leadership-team,
+    .marketing-team {
         flex-direction: column;
         align-items: center;
         gap: 1.5rem;
@@ -2263,13 +2245,12 @@ img {
         font-size: 15px;
     }
 
-        .small-btn-maps {
+    .small-btn-maps {
         font-size: 0.8rem; /* Smaller button text */
         padding: 0.35rem 1rem;
         max-width: 160px;
     }
 }
-
 
 @media (max-width: 480px) {
     .container-notice {
@@ -2317,18 +2298,16 @@ img {
         flex-direction: column;
     }
 
-            .text-produk {
+    .text-produk {
         font-size: 16px;
     }
 
-    
     .product-row {
         display: flex; /* Use flexbox for horizontal alignment */
         flex-wrap: nowrap; /* Prevent wrapping of cards */
         overflow-x: auto; /* Enable horizontal scroll */
         -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
         gap: 0.5px; /* Add space between the cards */
-
     }
 
     .product-card {
@@ -2337,13 +2316,12 @@ img {
         margin-right: 1px; /* Add some space between cards */
     }
 
-
     .row-cols-sm-5 .col {
         flex: 0 0 50%; /* Full-width cards on small screens */
         max-width: 50%;
     }
 
-        .profile-section {
+    .profile-section {
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -2351,25 +2329,25 @@ img {
     .profile-image {
         margin-bottom: 1rem;
     }
-    .profile-text p, .misi-list li {
+    .profile-text p,
+    .misi-list li {
         font-size: 0.85rem;
     }
 
     .banner-text-profil h1 {
-    font-size: 18px;
-    letter-spacing: 3px;
-    
-}
+        font-size: 18px;
+        letter-spacing: 3px;
+    }
 
-.banner-text-profil p {
-    font-size: 9px;
-}
+    .banner-text-profil p {
+        font-size: 9px;
+    }
 
     .section-title {
         font-size: 1.2rem;
     }
 
-        .org-structure {
+    .org-structure {
         padding: 0.8rem;
         max-width: 100%; /* Use full width for extra small devices */
     }
@@ -2410,13 +2388,12 @@ img {
         font-size: 12px;
     }
 
-        .small-btn-maps {
+    .small-btn-maps {
         font-size: 0.75rem;
         padding: 0.3rem 0.9rem;
         max-width: 150px; /* Button gets smaller */
     }
 }
-
 
 @media (max-width: 375px) {
     .group-fotodetail {
@@ -2431,36 +2408,33 @@ img {
         height: 50px;
     }
 
-            .text-produk {
+    .text-produk {
         font-size: 13px;
     }
 
-    
     .product-row {
         display: flex; /* Use flexbox for horizontal alignment */
         flex-wrap: nowrap; /* Prevent wrapping of cards */
         overflow-x: auto; /* Enable horizontal scroll */
         -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
-        gap: 6  px; /* Add space between the cards */
-
+        gap: 6 px; /* Add space between the cards */
     }
 
-        .community-profile {
+    .community-profile {
         padding: 0.5rem;
     }
-    .profile-text p, .misi-list li {
+    .profile-text p,
+    .misi-list li {
         font-size: 0.8rem;
     }
 
-    
     .banner-text-profil h1 {
-    font-size: 16px;
-    
-}
+        font-size: 16px;
+    }
 
-.banner-text-profil p {
-    font-size: 8px;
-}
+    .banner-text-profil p {
+        font-size: 8px;
+    }
 
     .org-structure {
         padding: 0.5rem;
@@ -2470,7 +2444,8 @@ img {
         font-size: 1.2rem;
     }
 
-    .leadership-team, .marketing-team {
+    .leadership-team,
+    .marketing-team {
         gap: 1rem;
     }
 
@@ -2514,7 +2489,7 @@ img {
         font-size: 11px;
     }
 
-        .small-btn-maps {
+    .small-btn-maps {
         font-size: 0.7rem; /* Smaller button */
         padding: 0.25rem 0.7rem;
         max-width: 140px;
