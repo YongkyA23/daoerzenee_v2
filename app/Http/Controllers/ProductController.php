@@ -10,17 +10,17 @@ class ProductController extends Controller
     // Fetch and display all products
     public function index()
     {
-        $products = Produk::with('kategoriProduk')->get();
+        // Fetch products along with categories and images
+        $products = Produk::with(['kategoriProduk', 'images'])->get();
 
-        // Pass the data to the view
         return view('products.index', compact('products'));
     }
 
     public function show($slug)
     {
-        // Find the product by its slug instead of ID
-        $product = Produk::with('kategoriProduk')->where('slug', $slug)->firstOrFail();
+        // Fetch single product with category and images by slug
+        $product = Produk::with(['kategoriProduk', 'images'])->where('slug', $slug)->firstOrFail();
 
-        return view('products.show', compact('product'));
+        return view('products.detail', compact('product'));
     }
 }

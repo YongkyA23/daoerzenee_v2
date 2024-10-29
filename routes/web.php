@@ -27,12 +27,15 @@ Route::get('/detailproduk', function () {
 
 
 
-
+Route::get('/', [ProductCategoryController::class, 'welcome'])->name('welcome');
 
 Route::get('/products', [ProductCategoryController::class, 'index'])->name('products.index');
-Route::get('/products/{slug}', [ProductCategoryController::class, 'show'])->name('products.show');
 
-Route::get('/', [ProductCategoryController::class, 'welcome'])->name('welcome');
+Route::get('/categories/{slug}', [ProductCategoryController::class, 'show'])->name('categories.show');
+
+Route::get('/products/{slug}', [ProductController::class, 'show'])->name('products.detail');
+
+
 
 Route::get('/galleries', [PhotoGalleryController::class, 'index'])->name('galleries.index');
 Route::get('/galleries/{slug}', [PhotoGalleryController::class, 'show'])->name('galleries.show');
