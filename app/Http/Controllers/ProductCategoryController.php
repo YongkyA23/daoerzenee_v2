@@ -24,14 +24,15 @@ class ProductCategoryController extends Controller
      *
      * @param string $slug
      */
+
     public function show($slug)
     {
-        // Find the category by its slug
+        // Fetch the single category by its slug, along with related products
         $category = KategoriProduk::with('produk')->where('slug', $slug)->firstOrFail();
-
-        // Pass the category and its products to the view
-        return view('products.show', compact('category'));
+        // Pass the single category to the view
+        return view('categories.show', compact('category'));
     }
+
 
     public function welcome()
     {

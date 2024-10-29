@@ -100,8 +100,7 @@ class ProductResource extends Resource
                         ])
                         ->label('Product Images')
                         ->minItems(1)
-                        ->maxItems(5)
-                        ->addButtonLabel('Add New Product Image'),
+                        ->maxItems(5),
                 ]),
             ]);
     }

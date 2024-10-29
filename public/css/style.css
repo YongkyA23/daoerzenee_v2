@@ -734,6 +734,9 @@ body {
     margin: 0; /* Remove default margin to align properly */
     font-size: 2rem;
     color: #444;
+    border-bottom: 4px solid #1a1a1a;
+    padding-bottom: 0.2em;
+    display: inline-block;
 }
 
 
@@ -839,7 +842,7 @@ body {
 }
 
 .produkdetail-kategori {
-    font-size: 12px;
+    font-size: 18px;
     color: grey;
 }
 
@@ -866,7 +869,7 @@ body {
 }
 
 .detail-produk {
-    padding: 1%;
+    padding: 0 5% 2% 5%;
 }
 
 /* ~~~~~ Pop Ups: ~~~~~ */

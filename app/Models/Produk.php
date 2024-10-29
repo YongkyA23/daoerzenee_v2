@@ -27,6 +27,7 @@ class Produk extends Model
         return $this->hasMany(ProductImage::class, 'produk_id');
     }
 
+
     protected static function boot()
     {
         parent::boot();

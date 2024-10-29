@@ -1,32 +1,16 @@
 @extends('layouts.frontend.master')
 
 @section('content')
-<section class="banner-section">
-    {{-- gambar --}}
-    <div class="banner-image">
-        <img src="{{ asset('photos/bannerProduk.webp') }}" alt="Banner Beranda" class="banner-image">
-        <div class="banner-text">
-            <h1 class="text-produk">Membeli produk kami berarti mencintai produk Indonesia, mengurangi sampah sekaligus membantu umat KLMTD menjadi lebih aktif dan produktif</h1>
-        </div>
-        <div class="search-produk">
-
-        </div>
-    </div>
-</section>
-
-
 <section class="product-categories">
     <div class="container">
-        @foreach ($categories as $category)
         <!-- Category Name -->
         <div class="title-container">
             <h1 class="category-title">{{ $category->namaKategori }}</h1>
-            <a href="{{ route('categories.show', $category->slug) }}" class="btn-custom">More</a>
         </div>
 
         <!-- Product Row for Each Category -->
         <div class="product-row row row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
-            @forelse ($category->produk->take(5) as $product)
+            @forelse ($category->produk as $product)
             <div class="col">
                 <div class="product-card">
                     <div class="isicard-atas">
@@ -46,7 +30,6 @@
             </div>
             @endforelse
         </div> <!-- End of Product Row -->
-        @endforeach
     </div>
 </section>
 @endsection
