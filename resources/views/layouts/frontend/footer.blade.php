@@ -93,11 +93,8 @@
                             <h3><b>Atau kirimkan ke:</b></h3>
                             <img src="{{ asset('photos/mapsLogo.webp') }}" alt="Logo Maps" width="50px" height="50px"
                                 style="margin-bottom: 10px;">
-                            <p style="font-size: 18px; margin-bottom: 0;">Jl Cawang Baru No 45,
-                                Cawang Kapling, Jakarta Timur 13340, Cawang, Kramat Jati, Jakarta
-                                Timur, DKI Jakarta 203</p>
-                            <a
-                                href="https://www.google.com/maps/place/Daoer+zenee/@-6.2415279,106.8732826,15z/data=!4m6!3m5!1s0x2e69f33af1b96e69:0xb0a16adb5841c6f4!8m2!3d-6.2415279!4d106.8732826!16s%2Fg%2F11j4_m2d46?entry=ttu">
+                            <p style="font-size: 18px; margin-bottom: 0;">{{ $settings->address }}</p>
+                            <a href="{{ $settings->maps_link }}">
                                 <button class="small-btn">BUKA</button>
                             </a>
                         </div>
