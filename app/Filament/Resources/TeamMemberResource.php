@@ -75,8 +75,8 @@ class TeamMemberResource extends Resource
 
                         TextInput::make('phone')
                             ->label('Phone')
-                            ->mask('+0000-0000-0000')
-                            ->placeholder('e.g., +62812-3456-7890'),
+                            ->mask('9999-9999-9999')
+                            ->placeholder('e.g., 08123456789'),
                     ])
                     ->columnSpan('full'), // Make section span the full width
             ]);
