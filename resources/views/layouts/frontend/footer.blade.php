@@ -167,13 +167,11 @@
 
     document.getElementById('buy-button').addEventListener('click', function() {
 
-        var waPhoneNumber =
-            {{ $settings->wa_number }};
-        var productMessage = "Hello, I am interested in buying the Lingkaran Advent product.";
-
+        var waPhoneNumber = "{{ $settings->wa_number }}";
+        var productName = document.getElementById('product-name').textContent;
+        var productMessage = "Hello, Saya ingin membeli produk: " + productName + ".";
 
         var waLink = "https://wa.me/" + waPhoneNumber + "?text=" + encodeURIComponent(productMessage);
-
 
         window.open(waLink, '_blank');
     });
