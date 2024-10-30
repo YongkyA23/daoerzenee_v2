@@ -72,66 +72,38 @@
 <div class="org-structure">
     <h2 class="section-title">STRUKTUR ORGANISASI</h2>
 
-    <!-- Leadership Team -->
+    <!-- Leadership Team (Exclude Marketing Members) -->
     <div class="leadership-team">
+        @foreach ($teamMembers as $member)
+        @if ($member->position->name !== 'Marketing')
         <div class="member">
-            <img src="{{ asset('photos/magdalena.webp') }}" alt="Magdalena">
-            <h3>Magdalena</h3>
-            <p>Founder, Keuangan dan Produksi</p>
+            <img src="{{ $member->photo }}" alt="{{ $member->name }}">
+            <h3>{{ $member->name }}</h3>
+            <p>{{ $member->position->name }}</p>
         </div>
-        <div class="member">
-            <img src="{{ asset('photos/williamKristiandi.webp') }}" alt="William Kristiandi">
-            <h3>William Kristiandi</h3>
-            <p>Penanggung jawab</p>
-        </div>
-        <div class="member">
-            <img src="{{ asset('photos/linawati.webp') }}" alt="Linawaty">
-            <h3>Linawaty</h3>
-            <p>Sekretariat dan Humas</p>
-        </div>
+        @endif
+        @endforeach
     </div>
-
-    <!-- Marketing Title with Separator -->
     <div class="marketing-title">
         <hr class="separator">
         <h3>Marketing</h3>
         <hr class="separator">
     </div>
-
     <!-- Marketing Team -->
     <div class="marketing-team">
+        @foreach ($teamMembers as $member)
+        @if ($member->position->name === 'Marketing')
         <div class="member">
-            <img src="{{ asset('photos/userAvatar.webp') }}" alt="Yuni Vio">
-            <h3>Yuni Vio</h3>
-            <p>Marketing Jakarta</p>
-            <p>0821-2327-7859</p>
+            <img src="{{ $member->photo }}" alt="{{ $member->name }}">
+            <h3>{{ $member->name }}</h3>
+            <p>{{ $member->position->name }} - {{ $member->location->name }}</p>
+            <p>{{ $member->phone }}</p>
         </div>
-        <div class="member">
-            <img src="{{ asset('photos/finny.webp') }}" alt="Finny Melati">
-            <h3>Finny Melati</h3>
-            <p>Marketing Jakarta</p>
-            <p>0812-992-4607</p>
-        </div>
-        <div class="member">
-            <img src="{{ asset('photos/userAvatar.webp') }}" alt="Lenny Muliaty">
-            <h3>Lenny Muliaty</h3>
-            <p>Marketing Serpong - Tangerang</p>
-            <p>0812-9014-9461</p>
-        </div>
-        <div class="member">
-            <img src="{{ asset('photos/userAvatar.webp') }}" alt="Tina Suryawinata">
-            <h3>Tina Suryawinata</h3>
-            <p>Marketing Cimanggis - Bogor</p>
-            <p>0896-0325-8507</p>
-        </div>
-        <div class="member">
-            <img src="{{ asset('photos/userAvatar.webp') }}" alt="Linawaty">
-            <h3>Linawaty</h3>
-            <p>Marketing Bekasi - Depok</p>
-            <p>0818-152-242</p>
-        </div>
+        @endif
+        @endforeach
     </div>
 </div>
+
 
 <section class="cardboard-profil">
     <div class="cardboard-card-profil-luar">
