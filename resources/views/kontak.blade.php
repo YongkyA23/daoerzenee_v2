@@ -22,7 +22,7 @@
                  Ikut serta peduli terhadap lingkungan sekitar serta membantu
                  kita di Daoer Zenee dengan memberikan donasi
              </h2>
-             <button class="small-btn">DONASI</button>
+             <button class="small-btn donasi-kontak">DONASI</button>
          </article>
 
          <div class="text-center container-notice">

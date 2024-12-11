@@ -6,6 +6,7 @@ use App\Filament\Resources\LocationResource\Pages;
 use App\Filament\Resources\LocationResource\RelationManagers;
 use App\Models\Location;
 use Filament\Forms;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -28,7 +29,9 @@ class LocationResource extends Resource
     {
         return $form
             ->schema([
-                //
+                TextInput::make('name')
+                    ->label('New location Name')
+                    ->required(),
             ]);
     }
 
@@ -36,13 +39,17 @@ class LocationResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('name')
+                    ->label('Location Name')
+                    ->sortable()
+                    ->searchable()
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
