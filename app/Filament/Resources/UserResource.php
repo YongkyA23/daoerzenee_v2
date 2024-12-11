@@ -49,11 +49,17 @@ class UserResource extends Resource
                         ->email()
                         ->required()
                         ->maxLength(255),
+                    Forms\Components\TextInput::make('password')
+                        ->required()
+                        ->minLength(8) // Optionally set minimum length
+                        ->maxLength(255)
+                        ->password()
+                        ->dehydrateStateUsing(fn($state) => bcrypt($state)),
                     Forms\Components\Select::make('roles')
                         ->relationship('roles', 'name')
+                        ->multiple()
                         ->preload()
                         ->searchable()
-
                 ])
             ]);
     }
