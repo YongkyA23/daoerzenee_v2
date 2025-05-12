@@ -108,12 +108,12 @@ class ProductResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->recordUrl(null) // Disable the default behavior of navigating to edit page when clicking a row
             ->columns([
                 Tables\Columns\TextColumn::make('namaProduk')
                     ->label('Product Name')
                     ->sortable()
                     ->searchable(),
-
 
                 Tables\Columns\ImageColumn::make('images.pathFoto')
                     ->disk('public')
@@ -135,6 +135,7 @@ class ProductResource extends Resource
                 // Add filters if needed
             ])
             ->actions([
+                Tables\Actions\ViewAction::make(), // Add View action
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ])
@@ -155,6 +156,7 @@ class ProductResource extends Resource
         return [
             'index' => Pages\ListProducts::route('/'),
             'create' => Pages\CreateProduct::route('/create'),
+            'view' => Pages\ViewProduct::route('/{record}'), // Add this line
             'edit' => Pages\EditProduct::route('/{record}/edit'),
         ];
     }
